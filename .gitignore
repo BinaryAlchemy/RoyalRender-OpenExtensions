@@ -1,0 +1,17 @@
+qtc-gdbmacros
+qtc_packaging
+.DS_Store
+\z_compiler_files
+/z_compiler_files
+\temp
+/temp
+\temp*
+/temp*
+\tmp
+/tmp
+\tmp*
+/tmp*
+/.metadata
+\.metadata
+GeneratedFiles
+generatedfiles
