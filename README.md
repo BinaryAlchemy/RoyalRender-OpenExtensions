@@ -50,3 +50,4 @@ In this case you should use .gitignore files in each folder to ignore the offici
 
 
 
+Once you have submitted a new file, please send an email into the Royal Render Knights Tavern Google Group
