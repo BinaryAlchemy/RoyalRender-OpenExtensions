@@ -110,7 +110,8 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         type = scn.render.image_settings.file_format
         rendertarget = type
         extension = "."+rendertarget.lower()
-        extension.replace("open_", "");
+        extension=extension.replace("open_", "");
+        extension=extension.replace(".tiff", ".tif");
         renderOut = os.path.dirname(bpy.data.filepath) + scn.render.filepath
         renderOut = renderOut.replace("//", "\\")
         
