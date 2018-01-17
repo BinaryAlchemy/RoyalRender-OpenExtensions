@@ -10,6 +10,14 @@
 # 
 ######################################################################
 
+bl_info = {
+    "name": "Royal Render Submitter",
+    "author": "Holger Schoenberger",
+    "version": (1, 0),
+    "blender": (2, 75, 0),
+    "description": "Submit scene to Royal Render",
+    "category": "Render",
+    }
 
 import bpy
 import os
