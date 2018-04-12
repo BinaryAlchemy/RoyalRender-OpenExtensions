@@ -1,0 +1,8 @@
+{
+  "name": "jsRR",
+  "version": "0.0.0",
+  "description": "Node.js Royal Renderer",
+  "main": "jsRR.js",
+  "private": true,
+  "gypfile": true
+}

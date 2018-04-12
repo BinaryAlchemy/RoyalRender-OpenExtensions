@@ -1,0 +1,221 @@
+@charset "UTF-8";
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px auto;
+  border: 1px solid white; }
+
+thead {
+  border-bottom: 1px solid #7f7f7f; }
+
+th {
+  background: #A9A9A9;
+  border-left: 1px dotted #7f7f7f;
+  padding: 3px;
+  text-align: left;
+  font-weight: normal; }
+
+td {
+  text-align: left;
+  font-weight: normal; }
+
+.client-name {
+  padding-left: 15px;
+  border-left: 1px dotted black;
+  position: relative;
+  margin-left: 7px;
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 14px; }
+
+.drop-list td {
+  color: #8BC200; }
+
+.bor td {
+  font-weight: bold; }
+
+.plus-minus {
+  position: absolute;
+  z-index: 2;
+  padding: 2px; }
+
+.client-list {
+  border-left: 2px dotted black;
+  position: relative;
+  margin-left: 5px; }
+
+.bar:hover {
+  color: blue; }
+
+.bar:active {
+  color: blue; }
+
+.activeJob {
+  color: blue; }
+
+.bor2 {
+  margin-left: 7px;
+  border-left: 1px solid red; }
+
+[data-toggle="toggle"] {
+  display: none; }
+
+.labels p {
+  width: 0%;
+  /* z-index: 2; */
+  /* margin-right: 0px; */
+  background: white;
+  position: relative;
+  top: 0.2em;
+  float: left;
+  margin: 0;
+  font-size: 10px; }
+
+.drop-list p {
+  width: 0%;
+  z-index: -1;
+  background: white;
+  position: relative;
+  top: -0.3em;
+  float: left;
+  margin: 0;
+  margin-left: 1px;
+  padding-left: 30px;
+  left: 6px;
+  font-size: 14px; }
+
+.filterContainer {
+  width: 50%;
+  float: left;
+  padding-right: 20px; }
+
+.filterContainer label {
+  width: 20%; }
+
+.filterContainer select {
+  width: 80%; }
+
+.filterCheckBox {
+  margin-top: -15px !important;
+  width: 20%;
+  float: left; }
+
+.filterCheckBox .checkbox {
+  margin-top: 0px !important;
+  margin-bottom: 3px !important; }
+
+.filterCheckBox label {
+  margin-bottom: 0px; }
+
+.filterCheckBox input[type='checkbox'] {
+  margin: 0px 10px 0px 0px; }
+
+.invert {
+  width: 20%;
+  float: left; }
+
+.jobOptions button, .clientOptions button {
+  margin: 0 2px;
+  /*padding: 10px 25px;
+    background-color: gray;
+    color: black;*/ }
+
+.jobOptions hr, .clientOptions hr {
+  border-top: 4px solid #060606 !important; }
+
+@font-face {
+  font-family: 'Notification';
+  src: url("./fonts/notification.eot?s3g3t9");
+  src: url("./fonts/notification.eot?#iefixs3g3t9") format("embedded-opentype"), url("./fonts/notification.woff?s3g3t9") format("woff"), url("./fonts/notification.ttf?s3g3t9") format("truetype"), url("./fonts/notification.svg?s3g3t9#notification") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.notification-container {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+  width: 320px;
+  padding: 0px 15px;
+  max-height: calc(100% - 30px);
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.notification {
+  box-sizing: border-box;
+  padding: 15px 15px 15px 58px;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #ccc;
+  box-shadow: 0 0 12px #999;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.2em;
+  position: relative;
+  opacity: 0.9;
+  margin-top: 15px; }
+
+.notification .title {
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: bold;
+  margin: 0 0 5px 0; }
+
+.notification:hover, .notification:focus {
+  opacity: 1; }
+
+.notification-enter {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0); }
+
+.notification-enter.notification-enter-active {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.4s; }
+
+.notification-leave {
+  visibility: visible;
+  transform: translate3d(0, 0, 0); }
+
+.notification-leave.notification-leave-active {
+  visibility: hidden;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.4s; }
+
+.notification:before {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -14px;
+  display: block;
+  font-family: 'Notification';
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 28px; }
+
+.notification-info {
+  background-color: #2f96b4; }
+
+.notification-info:before {
+  content: ""; }
+
+.notification-success {
+  background-color: #51a351; }
+
+.notification-success:before {
+  content: ""; }
+
+.notification-warning {
+  background-color: #f89406; }
+
+.notification-warning:before {
+  content: ""; }
+
+.notification-error {
+  background-color: #bd362f; }
+
+.notification-error:before {
+  content: ""; }

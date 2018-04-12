@@ -1,0 +1,23 @@
+#
+# Feel free to modify this document
+# 
+
+
+
+#####################################
+# Missing Features:
+#####################################
+
+___________________________________________________________________
+DynDNS service:
+   A website that checks for the IP of the caller.
+   It requires a password settings as URL parameter as well.
+   A new Windows/Linux service started on any machine in your network opens this website regulary to update the IP of your company.
+   (This service is half finished, please request to finish this service from rrSupport)
+     
+
+     
+
+#####################################
+# Known Issues:
+#####################################

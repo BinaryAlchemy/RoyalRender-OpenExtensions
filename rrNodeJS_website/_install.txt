@@ -1,0 +1,28 @@
+
+This is a short description how to install this website on a webserver:
+1. Install NodeJs.
+2. Copy this folder into any folder on your webservers harddrive.
+3. Copy the latest node.js plugin and required libraries from RR/bin/[OS]/ into the folder /app/server/connector/
+File List Windows:
+    msvcp120.dll
+    msvcr120.dll
+    nodeJsRR.node
+    QtCore4.dll
+    QtNetwork4.dll
+    rrShared.dll
+    libeay32.dll
+    ssleay32.dll
+
+File List Linux:
+    libnodeJsRR.node.1.0.0
+    nodeJsRR.node
+    libQtCore.so.4
+    libQtNetwork.so.4
+    rrShared.dll
+    librrShared.so.1
+    libcrypto.so.1.0.0
+    libssl.so.1.0.0
+
+4. Add your Webservers IP at line no 64 in `/app/server/controllers/app.js`.
+5. Type `npm install` and hit 'Enter' on project root directory.
+6. Type `npm start` to start your application.
