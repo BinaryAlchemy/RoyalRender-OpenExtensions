@@ -21,8 +21,9 @@ bl_info = {
 
 import bpy
 import os
-import random
+import tempfile
 import sys
+import subprocess
 
 class RoyalRender_Submitter(bpy.types.Panel):
     """Creates an XML and start the RR Submitter"""
@@ -34,29 +35,23 @@ class RoyalRender_Submitter(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        
 
-        #scn = bpy.data.scenes[0]
-        #if bpy.data.scenes.__len__() > 1:
-        #    print("Blendfile contains more then 1 scene - I take the first one for settings called: " + scn.name)
-        scn = bpy.context.scene
-        type = scn.render.image_settings.file_format
-        rendertarget = type
-        extension = "."+rendertarget.lower()
-        
-        renderOut = os.path.dirname(bpy.data.filepath) + scn.render.filepath
-        renderOut = renderOut.replace("//", "\\")
+        # We submit the current scene. In the future we can implement multi scene submission as RR layers
+        scn = context.scene
+        img_type = scn.render.image_settings.file_format
+
+        renderOut = bpy.path.abspath(scn.render.filepath)
         
         layout.label("Submit Scene Values: ")
         split = layout.split(percentage=0.05)
-        col = split.column()
+        split.separator()
         col = split.column()
         row = col.row()
         row.label("StartFrame: " + str(scn.frame_start))
         row.label("EndFrame: " + str(scn.frame_end))
-        col.label("ImageType: " + type)
+        col.label("ImageType: " + img_type)
         col.label("ImageName: " + os.path.basename(renderOut))
-        col.label("RenderDir: " +  os.path.dirname(renderOut))  
+        col.label("RenderDir: " + os.path.dirname(renderOut))
         
         layout.operator("royalrender.submitscene")
         
@@ -64,64 +59,54 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
     bl_idname = "royalrender.submitscene"
     bl_label = "Submit Scene"
     
-    def get_RR_Root(self):  
+    def get_RR_Root(self):
         if 'RR_ROOT' in os.environ: 
-            return os.environ['RR_ROOT'] 
-        HCPath="%"
-        if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
-            HCPath="%RRLocationWin%"
-        elif (sys.platform.lower() == "darwin"):
-            HCPath="%RRLocationMac%"
+            return os.environ['RR_ROOT']
+
+        if sys.platform.lower().startswith('win'):
+            HCPath = "%RRLocationWin%"
+        elif sys.platform.lower() == "darwin":
+            HCPath = "%RRLocationMac%"
         else:
-            HCPath="%RRLocationLx%" 
-        if HCPath[0]!="%":
+            HCPath = "%RRLocationLx%"
+        if not HCPath.startswith("%"):
             return HCPath
-        print("No RR_ROOT environment variable set!\n Please execute     rrWorkstationInstaller and restart.")
 
-    def writeNodeStr(self,fileID,name,text): 
-        text=text.replace("&","&amp;")
-        text=text.replace("<","&lt;")
-        text=text.replace(">","&gt;")
-        text=text.replace("\"","&quot;")
-        text=text.replace("'","&apos;")
-        fileID.write("    <"+name+">  "+text+"   </"+name+">\n")
+        self.report({'ERROR'},
+                    "No RR_ROOT environment variable set!"
+                    "\n Please execute     rrWorkstationInstaller and restart.")
 
-    def writeNodeInt(self,fileID,name,number):
-        fileID.write("    <"+name+">  "+str(number)+"   </"+name+">\n")
+    @staticmethod
+    def writeNodeStr(fileID, name, text):
+        text = text.replace("&", "&amp;")
+        text = text.replace("<", "&lt;")
+        text = text.replace(">", "&gt;")
+        text = text.replace("\"", "&quot;")
+        text = text.replace("'", "&apos;")
+        fileID.write("    <{0}>  {1}   </{0}>\n".format(name, text))
 
-    def writeNodeBool(self, fileID,name,value):
-        if value:
-            fileID.write("    <"+name+">   1   </"+name+">\n")
-        else:
-            fileID.write("    <"+name+">   0   </"+name+">\n")
-    
-    def setNewTempFileName(self):
-        random.seed()
-        if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
-            if 'TEMP' in os.environ:
-                nam=os.environ['TEMP']
-            else: 
-                nam=os.environ['TMP']
-                nam+="\\"
-        else:
-            nam="/tmp/"
-        nam+="rrSubmitBlender_"
-        nam+=str(random.randrange(1000,10000,1))
-        nam+=".xml"
-        return nam
+    @staticmethod
+    def writeNodeInt(fileID, name, number):
+        fileID.write("    <{0}>  {1}   </{0}>\n".format(name, number))
+
+    @staticmethod
+    def writeNodeBool(fileID, name, value):
+        fileID.write("    <{0}>   {1}   </{0}>\n".format(name, int(value)))
     
     def rrSubmit(self):
-        print("Platform: " + sys.platform)
-        TempFileName=self.setNewTempFileName()
-        print("Create temp Submission File: " + TempFileName)
-        fileID=0
-        fileID = open(TempFileName, "w")
+        self.report({'DEBUG'}, "Platform: {0}".format(sys.platform))
+
+        fileID = tempfile.NamedTemporaryFile(mode='w', prefix="rrSubmitBlender_", suffix=".xml", delete=False)
+        TempFileName = fileID.name
+        self.report({'DEBUG'}, "Create temp Submission File: {0}".format(TempFileName))
+
         fileID.write("<RR_Job_File syntax_version=\"6.0\">\n")
         fileID.write("<DeleteXML>1</DeleteXML>\n")
-        #scn = bpy.data.scenes["Scene"]
+
         scn = bpy.context.scene
-        type = scn.render.image_settings.file_format
-        rendertarget = type.replace("OPEN_", "")
+
+        img_type = scn.render.image_settings.file_format
+        rendertarget = img_type.replace("OPEN_", "")
         if rendertarget == "FFMPEG":
             ImageSingleOutputFile = True
             rendertarget = scn.render.ffmpeg.format
@@ -133,82 +118,100 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
             rendertarget = rendertarget.replace("TARGA_RAW", "RAWTGA")
             rendertarget = rendertarget.replace("TARGA", "TGA")
 
-        if rendertarget.endswith("_MULTILAYER"):  # i.e. EXR_MULTILAYER
-            extension, rendertarget = rendertarget.rsplit("_", 1)
-            extension = "." + extension.lower()
-        else:
-            extension = "." + rendertarget.lower()
-        if extension.startswith(".avi"):
-            ImageSingleOutputFile = True
-            extension = ".avi"
-            rendertarget = rendertarget.replace("_", "")
-
-        extension=extension.replace(".tiff", ".tif")
-        extension=extension.replace(".jpeg", ".jpg")
-        
-        extension=extension.replace(".quicktime", ".mov")
-        extension=extension.replace(".flash", ".flv")
-        extension=extension.replace(".mpeg1", ".mpg")
-        extension=extension.replace(".mpeg2", ".dvd")
-        extension=extension.replace(".mpeg4", ".mp4")
-        
-        if scn.render.filepath.startswith("//"):  # relative path
-            renderOut = os.path.dirname(bpy.data.filepath) + scn.render.filepath
-        else:
-            renderOut = scn.render.filepath
-        if renderOut.endswith('#'):
-            outLen = len(renderOut) - 1
-            renderPadding = outLen - next(i for i in range(outLen, 0, -1) if renderOut[i] != '#')
-
-            if ImageSingleOutputFile:
-                renderOut = "{0}{1:0{3}d}-{2:0{3}d}".format(renderOut, scn.frame_start, scn.frame_end, renderPadding)
-        else:
+        renderOut = bpy.path.abspath(scn.render.filepath)
+        try:
+            pad_idx = renderOut.rindex('#')
+            renderPadding = pad_idx - next(i for i in range(pad_idx, 0, -1) if renderOut[i] != '#')
+        except ValueError:
             renderPadding = 1
 
-        renderOut = renderOut.replace("//", "\\")
-        
+        if ImageSingleOutputFile:
+            renderOut = "{0}{1:0{4}d}-{2:0{4}d}{3}".format(renderOut[:pad_idx + renderPadding - 1],
+                                                        scn.frame_start, scn.frame_end,
+                                                        renderOut[pad_idx:],
+                                                        renderPadding)
+
+        # extension set in the output path takes over in blender
+        renderOut, extension = os.path.splitext(renderOut)
+        if not extension:  # get output extension from render settings
+            if rendertarget.endswith("_MULTILAYER"):  # i.e. EXR_MULTILAYER
+                extension, rendertarget = rendertarget.rsplit("_", 1)
+                extension = "." + extension.lower()
+            else:
+                extension = "." + rendertarget.lower()
+            if extension.startswith(".avi"):
+                ImageSingleOutputFile = True
+                extension = ".avi"
+                rendertarget = rendertarget.replace("_", "")
+
+            extension = extension.replace(".tiff", ".tif")
+            extension = extension.replace(".jpeg", ".jpg")
+
+            extension = extension.replace(".quicktime", ".mov")
+            extension = extension.replace(".flash", ".flv")
+            extension = extension.replace(".mpeg1", ".mpg")
+            extension = extension.replace(".mpeg2", ".dvd")
+            extension = extension.replace(".mpeg4", ".mp4")
+
+        app_ver = bpy.app.version
         writeNodeStr = self.writeNodeStr
         writeNodeInt = self.writeNodeInt
         writeNodeBool = self.writeNodeBool
+
         fileID.write("<Job>\n")
-        writeNodeStr(fileID,"Software", "Blender")
-        writeNodeInt(fileID,"Version",  bpy.app.version[0])
-        writeNodeStr(fileID,"Layer", scn.render.layers[0].name)
-        writeNodeStr(fileID,"SceneName",bpy.data.filepath)
-        writeNodeBool(fileID,"IsActive", True )
-        writeNodeBool(fileID,"ImageSingleOutputFile", ImageSingleOutputFile)
-        writeNodeInt(fileID,"SeqStart",scn.frame_start)
-        writeNodeInt(fileID,"SeqEnd",scn.frame_end)
-        writeNodeInt(fileID,"SeqStep",scn.frame_step)
-        #writeNodeStr(fileID,"ImagePreNumberLetter","_")
-        writeNodeStr(fileID,"ImageDir",os.path.dirname(renderOut) ) 
-        writeNodeStr(fileID,"ImageFilename",os.path.basename(renderOut))
-        writeNodeInt(fileID,"ImageFramePadding", renderPadding)
-        writeNodeStr(fileID,"ImageExtension",extension)
+        writeNodeStr(fileID, "Software", "Blender")
+        writeNodeStr(fileID, "Version",  "{0}.{1}".format(app_ver[0], app_ver[1]))
+        writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
+        writeNodeStr(fileID, "SceneName", bpy.data.filepath)
+        writeNodeBool(fileID, "IsActive", True)
+        writeNodeBool(fileID, "ImageSingleOutputFile", ImageSingleOutputFile)
+        writeNodeInt(fileID, "SeqStart", scn.frame_start)
+        writeNodeInt(fileID, "SeqEnd", scn.frame_end)
+        writeNodeInt(fileID, "SeqStep", scn.frame_step)
+        writeNodeStr(fileID, "ImageDir", os.path.dirname(renderOut))
+        writeNodeStr(fileID, "ImageFilename", os.path.basename(renderOut))
+        writeNodeInt(fileID, "ImageFramePadding", renderPadding)
+        writeNodeStr(fileID, "ImageExtension", extension)
         if rendertarget in ("TGA", "RAWTGA", "JPEG", "IRIS", "IRIZ", "AVIRAW",
                             "AVIJPEG", "PNG", "BMP", "HDR", "TIFF", "EXR", "MULTILAYER",
                             "MPEG", "FRAMESERVER", "CINEON", "DPX", "DDS", "JP2"):
-            writeNodeStr(fileID,"CustomFrameFormat", rendertarget)
+            writeNodeStr(fileID, "CustomFrameFormat", rendertarget)
         fileID.write("</Job>\n")
         fileID.write("</RR_Job_File>\n")
         fileID.close()
-        RR_ROOT=self.get_RR_Root()
-        if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
-            os.system("\""+RR_ROOT+"\\win__rrSubmitter.bat\"  "+TempFileName)
-        elif (sys.platform.lower() == "darwin"):
-            os.system("\""+RR_ROOT+"/bin/mac64/rrSubmitter.app/Contents/MacOS/rrSubmitter\"     "+TempFileName)
+
+        RR_ROOT = self.get_RR_Root()
+        if RR_ROOT is None:
+            return False
+
+        self.report({'DEBUG'}, "Found RR_Root:{0}".format(RR_ROOT))
+
+        if sys.platform.lower().startswith("win"):
+            submitCMD = "\"{0}\\win__rrSubmitter.bat\"  {1}".format(RR_ROOT, TempFileName)
+        elif sys.platform.lower() == "darwin":
+            submitCMD = "\"{0}/bin/mac64/rrSubmitter.app/Contents/MacOS/rrSubmitter\"     {1}".format(RR_ROOT, TempFileName)
         else:
-            os.system("\""+RR_ROOT+"/lx__rrSubmitter.sh\"  "+TempFileName)
-        return
+            submitCMD = "\"{0}/lx__rrSubmitter.sh\"  {1}".format(RR_ROOT, TempFileName)
+
+        try:
+            subprocess.run(submitCMD, check=True)
+        except FileNotFoundError:
+            self.report({'ERROR'}, "rrSubmitter not found\n({0})".format(submitCMD))
+            return False
+        except CalledProcessError:
+            self.report({'ERROR'}, "Error while executing rrSubmitter")
+            return False
+
+        return True
         
     def execute(self, context):
-        #print("Start Scene Submit")
-        RR_ROOT = self.get_RR_Root()
-        #print("Found RR_Root:"+RR_ROOT)
-        print("Saving mainFile...")
+        self.report({'INFO'}, "Saving mainFile...")
         bpy.ops.wm.save_mainfile()
-        self.rrSubmit()
-        print("\nSubmit Scene Successfull")
+        if self.rrSubmit():
+            self.report({'INFO'}, "Submit Launch Successfull")
+        else:
+            self.report({'ERROR'}, "Submit Scene Failed")
+
         return{'FINISHED'}
  
     
