@@ -122,14 +122,15 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         try:
             pad_idx = renderOut.rindex('#')
             renderPadding = pad_idx - next(i for i in range(pad_idx, 0, -1) if renderOut[i] != '#')
+
+            if ImageSingleOutputFile:
+                renderOut = "{0}{1:0{4}d}-{2:0{4}d}{3}".format(renderOut[:pad_idx + renderPadding - 1],
+                                                               scn.frame_start, scn.frame_end,
+                                                               renderOut[pad_idx:],
+                                                               renderPadding)
+
         except ValueError:
             renderPadding = 1
-
-        if ImageSingleOutputFile:
-            renderOut = "{0}{1:0{4}d}-{2:0{4}d}{3}".format(renderOut[:pad_idx + renderPadding - 1],
-                                                        scn.frame_start, scn.frame_end,
-                                                        renderOut[pad_idx:],
-                                                        renderPadding)
 
         # extension set in the output path takes over in blender
         renderOut, extension = os.path.splitext(renderOut)
