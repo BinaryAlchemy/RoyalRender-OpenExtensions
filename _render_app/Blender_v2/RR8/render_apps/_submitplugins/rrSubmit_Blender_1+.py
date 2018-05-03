@@ -188,16 +188,17 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         self.report({'DEBUG'}, "Found RR_Root:{0}".format(RR_ROOT))
 
         if sys.platform.lower().startswith("win"):
-            submitCMD = "\"{0}\\win__rrSubmitter.bat\"  {1}".format(RR_ROOT, TempFileName)
+            submitCMDs = ('{0}\\win__rrSubmitter.bat'.format(RR_ROOT),
+                          TempFileName)
         elif sys.platform.lower() == "darwin":
-            submitCMD = "\"{0}/bin/mac64/rrSubmitter.app/Contents/MacOS/rrSubmitter\"     {1}".format(RR_ROOT, TempFileName)
+            submitCMDs = ('{0}/bin/mac64/rrSubmitter.app/Contents/MacOS/rrSubmitter'.format(RR_ROOT), TempFileName)
         else:
-            submitCMD = "\"{0}/lx__rrSubmitter.sh\"  {1}".format(RR_ROOT, TempFileName)
+            submitCMDs = ('{0}/lx__rrSubmitter.sh'.format(RR_ROOT), TempFileName)
 
         try:
-            subprocess.run(submitCMD, check=True)
+            subprocess.run(submitCMDs, check=True)
         except FileNotFoundError:
-            self.report({'ERROR'}, "rrSubmitter not found\n({0})".format(submitCMD))
+            self.report({'ERROR'}, "rrSubmitter not found\n({0})".format(submitCMDs[0]))
             return False
         except CalledProcessError:
             self.report({'ERROR'}, "Error while executing rrSubmitter")
