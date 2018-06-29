@@ -80,6 +80,25 @@ def getSceneTakes():
     
     return takes
 
+def expandPathParm(parm):
+    """
+    Returns processed and expanded path from input parameter
+    """
+    if len(parm.keyframes()) == 0:
+        expr = parm.unexpandedString()
+        expr_src = expr
+
+        expr = expr.replace("$ACTIVETAKE", "<Channel>")
+        expr = expr.replace("${ACTIVETAKE}", "<Channel>")
+
+        parm.set(expr)
+        path = parm.eval()
+        parm.set(expr_src)
+    else:
+        pass
+
+    return path
+
 class GenericNode(object):
     """
     Abstract class for storing information about a node
@@ -90,7 +109,6 @@ class GenericNode(object):
         self.node_path = node.path()
         self.render_engine = self.getRenderEngine()
         self.render_engine_version = self.getRenderEngineVersion()
-        self.parms = NodeParms(self)
     
     def getRenderEngine(self):
         """
@@ -130,7 +148,11 @@ class GenericNode(object):
             except ImportError:
                 raise ImportError('Failed to import "arnold" python module, htoa is not available.')
         elif self.render_engine == "redshift":
-            return hou.hscript('Redshift_version')
+            ver = hou.hscript('Redshift_version')
+            if not ver.startswith("Unknown"):
+                return ver
+            else:
+                raise ImportError('Failed to run "Redshift_version" command, redshift is not available.')
         else:
             return hou.applicationVersionString()
 
@@ -156,8 +178,20 @@ class RenderNode(GenericNode):
     """
     def __init__(self, node):
         super(RenderNode, self).__init__(node)
+        self.parms = RenderParms(self)
 
-class NodeParms(object):
+class WedgeParms(object):
+    """
+    Class for storing information about parameters from Wedge ROP node
+    """
+    def __init__(self, generic_node):
+        #self.name
+        #self.start
+        #self.end
+        #self.steps
+        pass
+
+class RenderParms(object):
     """
     Class for storing information about parameters from ROP node
     """
@@ -166,20 +200,18 @@ class NodeParms(object):
         self.node_object = generic_node.node_object
         self.cam_path = self.getCameraPath()
         self.cam_stereo = self.isCamStereo()
-        #self.start
-        #self.end
-        #self.steps
+        self.start, self.end, self.steps = self.getFrameRange()
         #self.output_path
         #self.aovs
-        pass
 
     def getCameraPath(self):
         """
         Returns string containing path to camera
         """
-        if self.generic_node_object.render_engine == "arnold" or self.generic_node_object.render_engine == "mantra" or self.generic_node_object.render_engine == "opengl":
+        renderer = self.generic_node_object.render_engine
+        if renderer == "arnold" or renderer == "mantra" or renderer == "opengl":
             return self.node_object.parm("camera").evalAsNode().path()
-        elif self.generic_node_object.render_engine == "redshift":
+        elif renderer == "redshift":
             return self.node_object.parm("RS_renderCamera").evalAsNode().path()
         else:
             return None
@@ -194,5 +226,44 @@ class NodeParms(object):
                 return True
             else:
                 return False
+        else:
+            return None
+    
+    def getFrameRange(self):
+        """
+        Returns a touple of (start, end, steps) frame range in a node
+        """
+        start = self.node_object.parm("f1").eval()
+        end = self.node_object.parm("f2").eval()
+        steps = self.node_object.parm("f3").eval()
+
+        return (start, end, steps)
+    
+    def getOutputPath(self):
+        """
+        Returns expanded string containing path to the output picture
+        """
+        renderer = self.generic_node_object.render_engine
+        parm = None
+
+        if renderer == "arnold":
+            parm = "ar_picture"
+        elif renderer == "redshift":
+            parm = "RS_outputFileNamePrefix"
+        elif renderer == "redshift" and self.node_object.type.name() == "Redshift_Proxy_Output":
+            parm = "RS_archive_file"
+        elif renderer == "mantra":
+            parm = "vm_picture"
+        elif renderer == "geometry":
+            parm = "sopoutput"
+        elif renderer == "alembic":
+            parm = "filename"
+        elif renderer == "opengl":
+            parm = "picture"
+        
+        if parm:
+            parm_obj = self.node_object.parm(parm)
+            path = expandPathParm(parm_obj)
+            return path
         else:
             return None
