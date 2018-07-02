@@ -67,6 +67,19 @@ def getSceneRopNodes():
     
     return out_nodes
 
+def getSceneWedges():
+    """
+    Returns a list of wedge nodes in the whole scene
+    """
+    rops = getRopNodesAtPath("/")
+    wedges = []
+
+    for node in rops:
+        if node.type().name() == "wedge":
+            wedges.append(node)
+    
+    return wedges
+
 def getSceneTakes():
     """
     Rutrns a dict containing takes information
@@ -84,19 +97,20 @@ def expandPathParm(parm):
     """
     Returns processed and expanded path from input parameter
     """
+    in_path = hou.pwd().path()
+    hou.cd(parm.node().path())
+
     if len(parm.keyframes()) == 0:
         expr = parm.unexpandedString()
-        expr_src = expr
-
-        expr = expr.replace("$ACTIVETAKE", "<Channel>")
-        expr = expr.replace("${ACTIVETAKE}", "<Channel>")
-
-        parm.set(expr)
-        path = parm.eval()
-        parm.set(expr_src)
     else:
-        pass
+        expr = parm.eval()
 
+    expr = expr.replace("$ACTIVETAKE", "<Channel>")
+    expr = expr.replace("${ACTIVETAKE}", "<Channel>")
+
+    path = hou.expandString(expr)
+
+    hou.cd(in_path)
     return path
 
 class GenericNode(object):
@@ -116,10 +130,14 @@ class GenericNode(object):
         """
         type_name = self.node_object.type().name()
 
-        if type_name.lower().startswith("redshift"):
+        if type_name.lower() == "redshift_rop":
             return "redshift"
-        elif type_name.lower().startswith("arnold"):
+        elif type_name.lower() == "Redshift_Proxy_Output":
+            return "redshift_proxy"
+        elif type_name.lower() == "arnold":
             return "arnold"
+        elif type_name.lower() == "arnold_denoiser":
+            return "arnold_denoiser"
         elif type_name.lower() == "ifd":
             return "mantra"
         elif type_name.lower() == "geometry":
@@ -141,14 +159,14 @@ class GenericNode(object):
         """
         Returns a string specifying render engine version, or Houdini version if renderer is houdini/mantra
         """
-        if self.render_engine == "arnold":
+        if self.render_engine.startswith("arnold"):
             try:
                 import arnold
                 return arnold.AiGetVersionString()
             except ImportError:
                 raise ImportError('Failed to import "arnold" python module, htoa is not available.')
-        elif self.render_engine == "redshift":
-            ver = hou.hscript('Redshift_version')
+        elif self.render_engine.startswith("redshift"):
+            ver = hou.hscript('Redshift_version')[0]
             if not ver.startswith("Unknown"):
                 return ver
             else:
@@ -166,11 +184,49 @@ class WedgeNode(GenericNode):
         super(WedgeNode, self).__init__(node)
         self.prefix = self.node_object.parm("prefix").eval()
         self.wedge_method = self.node_object.parm("wedgemethod").evalAsString()
-        self.driver_node_path = self.node_object.parm("driver").evalAsNode().path()
+        self.driver_path = self.node_object.parm("driver").evalAsNode().path()
 
         node_inputs = self.node_object.inputs()
         if len( node_inputs ) == 1:
-            self.driver_node_path = node_inputs[0].path()
+            self.driver_path = node_inputs[0].path()
+        
+        self.driver = RenderNode( hou.node(self.driver_path) )
+        self.wedge_parms = self.getWedgeParms()
+    
+    def getWedgeParms(self):
+        """
+        Returns a dictionary of wedge parameters in this structure:
+        {
+            "name 1"  : {
+                "start" : 1,
+                "end" : 10,
+                "steps" : 1
+            },
+            "name 2" : {
+                ...
+            },
+            ...
+        }
+        """
+        multiparm = self.node_object.parm("wedgeparams")
+        wedges_num = multiparm.eval()
+        wedges = {}
+        child_parms = multiparm.multiParmInstances()
+        child_parms = [p.name() for p in child_parms]
+
+        for i in xrange(1, wedges_num + 1):
+            wedge_name = self.node_object.parm("name{num}".format(num = i)).eval()
+            wedge_start = self.node_object.parm("range{num}x".format(num = i)).eval()
+            wedge_end = self.node_object.parm("range{num}y".format(num = i)).eval()
+            wedge_steps = self.node_object.parm("steps{num}".format(num = i)).eval()
+
+            wedges[wedge_name] = {
+                "start" : wedge_start,
+                "end" : wedge_end,
+                "steps" : wedge_steps
+            }
+        
+        return wedges
 
 class RenderNode(GenericNode):
     """
@@ -179,17 +235,6 @@ class RenderNode(GenericNode):
     def __init__(self, node):
         super(RenderNode, self).__init__(node)
         self.parms = RenderParms(self)
-
-class WedgeParms(object):
-    """
-    Class for storing information about parameters from Wedge ROP node
-    """
-    def __init__(self, generic_node):
-        #self.name
-        #self.start
-        #self.end
-        #self.steps
-        pass
 
 class RenderParms(object):
     """
@@ -201,8 +246,8 @@ class RenderParms(object):
         self.cam_path = self.getCameraPath()
         self.cam_stereo = self.isCamStereo()
         self.start, self.end, self.steps = self.getFrameRange()
-        #self.output_path
-        #self.aovs
+        self.output_path = self.getOutputPath()
+        self.aovs = self.getAOVs()
 
     def getCameraPath(self):
         """
@@ -248,9 +293,11 @@ class RenderParms(object):
 
         if renderer == "arnold":
             parm = "ar_picture"
+        elif renderer == "arnold_denoiser":
+            parm = "output"
         elif renderer == "redshift":
             parm = "RS_outputFileNamePrefix"
-        elif renderer == "redshift" and self.node_object.type.name() == "Redshift_Proxy_Output":
+        elif renderer == "redshift_proxy"
             parm = "RS_archive_file"
         elif renderer == "mantra":
             parm = "vm_picture"
@@ -267,3 +314,46 @@ class RenderParms(object):
             return path
         else:
             return None
+    
+    def getAOVs(self):
+        """
+        Returns a dict of aovs in this form { "name" : "path" }
+        """
+        renderer = self.generic_node_object.render_engine
+        if renderer == "arnold":
+            multiparm_name = "ar_aovs"
+            parm_aov_name = "ar_aov_label{num}"
+            parm_aov_file = "ar_aov_separate_file{num}"
+            parm_aov_use_file = "ar_aov_separate{num}"
+        elif renderer == "mantra":
+            multiparm_name = "vm_numaux"
+            parm_aov_name = "vm_variable_plane{num}"
+            parm_aov_file = "vm_filename_plane{num}"
+            parm_aov_use_file = "vm_usefile_plane{num}"
+        elif renderer == "redshift":
+            multiparm_name = "RS_aov"
+            parm_aov_name = "RS_aovSuffix_{num}"
+            parm_aov_file = "RS_aovCustomPrefix_{num}"
+            parm_aov_use_file = 1
+        
+        multiparm = self.node_object.parm(multiparm_name)
+        aovs_num = multiparm.eval()
+        aovs = {}
+        child_parms = multiparm.multiParmInstances()
+        child_parms = [p.name() for p in child_parms]
+
+        for i in xrange(1, aovs_num + 1):
+            aov_name = self.node_object.parm( parm_aov_name.format(num = i) ).eval()
+            aov_file = expandPathParm( self.node_object.parm( parm_aov_file.format(num = i) ) )
+            
+            if parm_aov_use_file == 1:
+                aov_use_file = 1
+            else:
+                aov_use_file = self.node_object.parm( parm_aov_use_file.format(num = i) ).eval()
+
+            if aov_use_file == 1:
+                aovs[aov_name] = aov_file
+            else:
+                aovs[aov_name] = self.output_path
+        
+        return aovs
