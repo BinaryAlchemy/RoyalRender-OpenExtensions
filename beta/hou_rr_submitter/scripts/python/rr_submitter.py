@@ -116,6 +116,8 @@ def expandPathParm(parm):
 class GenericNode(object):
     """
     Abstract class for storing information about a node
+
+    input node parameter is of hou.Node type
     """
     def __init__(self, node):
         self.node_object = node
@@ -297,7 +299,7 @@ class RenderParms(object):
             parm = "output"
         elif renderer == "redshift":
             parm = "RS_outputFileNamePrefix"
-        elif renderer == "redshift_proxy"
+        elif renderer == "redshift_proxy":
             parm = "RS_archive_file"
         elif renderer == "mantra":
             parm = "vm_picture"
@@ -322,16 +324,19 @@ class RenderParms(object):
         renderer = self.generic_node_object.render_engine
         if renderer == "arnold":
             multiparm_name = "ar_aovs"
+            parm_aov_enable = "ar_enable_aov{num}"
             parm_aov_name = "ar_aov_label{num}"
             parm_aov_file = "ar_aov_separate_file{num}"
             parm_aov_use_file = "ar_aov_separate{num}"
         elif renderer == "mantra":
             multiparm_name = "vm_numaux"
+            parm_aov_enable = "vm_disable_plane{num}" # inverted
             parm_aov_name = "vm_variable_plane{num}"
             parm_aov_file = "vm_filename_plane{num}"
             parm_aov_use_file = "vm_usefile_plane{num}"
         elif renderer == "redshift":
             multiparm_name = "RS_aov"
+            parm_aov_enable = "RS_aovEnable_{num}"
             parm_aov_name = "RS_aovSuffix_{num}"
             parm_aov_file = "RS_aovCustomPrefix_{num}"
             parm_aov_use_file = 1
@@ -343,17 +348,22 @@ class RenderParms(object):
         child_parms = [p.name() for p in child_parms]
 
         for i in xrange(1, aovs_num + 1):
-            aov_name = self.node_object.parm( parm_aov_name.format(num = i) ).eval()
-            aov_file = expandPathParm( self.node_object.parm( parm_aov_file.format(num = i) ) )
+            aov_enable = self.node_object.parm( parm_aov_enable.format(num = i) ).eval()
+            if renderer == "mantra":
+                aov_enable = 1 - aov_enable
             
-            if parm_aov_use_file == 1:
-                aov_use_file = 1
-            else:
-                aov_use_file = self.node_object.parm( parm_aov_use_file.format(num = i) ).eval()
+            if aov_enable == 1:
+                aov_name = self.node_object.parm( parm_aov_name.format(num = i) ).eval()
+                aov_file = expandPathParm( self.node_object.parm( parm_aov_file.format(num = i) ) )
+                
+                if parm_aov_use_file == 1:
+                    aov_use_file = 1
+                else:
+                    aov_use_file = self.node_object.parm( parm_aov_use_file.format(num = i) ).eval()
 
-            if aov_use_file == 1:
-                aovs[aov_name] = aov_file
-            else:
-                aovs[aov_name] = self.output_path
+                if aov_use_file == 1 and aov_file != "":
+                    aovs[aov_name] = aov_file
+                else:
+                    aovs[aov_name] = self.output_path
         
         return aovs
