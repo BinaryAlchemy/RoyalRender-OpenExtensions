@@ -1,4 +1,264 @@
 import hou
+import sys
+import os
+import subprocess
+
+
+
+#####################################################################################
+# This function has to be changed if an app should show info and error dialog box   #
+#####################################################################################
+
+def writeInfo(msg):
+    print(msg)
+    #nuke.message(msg)
+
+def writeError(msg):
+    print(msg)
+    #nuke.message(msg)
+
+    
+    
+
+##############################################
+# JOB CLASS                                  #
+##############################################
+
+
+class rrJob(object):
+         
+    def __init__(self):
+        self.clear()
+    
+    def clear(self):
+        self.version = ""
+        self.software = ""
+        self.renderer = ""
+        self.RequiredLicenses = ""
+        self.sceneName = ""
+        self.sceneDatabaseDir = ""
+        self.seqStart = 0
+        self.seqEnd = 100
+        self.seqStep = 1
+        self.seqFileOffset = 0
+        self.seqFrameSet = ""
+        self.imageWidth = 99
+        self.imageHeight = 99
+        self.imageDir = ""
+        self.imageFileName = ""
+        self.imageFramePadding = 4
+        self.imageExtension = ""
+        self.imagePreNumberLetter = ""
+        self.imageSingleOutput = False
+        self.imageStereoR = ""
+        self.imageStereoL = ""
+        self.sceneOS = ""
+        self.camera = ""
+        self.layer = ""
+        self.channel = ""
+        self.maxChannels = 0
+        self.channelFileName = []
+        self.channelExtension = []
+        self.isActive = False
+        self.sendAppBit = ""
+        self.preID = ""
+        self.waitForPreID  = ""
+        self.CustomA  = ""
+        self.CustomB  = ""
+        self.CustomC  = ""
+        self.LocalTexturesFile  = ""
+        self.rrSubmitVersion= "%rrVersion%"
+
+    # from infix.se (Filip Solomonsson)
+    def indent(self, elem, level=0):
+        i = "\n" + level * ' '
+        if len(elem):
+            if not elem.text or not elem.text.strip():
+                elem.text = i + " "
+            for e in elem:
+                self.indent(e, level + 1)
+                if not e.tail or not e.tail.strip():
+                    e.tail = i + " "
+            if not e.tail or not e.tail.strip():
+                e.tail = i
+        else:
+            if level and (not elem.tail or not elem.tail.strip()):
+                elem.tail = i
+        return True
+
+    def subE(self, r, e, text):
+        sub = SubElement(r, e)
+        if (type(text) == unicode ):
+            sub.text = text.encode('utf8')
+        else:
+            sub.text = str(text).decode("utf8")
+        return sub
+    
+
+    def writeToXMLstart(self, submitOptions ):
+        rootElement = Element("rrJob_submitFile")
+        rootElement.attrib["syntax_version"] = "6.0"
+        self.subE(rootElement, "DeleteXML", "1")
+        self.subE(rootElement, "SubmitterParameter", submitOptions)
+        # YOU CAN ADD OTHER NOT SCENE-INFORMATION PARAMETERS USING THIS FORMAT:
+        # self.subE(jobElement,"SubmitterParameter","PARAMETERNAME=" + PARAMETERVALUE_AS_STRING)
+        return rootElement
+
+    def writeToXMLJob(self, rootElement):
+
+        jobElement = self.subE(rootElement, "Job", "")
+        self.subE(jobElement, "rrSubmitterPluginVersion", "%rrVersion%")
+        self.subE(jobElement, "Software", self.software)
+        self.subE(jobElement, "Renderer", self.renderer)
+        self.subE(jobElement, "RequiredLicenses", self.RequiredLicenses)
+        self.subE(jobElement, "Version", self.version)
+        self.subE(jobElement, "SceneName", self.sceneName)
+        self.subE(jobElement, "SceneDatabaseDir", self.sceneDatabaseDir)
+        self.subE(jobElement, "IsActive", self.isActive)
+        self.subE(jobElement, "SeqStart", self.seqStart)
+        self.subE(jobElement, "SeqEnd", self.seqEnd)
+        self.subE(jobElement, "SeqStep", self.seqStep)
+        self.subE(jobElement, "SeqFileOffset", self.seqFileOffset)
+        self.subE(jobElement, "SeqFrameSet", self.seqFrameSet)
+        self.subE(jobElement, "ImageWidth", int(self.imageWidth))
+        self.subE(jobElement, "ImageHeight", int(self.imageHeight))
+        self.subE(jobElement, "ImageDir", self.imageDir)
+        self.subE(jobElement, "ImageFilename", self.imageFileName)
+        self.subE(jobElement, "ImageFramePadding", self.imageFramePadding)
+        self.subE(jobElement, "ImageExtension", self.imageExtension)
+        self.subE(jobElement, "ImageSingleOutput", self.imageSingleOutput)
+        self.subE(jobElement, "ImagePreNumberLetter", self.imagePreNumberLetter)
+        self.subE(jobElement, "ImageStereoR", self.imageStereoR)
+        self.subE(jobElement, "ImageStereoL", self.imageStereoL)
+        self.subE(jobElement, "SceneOS", self.sceneOS)
+        self.subE(jobElement, "Camera", self.camera)
+        self.subE(jobElement, "Layer", self.layer)
+        self.subE(jobElement, "Channel", self.channel)
+        self.subE(jobElement, "SendAppBit", self.sendAppBit)
+        self.subE(jobElement, "PreID", self.preID)
+        self.subE(jobElement, "WaitForPreID", self.waitForPreID)
+        self.subE(jobElement, "CustomA", self.CustomA)
+        self.subE(jobElement, "CustomB", self.CustomB)
+        self.subE(jobElement, "CustomC", self.CustomC)
+        self.subE(jobElement, "rrSubmitVersion", self.rrSubmitVersion)
+        self.subE(jobElement, "LocalTexturesFile", self.LocalTexturesFile)
+        for c in range(0,self.maxChannels):
+           self.subE(jobElement,"ChannelFilename",self.channelFileName[c])
+           self.subE(jobElement,"ChannelExtension",self.channelExtension[c])
+        return True
+
+
+
+    def writeToXMLEnd(self, f,rootElement):
+        xml = ElementTree(rootElement)
+        self.indent(xml.getroot())
+
+        if not f == None:
+            xml.write(f)
+            f.close()
+        else:
+            print("No valid file has been passed to the function")
+            try:
+                f.close()
+            except:
+                pass
+            return False
+        return True
+
+
+
+##############################################
+# Global Functions                           #
+##############################################
+
+def getRR_Root():
+    if os.environ.has_key('RR_ROOT'):
+        return os.environ['RR_ROOT']
+    HCPath="%"
+    if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
+        HCPath="%RRLocationWin%"
+    elif (sys.platform.lower() == "darwin"):
+        HCPath="%RRLocationMac%"
+    else:
+        HCPath="%RRLocationLx%"
+    if HCPath[0]!="%":
+        return HCPath
+    writeError("This plugin was not installed via rrWorkstationInstaller!")
+
+
+def getNewTempFileName():
+    random.seed()
+    if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
+        if os.environ.has_key('TEMP'):
+            nam=os.environ['TEMP']
+        else:
+            nam=os.environ['TMP']
+        nam+="\\"
+    else:
+        nam="/tmp/"
+    nam+="rrSubmitNuke_"
+    nam+=str(random.randrange(1000,10000,1))
+    nam+=".xml"
+    return nam
+
+def getRRSubmitterPath():
+    ''' returns the rrSubmitter filename '''
+    rrRoot = getRR_Root()
+    if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
+        rrSubmitter = rrRoot+"\\win__rrSubmitter.bat"
+    elif (sys.platform.lower() == "darwin"):
+        rrSubmitter = rrRoot+"/bin/mac64/rrStartLocal rrSubmitter "
+    else:
+        rrSubmitter = rrRoot+"/lx__rrSubmitter.sh\""
+    return rrSubmitter
+
+def getRRSubmitterconsolePath():
+    ''' returns the rrSubmitter filename '''
+    rrRoot = getRR_Root()
+    if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
+        rrSubmitter = rrRoot+"\\bin\\win64\\rrStartLocal rrSubmitterconsole "
+    elif (sys.platform.lower() == "darwin"):
+        rrSubmitter = rrRoot+"/bin/mac64/rrStartLocal rrSubmitterconsole "
+    else:
+        rrSubmitter = rrRoot+"/bin/lx64/rrStartLocal rrSubmitterconsole "
+    return rrSubmitter
+    
+
+def getOSString():
+    if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
+        return "win"
+    elif (sys.platform.lower() == "darwin"):
+        return "osx"
+    else:
+        return "lx"
+
+    
+def submitJobsToRR(jobList,submitOptions, nogui=False):
+    tmpFileName = getNewTempFileName()
+    tmpFile = open(tmpFileName, "w")
+    xmlObj= jobList[0].writeToXMLstart(submitOptions)
+    for submitjob in jobList:
+        submitjob.writeToXMLJob(xmlObj)
+    ret = jobList[0].writeToXMLEnd(tmpFile,xmlObj)
+    if ret:
+        #writeInfo("Job written to " + tmpFile.name)
+        pass
+    else:
+        writeError("Error - There was a problem writing the job file to " + tmpFile.name)
+    commandline=""
+    if nogui:
+        commandline=getRRSubmitterconsolePath() + "  \"" + tmpFileName + "\"" + ' -Wait'
+    else:
+        commandline= getRRSubmitterPath()+"  \""+tmpFileName+"\""        
+    #writeInfo("Executing "+commandline)
+    os.system(commandline)
+
+
+
+##############################################
+# Houdini Functions                          #
+##############################################    
+    
 
 def isRenderable(node):
     """
@@ -191,7 +451,6 @@ class WedgeNode(GenericNode):
         node_inputs = self.node_object.inputs()
         if len( node_inputs ) == 1:
             self.driver_path = node_inputs[0].path()
-        
         self.driver = RenderNode( hou.node(self.driver_path) )
         self.wedge_parms = self.getWedgeParms()
     
@@ -232,7 +491,7 @@ class WedgeNode(GenericNode):
 
 class RenderNode(GenericNode):
     """
-    Class representing remder node
+    Class representing reNder node
     """
     def __init__(self, node):
         super(RenderNode, self).__init__(node)
@@ -365,5 +624,32 @@ class RenderParms(object):
                     aovs[aov_name] = aov_file
                 else:
                     aovs[aov_name] = self.output_path
-        
         return aovs
+
+        
+def createJobList(jobList, renderNodes, wedges, takes):
+    for node in renderNodes:
+        pass
+
+        
+        
+        
+def rrSubmit_new():
+    writeInfo ("rrSubmit %rrVersion%")
+    hou.hipFile.save()
+    sceneFile = hou.hipFile.name()
+    rrRoot = getRR_Root()
+    if ((sceneFile==None) or (len(sceneFile)==0)):
+        return
+    wedges= getSceneWedges()
+    takes= getSceneTakes()
+    renderNodes= getSceneRopNodes()
+    jobList= []
+    createJobList(jobList, renderNodes, wedges, takes)
+    
+    submitOptions=""
+    submitJobsToRR(jobList,submitOptions,nogui)
+        
+
+rrSubmit_new()        
+        
