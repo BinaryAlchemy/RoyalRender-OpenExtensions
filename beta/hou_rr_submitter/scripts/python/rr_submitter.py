@@ -67,7 +67,6 @@ class rrJob(object):
         self.CustomB  = ""
         self.CustomC  = ""
         self.LocalTexturesFile  = ""
-        self.rrSubmitVersion= "%rrVersion%"
 
     # from infix.se (Filip Solomonsson)
     def indent(self, elem, level=0):
@@ -105,9 +104,8 @@ class rrJob(object):
         return rootElement
 
     def writeToXMLJob(self, rootElement):
-
         jobElement = self.subE(rootElement, "Job", "")
-        self.subE(jobElement, "rrSubmitterPluginVersion", "%rrVersion%")
+        self.subE(jobElement, "rrSubmitterPluginVersion", "%rrVersion%-s")
         self.subE(jobElement, "Software", self.software)
         self.subE(jobElement, "Renderer", self.renderer)
         self.subE(jobElement, "RequiredLicenses", self.RequiredLicenses)
@@ -140,7 +138,6 @@ class rrJob(object):
         self.subE(jobElement, "CustomA", self.CustomA)
         self.subE(jobElement, "CustomB", self.CustomB)
         self.subE(jobElement, "CustomC", self.CustomC)
-        self.subE(jobElement, "rrSubmitVersion", self.rrSubmitVersion)
         self.subE(jobElement, "LocalTexturesFile", self.LocalTexturesFile)
         for c in range(0,self.maxChannels):
            self.subE(jobElement,"ChannelFilename",self.channelFileName[c])
@@ -298,7 +295,6 @@ def getRopNodesAtPath(root_path):
 def getSceneRopNodes():
     """
     If a node is selected, finds all renderable nodes in it, if not, then finds all renderable nodes in the scene
-    
     Returns a list of hou.Node objects
     """
     out_nodes = []
@@ -367,8 +363,17 @@ def expandPathParm(parm):
 
     expr = expr.replace("$ACTIVETAKE", "<Channel>")
     expr = expr.replace("${ACTIVETAKE}", "<Channel>")
-
+    expr = expr.replace("$WEDGE", "<Wedge>")
+    expr = expr.replace("${WEDGE}", "<Wedge>")
+    expr = expr.replace("${AOV}.", "<ValueVar @AOV.>")
+    expr = expr.replace("${AOV}/", "<ValueVar @AOV/>")
+    expr = expr.replace("${AOV}_", "<ValueVar @AOV_>")
+    expr = expr.replace("$AOV.", "<ValueVar @AOV.>")
+    expr = expr.replace("$AOV/", "<ValueVar @AOV/>")
+    expr = expr.replace("$AOV_", "<ValueVar @AOV_>")
     path = hou.expandString(expr)
+    expr = expr.replace("@AOV", "@$AOV")  #$AOV is required for the output setting at render time, but expandString would remove it.
+    
 
     hou.cd(in_path)
     return path
@@ -491,7 +496,7 @@ class WedgeNode(GenericNode):
 
 class RenderNode(GenericNode):
     """
-    Class representing reNder node
+    Class representing render node
     """
     def __init__(self, node):
         super(RenderNode, self).__init__(node)
@@ -509,7 +514,7 @@ class RenderParms(object):
         self.start, self.end, self.steps = self.getFrameRange()
         self.output_path = self.getOutputPath()
         self.aovs = self.getAOVs()
-
+        
     def getCameraPath(self):
         """
         Returns string containing path to camera
@@ -626,15 +631,108 @@ class RenderParms(object):
                     aovs[aov_name] = self.output_path
         return aovs
 
+    def createBaseJob(self):
+        newJob= rrJob()
+        newJob.software=  "Houdini"
+        newJob.version= "????"  #Todo: MISSING
+        newJob.sceneName= hou.hipFile.name()
+        newJob.sceneOS = getOSString()
+        newJob.seqStart=  self.parms.start
+        newJob.seqEnd= self.parms.end
+        newJob.seqStep= self.parms.steps
+        newJob.camera= self.parms.cam_path
+        newJob.imageWidth= 100 #Todo: MISSING
+        newJob.imageHeight= 100 #Todo: MISSING
+        return newJob
         
-def createJobList(jobList, renderNodes, wedges, takes):
-    for node in renderNodes:
+        
+    def createJobsFromNode_arnold(self, jobList, ropNodes, wedges, takes):          
+        #TODO: Missing
         pass
+        
+        
+    def createJobsFromNode_arnoldDenoise(self, jobList, ropNodes, wedges, takes):          
+        #TODO: Missing
+        pass
+        
+        
+    def createJobsFromNode_redshift(self, jobList, ropNodes, wedges, takes):          
+        #TODO: Missing
+        pass
+        
+        
+    def createJobsFromNode_redshiftProxy(self, jobList, ropNodes, wedges, takes):          
+        createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
+        
+        
+    def createJobsFromNode_mantra(self, jobList, ropNodes, wedges, takes):          
+        #TODO: Missing
+        pass
+        
+        
+    def createJobsFromNode_alembic(self, jobList, ropNodes, wedges, takes):          
+        #TODO: Missing
+        pass
+        
+        
+    def createJobsFromNode_openGL(self, jobList, ropNodes, wedges, takes):          
+        newJob= createBaseJob()
+        newJob.renderer=  self.generic_node_object.render_engine
+       
 
         
+        # self.subE(jobElement, "ImageFilename", self.imageFileName)
+        # self.subE(jobElement, "ImageFramePadding", self.imageFramePadding)
+        # self.subE(jobElement, "ImageExtension", self.imageExtension)
+        # self.subE(jobElement, "ImageSingleOutput", self.imageSingleOutput)
+        # self.subE(jobElement, "ImagePreNumberLetter", self.imagePreNumberLetter)
+        # self.subE(jobElement, "ImageStereoR", self.imageStereoR)
+        # self.subE(jobElement, "ImageStereoL", self.imageStereoL)
+        # self.subE(jobElement, "Layer", self.layer)
+        # self.subE(jobElement, "Channel", self.channel)
+        # for c in range(0,self.maxChannels):
+           # self.subE(jobElement,"ChannelFilename",self.channelFileName[c])
+           # self.subE(jobElement,"ChannelExtension",self.channelExtension[c])
+
+           
         
         
-def rrSubmit_new():
+        newJob.isActive = True
+        jobList.append(newJob)        
+        
+        
+        
+        
+    def createJobsFromNode(self, jobList, ropNodes, wedges, takes):  
+        renderer = self.generic_node_object.render_engine
+        if renderer == "arnold":
+            createJobsFromNode_arnold(jobList, ropNodes, wedges, takes)
+        elif renderer == "arnold_denoiser":
+            createJobsFromNode_arnoldDenoise(jobList, ropNodes, wedges, takes)
+        elif renderer == "redshift":
+            createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
+        elif renderer == "redshift_proxy":
+            createJobsFromNode_redshiftProxy(jobList, ropNodes, wedges, takes)
+        elif renderer == "mantra":
+            createJobsFromNode_mantra(jobList, ropNodes, wedges, takes)
+        elif renderer == "geometry":
+            createJobsFromNode_geometry(jobList, ropNodes, wedges, takes)
+        elif renderer == "alembic":
+            createJobsFromNode_alembic(jobList, ropNodes, wedges, takes)
+        elif renderer == "opengl":
+            createJobsFromNode_openGL(jobList, ropNodes, wedges, takes)
+        
+        
+        
+        
+def createJobList(jobList, ropNodes, wedges, takes):
+    for node in ropNodes:
+        renderNode= RenderNode( node )
+        renderNode.createJobsFromNode(jobList, ropNodes, wedges, takes)
+        
+        
+        
+def rrSubmit_scripted():
     writeInfo ("rrSubmit %rrVersion%")
     hou.hipFile.save()
     sceneFile = hou.hipFile.name()
@@ -643,13 +741,14 @@ def rrSubmit_new():
         return
     wedges= getSceneWedges()
     takes= getSceneTakes()
-    renderNodes= getSceneRopNodes()
+    ropNodes= getSceneRopNodes()
     jobList= []
-    createJobList(jobList, renderNodes, wedges, takes)
+    createJobList(jobList, ropNodes, wedges, takes)
     
     submitOptions=""
+    
     submitJobsToRR(jobList,submitOptions,nogui)
         
 
-rrSubmit_new()        
+rrSubmit_scripted()        
         
