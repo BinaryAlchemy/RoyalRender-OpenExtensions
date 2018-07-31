@@ -119,40 +119,50 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
             rendertarget = rendertarget.replace("TARGA", "TGA")
 
         renderOut = bpy.path.abspath(scn.render.filepath)
+
         try:
-            pad_idx = renderOut.rindex('#')
-            renderPadding = pad_idx - next(i for i in range(pad_idx, 0, -1) if renderOut[i] != '#')
-
-            if ImageSingleOutputFile:
-                renderOut = "{0}{1:0{4}d}-{2:0{4}d}{3}".format(renderOut[:pad_idx + renderPadding - 1],
-                                                               scn.frame_start, scn.frame_end,
-                                                               renderOut[pad_idx:],
-                                                               renderPadding)
-
+            hash_idx = renderOut.rindex('#')
+            renderPadding = hash_idx - next(i for i in range(hash_idx, 0, -1) if renderOut[i] != '#')
         except ValueError:
-            renderPadding = 1
+            hash_idx = -1
+            renderPadding = 4
 
-        # extension set in the output path takes over in blender
-        renderOut, extension = os.path.splitext(renderOut)
-        if not extension:  # get output extension from render settings
-            if rendertarget.endswith("_MULTILAYER"):  # i.e. EXR_MULTILAYER
-                extension, rendertarget = rendertarget.rsplit("_", 1)
-                extension = "." + extension.lower()
-            else:
+        extension = ""
+
+        if scn.render.use_file_extension:
+            if ImageSingleOutputFile:
                 extension = "." + rendertarget.lower()
-            if extension.startswith(".avi"):
-                ImageSingleOutputFile = True
-                extension = ".avi"
-                rendertarget = rendertarget.replace("_", "")
 
-            extension = extension.replace(".tiff", ".tif")
-            extension = extension.replace(".jpeg", ".jpg")
+                if extension.startswith(".avi"):
+                    extension = ".avi"
+                    rendertarget = rendertarget.replace("_", "")
 
-            extension = extension.replace(".quicktime", ".mov")
-            extension = extension.replace(".flash", ".flv")
-            extension = extension.replace(".mpeg1", ".mpg")
-            extension = extension.replace(".mpeg2", ".dvd")
-            extension = extension.replace(".mpeg4", ".mp4")
+                extension = extension.replace(".tiff", ".tif")
+                extension = extension.replace(".jpeg", ".jpg")
+
+                extension = extension.replace(".quicktime", ".mov")
+                extension = extension.replace(".flash", ".flv")
+                extension = extension.replace(".mpeg1", ".mpg")
+                extension = extension.replace(".mpeg2", ".dvd")
+                extension = extension.replace(".mpeg4", ".mp4")
+
+                # if the video extension is not part of the output filename,
+                # blender will add the frame range
+                if renderOut.lower().endswith(extension.lower()):
+                    renderOut = renderOut[:-len(extension)]
+                else:
+                    if hash_idx == -1:
+                        renderOut = "{0}{1:0{3}d}-{2:0{3}d}".format(renderOut,
+                                                                    scn.frame_start, scn.frame_end,
+                                                                    renderPadding)
+                    else:
+                        prefix, suffix = renderOut.rsplit("#" * renderPadding, 1)
+                        renderOut = "{0}{1:0{3}d}-{2:0{3}d}{4}".format(prefix,
+                                                                       scn.frame_start, scn.frame_end,
+                                                                       renderPadding,
+                                                                       suffix)
+            else:
+                extension = scn.render.file_extension
 
         app_ver = bpy.app.version
         writeNodeStr = self.writeNodeStr
@@ -162,7 +172,6 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         fileID.write("<Job>\n")
         writeNodeStr(fileID, "Software", "Blender")
         writeNodeStr(fileID, "Version",  "{0}.{1}".format(app_ver[0], app_ver[1]))
-        writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
         writeNodeStr(fileID, "SceneName", bpy.data.filepath)
         writeNodeBool(fileID, "IsActive", True)
         writeNodeBool(fileID, "ImageSingleOutputFile", ImageSingleOutputFile)
@@ -173,6 +182,10 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         writeNodeStr(fileID, "ImageFilename", os.path.basename(renderOut))
         writeNodeInt(fileID, "ImageFramePadding", renderPadding)
         writeNodeStr(fileID, "ImageExtension", extension)
+        if 'MULTILAYER' in rendertarget:
+            rendertarget = "MULTILAYER"
+        else:
+            writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
         if rendertarget in ("TGA", "RAWTGA", "JPEG", "IRIS", "IRIZ", "AVIRAW",
                             "AVIJPEG", "PNG", "BMP", "HDR", "TIFF", "EXR", "MULTILAYER",
                             "MPEG", "FRAMESERVER", "CINEON", "DPX", "DDS", "JP2"):
@@ -200,7 +213,7 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         except FileNotFoundError:
             self.report({'ERROR'}, "rrSubmitter not found\n({0})".format(submitCMDs[0]))
             return False
-        except CalledProcessError:
+        except subprocess.CalledProcessError:
             self.report({'ERROR'}, "Error while executing rrSubmitter")
             return False
 
