@@ -14,6 +14,7 @@ def writeInfo(msg):
     #nuke.message(msg)
 
 def writeError(msg):
+    #TODO: Replace with an UI error dialog
     print(msg)
     #nuke.message(msg)
 
