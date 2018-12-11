@@ -162,7 +162,7 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         fileID.write("<Job>\n")
         writeNodeStr(fileID, "Software", "Blender")
         writeNodeStr(fileID, "Version",  "{0}.{1}".format(app_ver[0], app_ver[1]))
-        writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
+        #writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
         writeNodeStr(fileID, "SceneName", bpy.data.filepath)
         writeNodeBool(fileID, "IsActive", True)
         writeNodeBool(fileID, "ImageSingleOutputFile", ImageSingleOutputFile)
