@@ -169,6 +169,11 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         writeNodeInt = self.writeNodeInt
         writeNodeBool = self.writeNodeBool
 
+        if scn.cycles.device == 'GPU':
+            fileID.write("<SubmitterParameter>")
+            fileID.write("COCyclesEnableGPU=1~1")
+            fileID.write("</SubmitterParameter>")
+        
         fileID.write("<Job>\n")
         writeNodeStr(fileID, "Software", "Blender")
         writeNodeStr(fileID, "Version",  "{0}.{1}".format(app_ver[0], app_ver[1]))
