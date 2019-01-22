@@ -1,0 +1,86 @@
+<rrJob_submitFile syntax_version="6.0">
+
+<!-- 
+Note: The RR submission plugins (E.g. Nuke, Maya, ...) set ImageFilename only and NO ImageFileNameVariables.
+The rrSubmitter converts this single ImageFilename value into ImageFilename and ImageFileNameVariables
+ImageFilename is most of the time the same as ImageFileNameVariables, but it can have special conditions/conversion parts how to split into ImageFilename and ImageFileNameVariables.
+As we do not have any information about these special flags any more, we have to save both ImageFilename and ImageFileNameVariables in this export for submission.
+If you want to change the image filename, we recommend to use the same single ImageFilename as the submission plugins export.
+Otherwise you have to perfectly match (not equal) ImageFilename and ImageFileNameVariables. In case you do this wrong, you tell Maya to render to ImageFileNameVariables and RR checks for ImageFilename. Which will fail. 
+-->
+<SubmitterParameter>     AJLP=1~0 ALRO=1~0 ALSC=1~0 ATR=1~0 ADCF=1~0 AJ=1~0 A-RM=1~0 AAJ=1~0 C=1~0 CEXR=1~0 CSHN=1~ CVN=1~ DSTE=1~0 DNCFF=1~0 DNSPJ=1~0 GPU=1~0 IC=1~0 KSO=1~0 LJ=1~0 MCAAT=1~1500 MC=1~30 MFT=1~0 MLR=1~30 MFSK=1~0      </SubmitterParameter>
+<SubmitterParameter>     MOSS=1~0 NFFL=1~0 NFD=1~0 NPTC=1~0 NFC=1~ NFP=1~0 NFW=1~205 NP=1~5 OIS=1~0 OIT=1~0 O=1~0 P-CF=1~0 PG2.2=1~0 P=1~50 R-EJAH=1~0 RPF=1~0 RQ=1~0 RV=1~0 RM=1~0 SJD=1~0 SDMAX=1~25 SDMAXC=1~25 SDMIN=1~10 SDMINC=1~10      </SubmitterParameter>
+<SubmitterParameter>     SD=1~1 SMI=1~0 UN=1~none =1~0      </SubmitterParameter>
+
+<Job>
+    <ID>    0    </ID>
+    <IDAsString>    {AAA }    </IDAsString>
+    <IsActive>    true    </IsActive>
+    <SceneName>    I:\3juraj\Houdini\box_redshift.hipnc    </SceneName>
+    <SceneDatabaseDir>    I:\3juraj\Houdini\    </SceneDatabaseDir>
+    <Camera>    /obj/cam1    </Camera>
+    <Layer>    /out/Redshift_ROP1    </Layer>
+    <Software>    Houdini    </Software>
+    <Version>    16    </Version>
+    <rrSubmitterPluginVersion>    py+ 8.2.11b    </rrSubmitterPluginVersion>
+    <Renderer>    createRS    </Renderer>
+    <RequiredLicenses>    Houdini    </RequiredLicenses>
+    <SeqStart>    1    </SeqStart>
+    <SeqEnd>    25    </SeqEnd>
+    <SeqStep>    1    </SeqStep>
+    <ImageWidth>    640    </ImageWidth>
+    <ImageHeight>    480    </ImageHeight>
+    <TotalFrames>    25    </TotalFrames>
+    <ImageDir>    &lt;Database&gt;archive\    </ImageDir>
+    <ImageFilename>    filename.    </ImageFilename>
+    <ImageFileNameVariables>        </ImageFileNameVariables>
+    <ImageExtension>    .rs    </ImageExtension>
+    <ImageFramePadding>    4    </ImageFramePadding>
+    <ImageSingleOutputFile>    false    </ImageSingleOutputFile>
+    <sceneOS>    Windows    </sceneOS>
+    <rrJobOS>    Windows    </rrJobOS>
+    <LocalTexturesFile>        </LocalTexturesFile>
+    <PreID>    1    </PreID>
+    <CustomSeQName>    hift    </CustomSeQName>
+    <SubmitterParameter>     CPN=1~_-_ CSQN=1~hift      </SubmitterParameter>
+</Job>
+
+
+<Job>
+    <ID>    0    </ID>
+    <IDAsString>    {AAA }    </IDAsString>
+    <IsActive>    true    </IsActive>
+    <SceneName>    &lt;Database&gt;archive\filename.&lt;FN4&gt;.rs    </SceneName>
+    <SceneDatabaseDir>    I:\3juraj\Houdini\    </SceneDatabaseDir>
+    <Camera>    /obj/cam1    </Camera>
+    <Layer>    /out/Redshift_ROP1    </Layer>
+    <Software>    Redshift    </Software>
+    <Version>    16    </Version>
+    <rrSubmitterPluginVersion>    py+ 8.2.11b    </rrSubmitterPluginVersion>
+    <Renderer>    Houdini    </Renderer>
+    <RequiredLicenses>    Redshift    </RequiredLicenses>
+    <customRenVer_Houdini>    16.5.571    </customRenVer_Houdini>
+    <SeqStart>    1    </SeqStart>
+    <SeqEnd>    25    </SeqEnd>
+    <SeqStep>    1    </SeqStep>
+    <ImageWidth>    640    </ImageWidth>
+    <ImageHeight>    480    </ImageHeight>
+    <TotalFrames>    25    </TotalFrames>
+    <ImageDir>    &lt;Database&gt;render\box_redshift\Redshift_ROP1\    </ImageDir>
+    <ImageFilename>    S022_v2_Redshift_ROP1.&lt;ValueVar @$AOV.&gt;v17.    </ImageFilename>
+    <ImageFileNameVariables>        </ImageFileNameVariables>
+    <ImageExtension>    .exr    </ImageExtension>
+    <ImageFramePadding>    4    </ImageFramePadding>
+    <ImageSingleOutputFile>    false    </ImageSingleOutputFile>
+    <sceneOS>    Windows    </sceneOS>
+    <rrJobOS>    Windows    </rrJobOS>
+    <ChannelFilename>    &lt;Database&gt;render\box_redshift\Redshift_ROP1\S022_v2_Redshift_ROP1.ao.v17.    </ChannelFilename>
+    <ChannelExtension>    .exr    </ChannelExtension>
+    <LocalTexturesFile>        </LocalTexturesFile>
+    <PreID>    2    </PreID>
+    <WaitForPreID>    1    </WaitForPreID>
+    <SubmitterParameter>     CPN=1~box_redshift CSQN=1~      </SubmitterParameter>
+</Job>
+
+
+</rrJob_submitFile>
