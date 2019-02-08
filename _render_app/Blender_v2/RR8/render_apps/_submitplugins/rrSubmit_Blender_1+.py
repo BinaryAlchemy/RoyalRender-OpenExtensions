@@ -206,16 +206,26 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
 
         self.report({'DEBUG'}, "Found RR_Root:{0}".format(RR_ROOT))
 
+        is_win_os = False
         if sys.platform.lower().startswith("win"):
             submitCMDs = ('{0}\\win__rrSubmitter.bat'.format(RR_ROOT),
                           TempFileName)
+            is_win_os = True
         elif sys.platform.lower() == "darwin":
             submitCMDs = ('{0}/bin/mac64/rrSubmitter.app/Contents/MacOS/rrSubmitter'.format(RR_ROOT), TempFileName)
         else:
             submitCMDs = ('{0}/lx__rrSubmitter.sh'.format(RR_ROOT), TempFileName)
 
         try:
-            subprocess.run(submitCMDs, check=True)
+            if is_win_os:
+                subprocess.run(submitCMDs, check=True, close_fds=True)
+            else:
+                # subprocess.run(...) will not free the handles on Unix
+                # we check manually and use Popen, or rrSubmitter will lock blender
+                # until it's closed
+                if not os.path.isfile(submitCMDs[0]):
+                    raise FileNotFoundError
+                subprocess.Popen(submitCMDs, close_fds=True)
         except FileNotFoundError:
             self.report({'ERROR'}, "rrSubmitter not found\n({0})".format(submitCMDs[0]))
             return False
@@ -227,7 +237,11 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         
     def execute(self, context):
         self.report({'INFO'}, "Saving mainFile...")
-        bpy.ops.wm.save_mainfile()
+
+        try:
+            bpy.ops.wm.save_mainfile()
+        except RuntimeError:
+            self.report({'WARNING', "Cannot save scene file"})
         if self.rrSubmit():
             self.report({'INFO'}, "Submit Launch Successfull")
         else:
