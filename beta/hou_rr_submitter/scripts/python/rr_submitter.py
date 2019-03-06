@@ -1,28 +1,44 @@
+import os
 import hou
 import sys
-import os
+import random
+import logging
 import subprocess
 
-
-
-#####################################################################################
-# This function has to be changed if an app should show info and error dialog box   #
-#####################################################################################
-
-def writeInfo(msg):
-    print(msg)
-    #nuke.message(msg)
-
-def writeError(msg):
-    #TODO: Replace with an UI error dialog
-    print(msg)
-    #nuke.message(msg)
-
-    
-    
+#import rr_submitter as rr
 
 ##############################################
-# JOB CLASS                                  #
+# Logging functions                          #
+##############################################
+
+# logging config
+logging_format = "%(name)s :: %(levelname)s :: %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=logging_format) # set level to logging.INFO to disable DEBUG logs
+logger = logging.getLogger(__name__)
+
+def writeInfo(msg):
+    """
+    Writes info to stdout using logger
+    """
+    logger.info(msg)
+
+def writeError(msg, details=None):
+    """
+    Writes error to stdout using logger and prompts UI windows with the same message
+
+    Additional information can be pased to details argument which user will be able to expand in the UI
+    """
+    # include details in logger output
+    msg_stderr = msg
+    if details:
+        msg_stderr += " :: {}".format(details)
+
+    logger.error(msg_stderr)
+    hou.ui.displayMessage(text="Royal Render encountered an error:", severity=hou.severityType.Error, help=msg, title="Royal Render", details=details, details_label="Show more...")
+
+
+##############################################
+# Job class                                  #
 ##############################################
 
 
@@ -35,6 +51,7 @@ class rrJob(object):
         self.version = ""
         self.software = ""
         self.renderer = ""
+        self.rendererVersion = ""
         self.RequiredLicenses = ""
         self.sceneName = ""
         self.sceneDatabaseDir = ""
@@ -94,7 +111,6 @@ class rrJob(object):
             sub.text = str(text).decode("utf8")
         return sub
     
-
     def writeToXMLstart(self, submitOptions ):
         rootElement = Element("rrJob_submitFile")
         rootElement.attrib["syntax_version"] = "6.0"
@@ -109,6 +125,7 @@ class rrJob(object):
         self.subE(jobElement, "rrSubmitterPluginVersion", "%rrVersion%-s")
         self.subE(jobElement, "Software", self.software)
         self.subE(jobElement, "Renderer", self.renderer)
+        self.subE(jobElement, "rendererVersion", self.rendererVersion)
         self.subE(jobElement, "RequiredLicenses", self.RequiredLicenses)
         self.subE(jobElement, "Version", self.version)
         self.subE(jobElement, "SceneName", self.sceneName)
@@ -145,8 +162,6 @@ class rrJob(object):
            self.subE(jobElement,"ChannelExtension",self.channelExtension[c])
         return True
 
-
-
     def writeToXMLEnd(self, f,rootElement):
         xml = ElementTree(rootElement)
         self.indent(xml.getroot())
@@ -164,10 +179,10 @@ class rrJob(object):
         return True
 
 
-
 ##############################################
 # Global Functions                           #
 ##############################################
+
 
 def getRR_Root():
     if os.environ.has_key('RR_ROOT'):
@@ -182,7 +197,6 @@ def getRR_Root():
     if HCPath[0]!="%":
         return HCPath
     writeError("This plugin was not installed via rrWorkstationInstaller!")
-
 
 def getNewTempFileName():
     random.seed()
@@ -220,7 +234,6 @@ def getRRSubmitterconsolePath():
     else:
         rrSubmitter = rrRoot+"/bin/lx64/rrStartLocal rrSubmitterconsole "
     return rrSubmitter
-    
 
 def getOSString():
     if ((sys.platform.lower() == "win32") or (sys.platform.lower() == "win64")):
@@ -230,7 +243,6 @@ def getOSString():
     else:
         return "lx"
 
-    
 def submitJobsToRR(jobList,submitOptions, nogui=False):
     tmpFileName = getNewTempFileName()
     tmpFile = open(tmpFileName, "w")
@@ -252,11 +264,10 @@ def submitJobsToRR(jobList,submitOptions, nogui=False):
     os.system(commandline)
 
 
-
 ##############################################
 # Houdini Functions                          #
 ##############################################    
-    
+
 
 def isRenderable(node):
     """
@@ -381,7 +392,8 @@ def expandPathParm(parm):
 
 class GenericNode(object):
     """
-    Abstract class for storing information about a node
+    Abstract class for storing information about a node, this stores information which is common to all renderable nodes
+    More specific nodes should subclass this class and store additional information
 
     input node parameter is of hou.Node type
     """
@@ -389,12 +401,18 @@ class GenericNode(object):
         self.node_object = node
         self.node_name = node.name()
         self.node_path = node.path()
+
         self.render_engine = self.getRenderEngine()
         self.render_engine_version = self.getRenderEngineVersion()
     
     def getRenderEngine(self):
         """
         Returns a string specifying render engine, supported nodes must be specified here, otherwise an exception will be raised
+
+        TODO
+            * differentiate between normal renders and archive renderers
+            * ?mapping list could be stored in a dict to make code more readable
+            * ?store it in a global (within module scope) dict to make it re-usable by other classes
         """
         type_name = self.node_object.type().name()
 
@@ -421,79 +439,37 @@ class GenericNode(object):
         elif type_name.lower() == "opengl":
             return "opengl"
         else:
-            raise NameError('Node "{}" of type "{}" is not supported'.format(self.node_object.name(), type_name))
+            msg = 'Node "{}" of type "{}" is not supported'.format(self.node_object.name(), type_name)
+            writeError(msg)
+            raise NameError(msg)
     
     def getRenderEngineVersion(self):
         """
         Returns a string specifying render engine version, or Houdini version if renderer is houdini/mantra
+
+        TODO
+            * refer user to help via details argument in writeError()
         """
         if self.render_engine.startswith("arnold"):
             try:
                 import arnold
                 return arnold.AiGetVersionString()
             except ImportError:
-                raise ImportError('Failed to import "arnold" python module, htoa is not available.')
+                msg = 'Failed to import "arnold" python module, htoa is not available.'
+                writeError(msg)
+                raise ImportError(msg)
+
         elif self.render_engine.startswith("redshift"):
             ver = hou.hscript('Redshift_version')[0]
             if not ver.startswith("Unknown"):
                 return ver
             else:
-                raise ImportError('Failed to run "Redshift_version" command, redshift is not available.')
+                msg = 'Failed to run "Redshift_version" command, redshift is not available.'
+                writeError(msg)
+                raise ImportError(msg)
+
         else:
             return hou.applicationVersionString()
-
-class WedgeNode(GenericNode):
-    """
-    Class representing wedge node
-
-    self.wedge_method can be either "channel" or "take"
-    """
-    def __init__(self, node):
-        super(WedgeNode, self).__init__(node)
-        self.prefix = self.node_object.parm("prefix").eval()
-        self.wedge_method = self.node_object.parm("wedgemethod").evalAsString()
-        self.driver_path = self.node_object.parm("driver").evalAsNode().path()
-
-        node_inputs = self.node_object.inputs()
-        if len( node_inputs ) == 1:
-            self.driver_path = node_inputs[0].path()
-        self.driver = RenderNode( hou.node(self.driver_path) )
-        self.wedge_parms = self.getWedgeParms()
-    
-    def getWedgeParms(self):
-        """
-        Returns a dictionary of wedge parameters in this structure:
-        {
-            "name 1"  : {
-                "start" : 1,
-                "end" : 10,
-                "steps" : 1
-            },
-            "name 2" : {
-                ...
-            },
-            ...
-        }
-        """
-        multiparm = self.node_object.parm("wedgeparams")
-        wedges_num = multiparm.eval()
-        wedges = {}
-        child_parms = multiparm.multiParmInstances()
-        child_parms = [p.name() for p in child_parms]
-
-        for i in xrange(1, wedges_num + 1):
-            wedge_name = self.node_object.parm("name{num}".format(num = i)).eval()
-            wedge_start = self.node_object.parm("range{num}x".format(num = i)).eval()
-            wedge_end = self.node_object.parm("range{num}y".format(num = i)).eval()
-            wedge_steps = self.node_object.parm("steps{num}".format(num = i)).eval()
-
-            wedges[wedge_name] = {
-                "start" : wedge_start,
-                "end" : wedge_end,
-                "steps" : wedge_steps
-            }
-        
-        return wedges
 
 class RenderNode(GenericNode):
     """
@@ -515,6 +491,7 @@ class RenderParms(object):
         self.start, self.end, self.steps = self.getFrameRange()
         self.output_path = self.getOutputPath()
         self.aovs = self.getAOVs()
+        self.res = self.getResolution()
         
     def getCameraPath(self):
         """
@@ -531,6 +508,9 @@ class RenderParms(object):
     def isCamStereo(self):
         """
         Returns boolean if camera is stereo, or None if there is no camera
+
+        TODO
+            * add paths to cameras? for imageStereoL, imageStereoR options
         """
         if self.cam_path:
             cam_node = hou.node(self.cam_path)
@@ -554,6 +534,9 @@ class RenderParms(object):
     def getOutputPath(self):
         """
         Returns expanded string containing path to the output picture
+
+        TODO
+            * make the mapping more readable by storing it in a dict
         """
         renderer = self.generic_node_object.render_engine
         parm = None
@@ -631,97 +614,199 @@ class RenderParms(object):
                 else:
                     aovs[aov_name] = self.output_path
         return aovs
+    
+    def getResolution(self):
+        """
+        Returns a list containing X and Y output image resolution
 
-    def createBaseJob(self):
-        newJob= rrJob()
-        newJob.software=  "Houdini"
-        newJob.version= "????"  #Todo: MISSING
-        newJob.sceneName= hou.hipFile.name()
-        newJob.sceneOS = getOSString()
-        newJob.seqStart=  self.parms.start
-        newJob.seqEnd= self.parms.end
-        newJob.seqStep= self.parms.steps
-        newJob.camera= self.parms.cam_path
-        newJob.imageWidth= 100 #Todo: MISSING
-        newJob.imageHeight= 100 #Todo: MISSING
-        return newJob
-        
-        
-    def createJobsFromNode_arnold(self, jobList, ropNodes, wedges, takes):          
-        #TODO: Missing
-        pass
-        
-        
-    def createJobsFromNode_arnoldDenoise(self, jobList, ropNodes, wedges, takes):          
-        #TODO: Missing
-        pass
-        
-        
-    def createJobsFromNode_redshift(self, jobList, ropNodes, wedges, takes):          
-        #TODO: Missing
-        pass
-        
-        
-    def createJobsFromNode_redshiftProxy(self, jobList, ropNodes, wedges, takes):          
-        createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
-        
-        
-    def createJobsFromNode_mantra(self, jobList, ropNodes, wedges, takes):          
-        #TODO: Missing
-        pass
-        
-        
-    def createJobsFromNode_alembic(self, jobList, ropNodes, wedges, takes):          
-        #TODO: Missing
-        pass
-        
-        
-    def createJobsFromNode_openGL(self, jobList, ropNodes, wedges, takes):          
-        newJob= createBaseJob()
-        newJob.renderer=  self.generic_node_object.render_engine
-       
-
-        
-        # self.subE(jobElement, "ImageFilename", self.imageFileName)
-        # self.subE(jobElement, "ImageFramePadding", self.imageFramePadding)
-        # self.subE(jobElement, "ImageExtension", self.imageExtension)
-        # self.subE(jobElement, "ImageSingleOutput", self.imageSingleOutput)
-        # self.subE(jobElement, "ImagePreNumberLetter", self.imagePreNumberLetter)
-        # self.subE(jobElement, "ImageStereoR", self.imageStereoR)
-        # self.subE(jobElement, "ImageStereoL", self.imageStereoL)
-        # self.subE(jobElement, "Layer", self.layer)
-        # self.subE(jobElement, "Channel", self.channel)
-        # for c in range(0,self.maxChannels):
-           # self.subE(jobElement,"ChannelFilename",self.channelFileName[c])
-           # self.subE(jobElement,"ChannelExtension",self.channelExtension[c])
-
-           
-        
-        
-        newJob.isActive = True
-        jobList.append(newJob)        
-        
-        
-        
-        
-    def createJobsFromNode(self, jobList, ropNodes, wedges, takes):  
+        TODO
+            * add support for redshift and arnold
+        """
         renderer = self.generic_node_object.render_engine
-        if renderer == "arnold":
-            createJobsFromNode_arnold(jobList, ropNodes, wedges, takes)
-        elif renderer == "arnold_denoiser":
-            createJobsFromNode_arnoldDenoise(jobList, ropNodes, wedges, takes)
-        elif renderer == "redshift":
-            createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
-        elif renderer == "redshift_proxy":
-            createJobsFromNode_redshiftProxy(jobList, ropNodes, wedges, takes)
-        elif renderer == "mantra":
-            createJobsFromNode_mantra(jobList, ropNodes, wedges, takes)
-        elif renderer == "geometry":
-            createJobsFromNode_geometry(jobList, ropNodes, wedges, takes)
-        elif renderer == "alembic":
-            createJobsFromNode_alembic(jobList, ropNodes, wedges, takes)
-        elif renderer == "opengl":
-            createJobsFromNode_openGL(jobList, ropNodes, wedges, takes)
+        if renderer == "mantra":
+            override_parm = "override_camerares"
+            override_res_parms = ["res_overridex", "res_overridey"]
+            override_mult_parm = "res_fraction"
+            cam_res_parms = ["resx", "resy"]
+        
+        cam_node = hou.node(self.cam_path)
+        cam_res_x = cam_node.parm(cam_res_parms[0]).eval()
+        cam_res_y = cam_node.parm(cam_res_parms[1]).eval()
+
+        override = bool( self.node_object.parm(override_parm).eval() )
+
+        if override:
+            override_mult = self.node_object.parm(override_mult_parm).eval()
+            
+            if override_mult == "specific":
+                res_x = self.node_object.parm(override_res_parms[0]).eval()
+                res_y = self.node_object.parm(override_res_parms[1]).eval()
+            else:
+                res_x = cam_res_x * float(override_mult)
+                res_y = cam_res_y * float(override_mult)
+            return [res_x, res_y]
+        else:
+            return [cam_res_x, cam_res_y]
+
+class WedgeNode(GenericNode):
+    """
+    Class representing wedge node
+
+    self.wedge_method can be either "channel" or "take"
+    """
+    def __init__(self, node):
+        super(WedgeNode, self).__init__(node)
+        self.prefix = self.node_object.parm("prefix").eval()
+        self.wedge_method = self.node_object.parm("wedgemethod").evalAsString()
+        self.driver_path = self.node_object.parm("driver").evalAsNode().path()
+
+        node_inputs = self.node_object.inputs()
+        if len( node_inputs ) == 1:
+            self.driver_path = node_inputs[0].path()
+        self.driver = RenderNode( hou.node(self.driver_path) )
+        self.wedge_parms = self.getWedgeParms()
+    
+    def getWedgeParms(self):
+        """
+        Returns a dictionary of wedge parameters in this structure:
+        {
+            "name 1"  : {
+                "start" : 1,
+                "end" : 10,
+                "steps" : 1
+            },
+            "name 2" : {
+                ...
+            },
+            ...
+        }
+        """
+        multiparm = self.node_object.parm("wedgeparams")
+        wedges_num = multiparm.eval()
+        wedges = {}
+        child_parms = multiparm.multiParmInstances()
+        child_parms = [p.name() for p in child_parms]
+
+        for i in xrange(1, wedges_num + 1):
+            wedge_name = self.node_object.parm("name{num}".format(num = i)).eval()
+            wedge_start = self.node_object.parm("range{num}x".format(num = i)).eval()
+            wedge_end = self.node_object.parm("range{num}y".format(num = i)).eval()
+            wedge_steps = self.node_object.parm("steps{num}".format(num = i)).eval()
+
+            wedges[wedge_name] = {
+                "start" : wedge_start,
+                "end" : wedge_end,
+                "steps" : wedge_steps
+            }
+        
+        return wedges
+
+def createGenericJob(node):
+    """
+    Creates rrJob object and fills in submission information
+    
+    node argument should be of type Hou.Node
+    """
+    render_node = RenderNode(node)
+
+    newJob = rrJob()
+
+    newJob.version = hou.applicationVersionString()
+    newJob.software = "Houdini"
+    newJob.renderer = render_node.render_engine
+    newJob.rendererVersion = render_node.render_engine_version
+    newJob.sceneName = hou.hipFile.path()
+    newJob.sceneOS = getOSString()
+    newJob.seqStart = render_node.parms.start
+    newJob.seqEnd = render_node.parms.end
+    newJob.seqStep = render_node.parms.steps
+    newJob.imageWidth = render_node.parms.res[0]
+    newJob.imageHeight = render_node.parms.res[1]
+    newJob.imageFileName = render_node.parms.output_path
+    newJob.camera = render_node.parms.cam_path
+    
+    # continue
+    newJob.layer = ""
+    newJob.channel = ""
+
+    return newJob
+    
+    
+def createJobsFromNode_arnold(self, jobList, ropNodes, wedges, takes):          
+    #TODO: Missing
+    pass
+    
+    
+def createJobsFromNode_arnoldDenoise(self, jobList, ropNodes, wedges, takes):          
+    #TODO: Missing
+    pass
+    
+    
+def createJobsFromNode_redshift(self, jobList, ropNodes, wedges, takes):          
+    #TODO: Missing
+    pass
+    
+    
+def createJobsFromNode_redshiftProxy(self, jobList, ropNodes, wedges, takes):          
+    createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
+    
+    
+def createJobsFromNode_mantra(self, jobList, ropNodes, wedges, takes):          
+    #TODO: Missing
+    pass
+    
+    
+def createJobsFromNode_alembic(self, jobList, ropNodes, wedges, takes):          
+    #TODO: Missing
+    pass
+    
+    
+def createJobsFromNode_openGL(self, jobList, ropNodes, wedges, takes):          
+    newJob= createGenericJob()
+    newJob.renderer=  self.generic_node_object.render_engine
+    
+
+    
+    # self.subE(jobElement, "ImageFilename", self.imageFileName)
+    # self.subE(jobElement, "ImageFramePadding", self.imageFramePadding)
+    # self.subE(jobElement, "ImageExtension", self.imageExtension)
+    # self.subE(jobElement, "ImageSingleOutput", self.imageSingleOutput)
+    # self.subE(jobElement, "ImagePreNumberLetter", self.imagePreNumberLetter)
+    # self.subE(jobElement, "ImageStereoR", self.imageStereoR)
+    # self.subE(jobElement, "ImageStereoL", self.imageStereoL)
+    # self.subE(jobElement, "Layer", self.layer)
+    # self.subE(jobElement, "Channel", self.channel)
+    # for c in range(0,self.maxChannels):
+        # self.subE(jobElement,"ChannelFilename",self.channelFileName[c])
+        # self.subE(jobElement,"ChannelExtension",self.channelExtension[c])
+
+        
+    
+    
+    newJob.isActive = True
+    jobList.append(newJob)        
+    
+    
+    
+    
+def createJobsFromNode(self, jobList, ropNodes, wedges, takes):  
+    renderer = self.generic_node_object.render_engine
+    if renderer == "arnold":
+        createJobsFromNode_arnold(jobList, ropNodes, wedges, takes)
+    elif renderer == "arnold_denoiser":
+        createJobsFromNode_arnoldDenoise(jobList, ropNodes, wedges, takes)
+    elif renderer == "redshift":
+        createJobsFromNode_redshift(jobList, ropNodes, wedges, takes)
+    elif renderer == "redshift_proxy":
+        createJobsFromNode_redshiftProxy(jobList, ropNodes, wedges, takes)
+    elif renderer == "mantra":
+        createJobsFromNode_mantra(jobList, ropNodes, wedges, takes)
+    elif renderer == "geometry":
+        createJobsFromNode_geometry(jobList, ropNodes, wedges, takes)
+    elif renderer == "alembic":
+        createJobsFromNode_alembic(jobList, ropNodes, wedges, takes)
+    elif renderer == "opengl":
+        createJobsFromNode_openGL(jobList, ropNodes, wedges, takes)
         
         
         
@@ -751,5 +836,5 @@ def rrSubmit_scripted():
     submitJobsToRR(jobList,submitOptions,nogui)
         
 
-rrSubmit_scripted()        
+#rrSubmit_scripted()        
         
