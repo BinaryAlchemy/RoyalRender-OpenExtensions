@@ -5,8 +5,6 @@ import random
 import logging
 import subprocess
 
-#import rr_submitter as rr
-
 ##############################################
 # Logging functions                          #
 ##############################################
@@ -307,6 +305,7 @@ def getRopNodesAtPath(root_path):
 def getSceneRopNodes():
     """
     If a node is selected, finds all renderable nodes in it, if not, then finds all renderable nodes in the scene
+
     Returns a list of hou.Node objects
     """
     out_nodes = []
@@ -350,7 +349,7 @@ def getSceneWedges():
 
 def getSceneTakes():
     """
-    Rutrns a dict containing takes information
+    Returns a dict containing takes information
     """
     takes = {}
     takes["current_take"] = hou.takes.currentTake().name()
@@ -364,6 +363,8 @@ def getSceneTakes():
 def expandPathParm(parm):
     """
     Returns processed and expanded path from input parameter
+
+    parm should be hou.Parm object
     """
     in_path = hou.pwd().path()
     hou.cd(parm.node().path())
@@ -375,6 +376,7 @@ def expandPathParm(parm):
 
     expr = expr.replace("$ACTIVETAKE", "<Channel>")
     expr = expr.replace("${ACTIVETAKE}", "<Channel>")
+
     expr = expr.replace("$WEDGE", "<Wedge>")
     expr = expr.replace("${WEDGE}", "<Wedge>")
     expr = expr.replace("${AOV}.", "<ValueVar @AOV.>")
@@ -383,12 +385,43 @@ def expandPathParm(parm):
     expr = expr.replace("$AOV.", "<ValueVar @AOV.>")
     expr = expr.replace("$AOV/", "<ValueVar @AOV/>")
     expr = expr.replace("$AOV_", "<ValueVar @AOV_>")
-    path = hou.expandString(expr)
-    expr = expr.replace("@AOV", "@$AOV")  #$AOV is required for the output setting at render time, but expandString would remove it.
     
-
+    path = hou.expandString(expr)
+    
+    expr = expr.replace("@AOV", "@$AOV")  #@$AOV is required for the output setting at render time, but expandString would remove it.
+    
     hou.cd(in_path)
     return path
+
+def addStereoTokenToPath(path):
+    """
+    Adds <stereo> token into path:
+        directly before image extension (img<stereo>.jpg)
+        or if part before image extension ends with frame number, then it is put before frame number (img<stereo>_1.jpg, img<stereo>_001.jpg)
+            if the first letter before frame number is non-alphanumeric char (e.g. underscore, period) then token is stored before it
+
+    Returns modified string
+    """
+    new_path = path
+
+    base, ext = os.path.splitext(new_path)
+    
+    if base[-1].isdigit():
+        for i, letter in enumerate(base[::-1]):
+            if not letter.isdigit():
+                if letter.isalpha():
+                    end = i
+                else:
+                    end = i + 1
+                break
+        end = len(base) - end
+        base = base[:end] + "<stereo>" + base[end:]
+    else:
+        base += "<stereo>"
+    
+    new_path = base + ext
+
+    return new_path
 
 class GenericNode(object):
     """
@@ -486,16 +519,18 @@ class RenderParms(object):
     def __init__(self, generic_node):
         self.generic_node_object = generic_node
         self.node_object = generic_node.node_object
+
         self.cam_path = self.getCameraPath()
-        self.cam_stereo = self.isCamStereo()
+        self.is_stereo = self.isCamStereo()
         self.start, self.end, self.steps = self.getFrameRange()
         self.output_path = self.getOutputPath()
         self.aovs = self.getAOVs()
         self.res = self.getResolution()
+        self.take = self.getTake()
         
     def getCameraPath(self):
         """
-        Returns string containing path to camera
+        Returns string containing path to camera or None if not applicable
         """
         renderer = self.generic_node_object.render_engine
         if renderer == "arnold" or renderer == "mantra" or renderer == "opengl":
@@ -508,9 +543,6 @@ class RenderParms(object):
     def isCamStereo(self):
         """
         Returns boolean if camera is stereo, or None if there is no camera
-
-        TODO
-            * add paths to cameras? for imageStereoL, imageStereoR options
         """
         if self.cam_path:
             cam_node = hou.node(self.cam_path)
@@ -647,6 +679,23 @@ class RenderParms(object):
             return [res_x, res_y]
         else:
             return [cam_res_x, cam_res_y]
+    
+    def getTake(self):
+        """
+        Returns name of a take selected in the render node
+
+        TODO
+            * add support for redshift and arnold
+        """
+        renderer = self.generic_node_object.render_engine
+        if renderer == "mantra" or renderer == "geometry" or renderer == "alembic" or renderer == "opengl":
+            take_parm = "take"
+        
+        take_name = self.node_object.parm(take_parm).eval()
+        if take_name == "_current_":
+            take_name = hou.takes.currentTake().name()
+        
+        return take_name
 
 class WedgeNode(GenericNode):
     """
@@ -706,6 +755,9 @@ def createGenericJob(node):
     Creates rrJob object and fills in submission information
     
     node argument should be of type Hou.Node
+
+    TODO
+        * for RS: add <customRenVer_redshift> (and one probably for htoa)
     """
     render_node = RenderNode(node)
 
@@ -724,10 +776,13 @@ def createGenericJob(node):
     newJob.imageHeight = render_node.parms.res[1]
     newJob.imageFileName = render_node.parms.output_path
     newJob.camera = render_node.parms.cam_path
-    
-    # continue
-    newJob.layer = ""
-    newJob.channel = ""
+    newJob.layer = render_node.node_path
+    newJob.channel = render_node.parms.take
+
+    if render_node.parms.is_stereo:
+        newJob.imageStereoR = "_left"
+        newJob.imageStereoL = "_right"
+        newJob.imageFileName = addStereoTokenToPath(newJob.imageFileName)
 
     return newJob
     
