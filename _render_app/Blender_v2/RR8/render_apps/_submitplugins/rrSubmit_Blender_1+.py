@@ -4,7 +4,7 @@
 # Royal Render Plugin script for Blender 
 # Authors, based on:    Felix Bucella, Patrik Gleich
 # Authors:              Friedrich Wessel (Callisto FX GmbH)
-# Authors, updated by:  Holger Schoenberger (Binary Alchemy)
+# Authors, updated by:  Paolo Acampora, Holger Schoenberger (Binary Alchemy)
 #
 # rrInstall_Copy:     \*\scripts\startup\
 # 
@@ -12,9 +12,9 @@
 
 bl_info = {
     "name": "Royal Render Submitter",
-    "author": "Holger Schoenberger",
-    "version": (1, 0),
-    "blender": (2, 75, 0),
+    "author": "Binary Alchemy",
+    "version": (2, 0),
+    "blender": (2, 80, 0),
     "description": "Submit scene to Royal Render",
     "category": "Render",
     }
@@ -33,6 +33,9 @@ class RoyalRender_Submitter(bpy.types.Panel):
     bl_region_type = 'WINDOW'
     bl_context = "render"
 
+    # switching keyword arguments to keep backward compatibility with 2.79
+    _split_kwargs_ = {'factor': 0.05} if bpy.app.version[1] > 79 or bpy.app.version[0] > 2 else {'percentage': 0.05}
+
     def draw(self, context):
         layout = self.layout
 
@@ -42,19 +45,22 @@ class RoyalRender_Submitter(bpy.types.Panel):
 
         renderOut = bpy.path.abspath(scn.render.filepath)
         
-        layout.label("Submit Scene Values: ")
-        split = layout.split(percentage=0.05)
+        layout.label(text="Submit Scene Recap: ")
+        split = layout.split(**self._split_kwargs_)
+
         split.separator()
         col = split.column()
         row = col.row()
-        row.label("StartFrame: " + str(scn.frame_start))
-        row.label("EndFrame: " + str(scn.frame_end))
-        col.label("ImageType: " + img_type)
-        col.label("ImageName: " + os.path.basename(renderOut))
-        col.label("RenderDir: " + os.path.dirname(renderOut))
-        
-        layout.operator("royalrender.submitscene")
-        
+        row.label(text="StartFrame: " + str(scn.frame_start))
+        row.label(text="EndFrame: " + str(scn.frame_end))
+        col.label(text="ImageType: " + img_type)
+        col.label(text="ImageName: " + os.path.basename(renderOut))
+        col.label(text="RenderDir: " + os.path.dirname(renderOut))
+
+        row = layout.row()
+        row.operator("royalrender.submitscene")
+
+
 class OBJECT_OT_SubmitScene(bpy.types.Operator):
     bl_idname = "royalrender.submitscene"
     bl_label = "Submit Scene"
@@ -164,7 +170,7 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
             else:
                 extension = scn.render.file_extension
 
-        app_ver = bpy.app.version
+        v_major, v_minor, _ = bpy.app.version
         writeNodeStr = self.writeNodeStr
         writeNodeInt = self.writeNodeInt
         writeNodeBool = self.writeNodeBool
@@ -175,8 +181,9 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
             fileID.write("</SubmitterParameter>")
         
         fileID.write("<Job>\n")
+        writeNodeStr(fileID, "rrSubmitterPluginVersion", "%rrVersion%")
         writeNodeStr(fileID, "Software", "Blender")
-        writeNodeStr(fileID, "Version",  "{0}.{1}".format(app_ver[0], app_ver[1]))
+        writeNodeStr(fileID, "Version",  "{0}.{1}".format(v_major, v_minor))
         #writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
         writeNodeStr(fileID, "SceneName", bpy.data.filepath)
         writeNodeBool(fileID, "IsActive", True)
@@ -190,7 +197,7 @@ class OBJECT_OT_SubmitScene(bpy.types.Operator):
         writeNodeStr(fileID, "ImageExtension", extension)
         if 'MULTILAYER' in rendertarget:
             rendertarget = "MULTILAYER"
-        else:
+        elif v_major == 2 and v_minor < 80:
             writeNodeStr(fileID, "Layer", scn.render.layers[0].name)
         if rendertarget in ("TGA", "RAWTGA", "JPEG", "IRIS", "IRIZ", "AVIRAW",
                             "AVIJPEG", "PNG", "BMP", "HDR", "TIFF", "EXR", "MULTILAYER",
@@ -262,4 +269,4 @@ def unregister():
     bpy.utils.unregister_class(OBJECT_OT_SubmitScene)
     
 if __name__ == "__main__":
-    bpy.utils.register_module(__name__)
+    register()
