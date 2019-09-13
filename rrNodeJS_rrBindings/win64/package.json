@@ -1,0 +1,19 @@
+{
+  "name": "rrshared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "files": [
+    "msvcp120.dll",
+    "msvcr120.dll",
+    "QtCore4.dll",
+    "rrShared.dll",
+    "*.node"
+  ],
+  "author": "",
+  "license": "ISC"
+}
