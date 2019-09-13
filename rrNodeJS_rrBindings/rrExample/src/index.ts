@@ -2,7 +2,11 @@ import bindings from 'rrbindings'
 
 //Create RRTCP object and connect to the renderfarm via its IP
 const rrtcp = bindings._rrTCP()
-rrtcp.setServer('172.31.18.1', 7773)
+
+const rrServerIP: string = '111.11.11.1'    // CHANGE THIS VALUE TO YOUR rrServerIP
+const rrServerPORT: number = 1234           // CHANGE THIS VALUE TO YOUR rrServerPORT
+
+rrtcp.setServer(rrServerIP, rrServerPORT)
 
 //Get all the clients from the connected Renderfarm
 rrtcp.clientGetList()
