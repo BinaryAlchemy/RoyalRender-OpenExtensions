@@ -1,0 +1,50 @@
+{
+  "name": "rrbindings",
+  "version": "1.0.0",
+  "description": "Bindings for the powerfull Royal Render Renderfarm",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "private": true,
+  "scripts": {
+    "start": "backpack",
+    "build": "rm -rf ./lib/* && backpack build",
+    "prepublishOnly": "npm run build",
+    "gen:docs": "rm -rf ./docs && typedoc --mode file --includeDeclarations --excludeExternals --out docs/html --name rrBindingsDocs --readme none && typedoc --theme markdown --mode file --includeDeclarations --excludeExternals --out docs/md --name rrBindingsDocs --readme none"
+  },
+  "files": [
+    "lib/",
+    "*.d.ts",
+    "docs/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Killuah15/rrBindings.git"
+  },
+  "keywords": [
+    "Holger Schönberger",
+    "Renderfarm",
+    "Royal Render",
+    "RR",
+    "Robin Dürhager",
+    "Maya",
+    "Bindings"
+  ],
+  "author": "Robin Dürhager",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Killuah15/rrBindings/issues"
+  },
+  "homepage": "https://github.com/Killuah15/rrBindings#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "backpack-core": "^0.8.3",
+    "node-loader": "^0.6.0",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.1.10",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "rrshared": "file:..\\..\\..\\win64"
+  }
+}
