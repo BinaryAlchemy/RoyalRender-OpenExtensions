@@ -21,7 +21,7 @@
 
 ▸ **jobThread**(`idx`: number): *[_rrClientStats_day_data_hourly_jobthread](libnoderr2_datafiles._rrclientstats_day_data_hourly_jobthread.md)*
 
-*Defined in [types.d.ts:791](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L791)*
+*Defined in [types.d.ts:791](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L791)*
 
 **Parameters:**
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **jobThreadMax**(): *number*
 
-*Defined in [types.d.ts:796](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L796)*
+*Defined in [types.d.ts:796](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L796)*
 
 **Returns:** *number*
 

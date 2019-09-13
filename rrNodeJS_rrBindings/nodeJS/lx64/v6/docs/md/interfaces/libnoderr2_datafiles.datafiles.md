@@ -32,7 +32,7 @@
 
 ▸ **_ClientGroup**(`idx`: number): *[_ClientGroup](libnoderr2_datafiles._clientgroup.md)*
 
-*Defined in [types.d.ts:436](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L436)*
+*Defined in [types.d.ts:436](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L436)*
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ ___
 
 ▸ **_ClientGroupList**(): *[_ClientGroupList](libnoderr2_datafiles._clientgrouplist.md)*
 
-*Defined in [types.d.ts:418](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L418)*
+*Defined in [types.d.ts:418](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L418)*
 
 **`description`** The client group list.
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **_StatsRenderTime**(): *[_StatsRenderTime](libnoderr2_datafiles._statsrendertime.md)*
 
-*Defined in [types.d.ts:430](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L430)*
+*Defined in [types.d.ts:430](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L430)*
 
 **`description`** Every time a job is finished, it adds its average frame time to a list, separated by each layer of each project. It includes the last 100 finished jobs of each layer name of each project. (For example the the last 100 jobs of render layer "Ambient Occlusion" of project "FancyDrink-Commercial")
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **_dailyStats_data**(): *[_DailyStats_Data](libnoderr2_datafiles._dailystats_data.md)*
 
-*Defined in [types.d.ts:394](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L394)*
+*Defined in [types.d.ts:394](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L394)*
 
 **`description`** Job information for each project, user and render application that was used. Informations like Memory usage, CPU usage, Number of jobs rendering, idle, finished, .., Number of frames rendered and frames to be rendered.
 
@@ -92,7 +92,7 @@ ___
 
 ▸ **_frameStatJob**(): *[_frameStatJob](libnoderr2_datafiles._framestatjob.md)*
 
-*Defined in [types.d.ts:424](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L424)*
+*Defined in [types.d.ts:424](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L424)*
 
 **`description`** Same data as the the "frames rendered" table in rrControl. Per frame information includes Render time, Memory (5 times per frame), CPU usage (5 times per frame)
 
@@ -106,7 +106,7 @@ ___
 
 ▸ **_rrClientStats_data**(): *[_rrClientStats_Data](libnoderr2_datafiles._rrclientstats_data.md)*
 
-*Defined in [types.d.ts:406](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L406)*
+*Defined in [types.d.ts:406](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L406)*
 
 **`description`** rrClient stats with CPU usage, memory usage, current job, ...
 
@@ -120,7 +120,7 @@ ___
 
 ▸ **_rrsStatsSaveData**(): *[_rrsStatsSaveData](libnoderr2_datafiles._rrsstatssavedata.md)*
 
-*Defined in [types.d.ts:400](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L400)*
+*Defined in [types.d.ts:400](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L400)*
 
 **`description`** Same as you see in rrControl tab "Global Info".Clients enabled, disabled, rendering. Jobs rendering, waiting Frames rendered, waiting, Server CPU usage.
 
@@ -134,7 +134,7 @@ ___
 
 ▸ **_rrsStatsSaveDataLS**(): *[_rrsStatsSaveDataLS](libnoderr2_datafiles._rrsstatssavedatals.md)*
 
-*Defined in [types.d.ts:412](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L412)*
+*Defined in [types.d.ts:412](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L412)*
 
 **`description`** This class loads the file [RR]\sub\stats\server_stats.db This statistics file is used to create the server stats in rrControl, tab Global Info. There are three different stats: "day": A 24h statistic, saved every 90seconds. "month": A 20 day statistic, saved every 30 minutes. "year": A 160 days statistic, saved every 6 hours.
 
@@ -148,7 +148,7 @@ ___
 
 ▸ **getRRFolder_bin**(): *string*
 
-*Defined in [types.d.ts:388](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L388)*
+*Defined in [types.d.ts:388](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L388)*
 
 **Returns:** *string*
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **getRRFolder_cfgGlobal**(): *string*
 
-*Defined in [types.d.ts:373](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L373)*
+*Defined in [types.d.ts:373](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L373)*
 
 **Returns:** *string*
 
@@ -172,7 +172,7 @@ ___
 
 ▸ **getRRFolder_cfgStats**(): *string*
 
-*Defined in [types.d.ts:383](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L383)*
+*Defined in [types.d.ts:383](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L383)*
 
 **Returns:** *string*
 
@@ -184,7 +184,7 @@ ___
 
 ▸ **getRRFolder_cfgUser**(): *string*
 
-*Defined in [types.d.ts:378](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L378)*
+*Defined in [types.d.ts:378](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L378)*
 
 **Returns:** *string*
 
@@ -196,7 +196,7 @@ ___
 
 ▸ **getRRModuleVersion**(): *string*
 
-*Defined in [types.d.ts:368](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L368)*
+*Defined in [types.d.ts:368](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L368)*
 
 **`description`** Requires to call any jobGet..() function.
 

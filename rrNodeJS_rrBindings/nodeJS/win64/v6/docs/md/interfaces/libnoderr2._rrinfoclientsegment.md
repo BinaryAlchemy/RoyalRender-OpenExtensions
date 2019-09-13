@@ -21,7 +21,7 @@
 
 • **RenderSegmentsDone**: *number*
 
-*Defined in [types.d.ts:351](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L351)*
+*Defined in [types.d.ts:352](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L352)*
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 • **RenderSegmentsTime**: *number*
 
-*Defined in [types.d.ts:352](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L352)*
+*Defined in [types.d.ts:353](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L353)*

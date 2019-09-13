@@ -27,7 +27,7 @@
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[getError](libnoderr2_datafiles._rrstatssharedfunctions.md#geterror)*
 
-*Defined in [types.d.ts:450](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L450)*
+*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
 
 **Returns:** *string*
 
@@ -41,7 +41,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[loadFromFile](libnoderr2_datafiles._rrstatssharedfunctions.md#loadfromfile)*
 
-*Defined in [types.d.ts:445](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L445)*
+*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
 
 **`description`** Loads the stats from file FileName.
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **singleStats**(`id`: number): *[_singleStatDay](libnoderr2_datafiles._singlestatday.md)[]*
 
-*Defined in [types.d.ts:459](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L459)*
+*Defined in [types.d.ts:460](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L460)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **singleStatsMax**(): *number*
 
-*Defined in [types.d.ts:464](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L464)*
+*Defined in [types.d.ts:465](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L465)*
 
 **Returns:** *number*
 

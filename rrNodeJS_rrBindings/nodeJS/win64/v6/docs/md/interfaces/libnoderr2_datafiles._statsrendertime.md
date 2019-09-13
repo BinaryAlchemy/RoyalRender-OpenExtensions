@@ -28,7 +28,7 @@
 
 • **lastSaved**: *Date*
 
-*Defined in [types.d.ts:999](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L999)*
+*Defined in [types.d.ts:1000](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1000)*
 
 **`description`** Date/Time of the group settings file saved.
 
@@ -38,7 +38,7 @@ ___
 
 • **prjCount**: *number*
 
-*Defined in [types.d.ts:994](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L994)*
+*Defined in [types.d.ts:995](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L995)*
 
 **`description`** Get the number of groups.
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **getError**(): *string*
 
-*Defined in [types.d.ts:1023](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1023)*
+*Defined in [types.d.ts:1024](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1024)*
 
 **Returns:** *string*
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **getProject**(`idx`: number): *[_StatsRenderTime_project](libnoderr2_datafiles._statsrendertime_project.md)*
 
-*Defined in [types.d.ts:1006](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1006)*
+*Defined in [types.d.ts:1007](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1007)*
 
 **Parameters:**
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **loadFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:1012](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1012)*
+*Defined in [types.d.ts:1013](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1013)*
 
 **`description`** Loads the stats from file FileName.
 
@@ -96,7 +96,7 @@ ___
 
 ▸ **saveFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:1018](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1018)*
+*Defined in [types.d.ts:1019](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1019)*
 
 **`description`** Saves the stats into file FileName.
 

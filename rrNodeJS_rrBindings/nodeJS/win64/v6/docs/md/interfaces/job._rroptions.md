@@ -42,7 +42,7 @@
 
 • **rroAbortLowJobs**: *number*
 
-*Defined in [types.d.ts:1954](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1954)*
+*Defined in [types.d.ts:1955](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1955)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **rroAllowToDeleteCrashedFrame**: *number*
 
-*Defined in [types.d.ts:1964](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1964)*
+*Defined in [types.d.ts:1965](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1965)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **rroAutoApprove**: *number*
 
-*Defined in [types.d.ts:1956](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1956)*
+*Defined in [types.d.ts:1957](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1957)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **rroCropEXR**: *number*
 
-*Defined in [types.d.ts:1969](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1969)*
+*Defined in [types.d.ts:1970](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1970)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **rroDisStartToEnd**: *number*
 
-*Defined in [types.d.ts:1975](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1975)*
+*Defined in [types.d.ts:1976](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1976)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **rroIgnoreCrashes**: *number*
 
-*Defined in [types.d.ts:1955](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1955)*
+*Defined in [types.d.ts:1956](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1956)*
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 • **rroIsGPURender**: *number*
 
-*Defined in [types.d.ts:1974](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1974)*
+*Defined in [types.d.ts:1975](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1975)*
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 • **rroKeepSceneOpen**: *number*
 
-*Defined in [types.d.ts:1963](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1963)*
+*Defined in [types.d.ts:1964](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1964)*
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 • **rroLittleJob**: *number*
 
-*Defined in [types.d.ts:1961](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1961)*
+*Defined in [types.d.ts:1962](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1962)*
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 • **rroLocalRenderOut**: *number*
 
-*Defined in [types.d.ts:1967](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1967)*
+*Defined in [types.d.ts:1968](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1968)*
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 • **rroLocalSceneCopy**: *number*
 
-*Defined in [types.d.ts:1965](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1965)*
+*Defined in [types.d.ts:1966](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1966)*
 
 ___
 
@@ -130,7 +130,7 @@ ___
 
 • **rroMultiOSScene**: *number*
 
-*Defined in [types.d.ts:1970](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1970)*
+*Defined in [types.d.ts:1971](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1971)*
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 • **rroMultipleInstances**: *number*
 
-*Defined in [types.d.ts:1962](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1962)*
+*Defined in [types.d.ts:1963](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1963)*
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 • **rroNoFrameChecking**: *number*
 
-*Defined in [types.d.ts:1960](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1960)*
+*Defined in [types.d.ts:1961](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1961)*
 
 ___
 
@@ -154,7 +154,7 @@ ___
 
 • **rroNoFreezeDetection**: *number*
 
-*Defined in [types.d.ts:1973](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1973)*
+*Defined in [types.d.ts:1974](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1974)*
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 • **rroNoProcessTreeCheck**: *number*
 
-*Defined in [types.d.ts:1971](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1971)*
+*Defined in [types.d.ts:1972](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1972)*
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 • **rroNoWebsiteJpegs**: *number*
 
-*Defined in [types.d.ts:1959](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1959)*
+*Defined in [types.d.ts:1960](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1960)*
 
 ___
 
@@ -178,7 +178,7 @@ ___
 
 • **rroOverwriteExisting**: *number*
 
-*Defined in [types.d.ts:1972](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1972)*
+*Defined in [types.d.ts:1973](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1973)*
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 • **rroPreviewGamma22**: *number*
 
-*Defined in [types.d.ts:1968](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1968)*
+*Defined in [types.d.ts:1969](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1969)*
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 • **rroPreviewRendering**: *number*
 
-*Defined in [types.d.ts:1958](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1958)*
+*Defined in [types.d.ts:1959](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1959)*
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 • **rroSendSMS**: *number*
 
-*Defined in [types.d.ts:1957](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1957)*
+*Defined in [types.d.ts:1958](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1958)*
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 • **rroTextureReplacements**: *number*
 
-*Defined in [types.d.ts:1966](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1966)*
+*Defined in [types.d.ts:1967](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1967)*
 
 ___
 
@@ -218,4 +218,4 @@ ___
 
 • **rroTotalrrOptions**: *number*
 
-*Defined in [types.d.ts:1976](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1976)*
+*Defined in [types.d.ts:1977](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1977)*

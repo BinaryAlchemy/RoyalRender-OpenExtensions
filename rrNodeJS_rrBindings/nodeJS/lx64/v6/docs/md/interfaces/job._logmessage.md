@@ -79,7 +79,7 @@
 
 • **lAbort**: *number*
 
-*Defined in [types.d.ts:1898](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1898)*
+*Defined in [types.d.ts:1898](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1898)*
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 • **lAbortLowPriority**: *number*
 
-*Defined in [types.d.ts:1929](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1929)*
+*Defined in [types.d.ts:1929](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1929)*
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 • **lAbortedFrameTime**: *number*
 
-*Defined in [types.d.ts:1928](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1928)*
+*Defined in [types.d.ts:1928](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1928)*
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 • **lAbortedReservedClients**: *number*
 
-*Defined in [types.d.ts:1891](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1891)*
+*Defined in [types.d.ts:1891](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1891)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 • **lAllFramesAssigned**: *number*
 
-*Defined in [types.d.ts:1908](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1908)*
+*Defined in [types.d.ts:1908](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1908)*
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 • **lApprove**: *number*
 
-*Defined in [types.d.ts:1895](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1895)*
+*Defined in [types.d.ts:1895](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1895)*
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 • **lAutoDeleteAfterDays**: *number*
 
-*Defined in [types.d.ts:1906](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1906)*
+*Defined in [types.d.ts:1906](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1906)*
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 • **lChangeClientAssignment**: *number*
 
-*Defined in [types.d.ts:1902](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1902)*
+*Defined in [types.d.ts:1902](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1902)*
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 • **lChangeSettings**: *number*
 
-*Defined in [types.d.ts:1911](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1911)*
+*Defined in [types.d.ts:1911](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1911)*
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 • **lCheck**: *number*
 
-*Defined in [types.d.ts:1899](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1899)*
+*Defined in [types.d.ts:1899](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1899)*
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 • **lClearErrormessages**: *number*
 
-*Defined in [types.d.ts:1914](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1914)*
+*Defined in [types.d.ts:1914](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1914)*
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 • **lClearErrormessagesEnable**: *number*
 
-*Defined in [types.d.ts:1931](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1931)*
+*Defined in [types.d.ts:1931](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1931)*
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 • **lClientAssignmentLost**: *number*
 
-*Defined in [types.d.ts:1946](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1946)*
+*Defined in [types.d.ts:1946](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1946)*
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 • **lClientAssignmentWrong**: *number*
 
-*Defined in [types.d.ts:1947](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1947)*
+*Defined in [types.d.ts:1947](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1947)*
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 • **lClientKSOClose**: *number*
 
-*Defined in [types.d.ts:1949](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1949)*
+*Defined in [types.d.ts:1949](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1949)*
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 • **lClientRenderAborted**: *number*
 
-*Defined in [types.d.ts:1904](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1904)*
+*Defined in [types.d.ts:1904](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1904)*
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 • **lClientRenderAbortedAveraging**: *number*
 
-*Defined in [types.d.ts:1938](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1938)*
+*Defined in [types.d.ts:1938](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1938)*
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 • **lClientRenderAbortedDisabled**: *number*
 
-*Defined in [types.d.ts:1950](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1950)*
+*Defined in [types.d.ts:1950](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1950)*
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 • **lClientRenderAbortedFrozen**: *number*
 
-*Defined in [types.d.ts:1924](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1924)*
+*Defined in [types.d.ts:1924](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1924)*
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 • **lClientRenderAbortedHighCpu**: *number*
 
-*Defined in [types.d.ts:1927](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1927)*
+*Defined in [types.d.ts:1927](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1927)*
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 • **lClientRenderAbortedHighPriorityJob**: *number*
 
-*Defined in [types.d.ts:1936](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1936)*
+*Defined in [types.d.ts:1936](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1936)*
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 • **lClientRenderAbortedLicenseBlock**: *number*
 
-*Defined in [types.d.ts:1939](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1939)*
+*Defined in [types.d.ts:1939](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1939)*
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 • **lClientRenderAbortedLocalMachine**: *number*
 
-*Defined in [types.d.ts:1940](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1940)*
+*Defined in [types.d.ts:1940](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1940)*
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 • **lClientRenderAbortedLowMem**: *number*
 
-*Defined in [types.d.ts:1923](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1923)*
+*Defined in [types.d.ts:1923](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1923)*
 
 ___
 
@@ -271,7 +271,7 @@ ___
 
 • **lClientRenderAbortedProcessFound**: *number*
 
-*Defined in [types.d.ts:1934](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1934)*
+*Defined in [types.d.ts:1934](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1934)*
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 • **lClientRenderAbortedReservedClient**: *number*
 
-*Defined in [types.d.ts:1935](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1935)*
+*Defined in [types.d.ts:1935](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1935)*
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 • **lClientRenderAbortedWorkinghours**: *number*
 
-*Defined in [types.d.ts:1933](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1933)*
+*Defined in [types.d.ts:1933](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1933)*
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 • **lClientRenderAbortedrrControl**: *number*
 
-*Defined in [types.d.ts:1937](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1937)*
+*Defined in [types.d.ts:1937](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1937)*
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 • **lClientRenderError**: *number*
 
-*Defined in [types.d.ts:1925](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1925)*
+*Defined in [types.d.ts:1925](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1925)*
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 • **lClientRenderSuccessful**: *number*
 
-*Defined in [types.d.ts:1903](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1903)*
+*Defined in [types.d.ts:1903](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1903)*
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 • **lClientSegmentLessThanXs**: *number*
 
-*Defined in [types.d.ts:1930](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1930)*
+*Defined in [types.d.ts:1930](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1930)*
 
 ___
 
@@ -327,7 +327,7 @@ ___
 
 • **lClientWait**: *number*
 
-*Defined in [types.d.ts:1926](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1926)*
+*Defined in [types.d.ts:1926](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1926)*
 
 ___
 
@@ -335,7 +335,7 @@ ___
 
 • **lDeassignClients**: *number*
 
-*Defined in [types.d.ts:1920](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1920)*
+*Defined in [types.d.ts:1920](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1920)*
 
 ___
 
@@ -343,7 +343,7 @@ ___
 
 • **lDelete**: *number*
 
-*Defined in [types.d.ts:1897](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1897)*
+*Defined in [types.d.ts:1897](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1897)*
 
 ___
 
@@ -351,7 +351,7 @@ ___
 
 • **lDeleteDisabled**: *number*
 
-*Defined in [types.d.ts:1913](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1913)*
+*Defined in [types.d.ts:1913](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1913)*
 
 ___
 
@@ -359,7 +359,7 @@ ___
 
 • **lDeleteFinished**: *number*
 
-*Defined in [types.d.ts:1912](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1912)*
+*Defined in [types.d.ts:1912](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1912)*
 
 ___
 
@@ -367,7 +367,7 @@ ___
 
 • **lDisApprove**: *number*
 
-*Defined in [types.d.ts:1896](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1896)*
+*Defined in [types.d.ts:1896](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1896)*
 
 ___
 
@@ -375,7 +375,7 @@ ___
 
 • **lDisable**: *number*
 
-*Defined in [types.d.ts:1893](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1893)*
+*Defined in [types.d.ts:1893](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1893)*
 
 ___
 
@@ -383,7 +383,7 @@ ___
 
 • **lDisableAbort**: *number*
 
-*Defined in [types.d.ts:1894](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1894)*
+*Defined in [types.d.ts:1894](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1894)*
 
 ___
 
@@ -391,7 +391,7 @@ ___
 
 • **lDisableManyCrashes**: *number*
 
-*Defined in [types.d.ts:1941](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1941)*
+*Defined in [types.d.ts:1941](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1941)*
 
 ___
 
@@ -399,7 +399,7 @@ ___
 
 • **lDisableNoDriveSpace**: *number*
 
-*Defined in [types.d.ts:1945](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1945)*
+*Defined in [types.d.ts:1945](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1945)*
 
 ___
 
@@ -407,7 +407,7 @@ ___
 
 • **lDisableNoFrames**: *number*
 
-*Defined in [types.d.ts:1942](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1942)*
+*Defined in [types.d.ts:1942](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1942)*
 
 ___
 
@@ -415,7 +415,7 @@ ___
 
 • **lDisableNoOutputDir**: *number*
 
-*Defined in [types.d.ts:1943](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1943)*
+*Defined in [types.d.ts:1943](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1943)*
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 • **lDisableUNCFailed**: *number*
 
-*Defined in [types.d.ts:1944](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1944)*
+*Defined in [types.d.ts:1944](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1944)*
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 • **lEmitChange**: *number*
 
-*Defined in [types.d.ts:1921](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1921)*
+*Defined in [types.d.ts:1921](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1921)*
 
 ___
 
@@ -439,7 +439,7 @@ ___
 
 • **lEnable**: *number*
 
-*Defined in [types.d.ts:1892](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1892)*
+*Defined in [types.d.ts:1892](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1892)*
 
 ___
 
@@ -447,7 +447,7 @@ ___
 
 • **lExportDebug**: *number*
 
-*Defined in [types.d.ts:1922](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1922)*
+*Defined in [types.d.ts:1922](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1922)*
 
 ___
 
@@ -455,7 +455,7 @@ ___
 
 • **lFirstCheck**: *number*
 
-*Defined in [types.d.ts:1932](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1932)*
+*Defined in [types.d.ts:1932](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1932)*
 
 ___
 
@@ -463,7 +463,7 @@ ___
 
 • **lFramesDeleted**: *number*
 
-*Defined in [types.d.ts:1907](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1907)*
+*Defined in [types.d.ts:1907](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1907)*
 
 ___
 
@@ -471,7 +471,7 @@ ___
 
 • **lReceiveJob**: *number*
 
-*Defined in [types.d.ts:1910](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1910)*
+*Defined in [types.d.ts:1910](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1910)*
 
 ___
 
@@ -479,7 +479,7 @@ ___
 
 • **lReset**: *number*
 
-*Defined in [types.d.ts:1900](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1900)*
+*Defined in [types.d.ts:1900](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1900)*
 
 ___
 
@@ -487,7 +487,7 @@ ___
 
 • **lResetNDelete**: *number*
 
-*Defined in [types.d.ts:1901](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1901)*
+*Defined in [types.d.ts:1901](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1901)*
 
 ___
 
@@ -495,7 +495,7 @@ ___
 
 • **lSeqDivAdjusted**: *number*
 
-*Defined in [types.d.ts:1909](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1909)*
+*Defined in [types.d.ts:1909](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1909)*
 
 ___
 
@@ -503,7 +503,7 @@ ___
 
 • **lUnknown**: *number*
 
-*Defined in [types.d.ts:1890](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1890)*
+*Defined in [types.d.ts:1890](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1890)*
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 • **lViewJobInfo**: *number*
 
-*Defined in [types.d.ts:1948](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1948)*
+*Defined in [types.d.ts:1948](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1948)*
 
 ___
 
@@ -519,7 +519,7 @@ ___
 
 • **lmarkFinished**: *number*
 
-*Defined in [types.d.ts:1919](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1919)*
+*Defined in [types.d.ts:1919](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1919)*
 
 ___
 
@@ -527,7 +527,7 @@ ___
 
 • **lmoveJobs**: *number*
 
-*Defined in [types.d.ts:1918](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1918)*
+*Defined in [types.d.ts:1918](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1918)*
 
 ___
 
@@ -535,7 +535,7 @@ ___
 
 • **lsetSoftX32**: *number*
 
-*Defined in [types.d.ts:1915](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1915)*
+*Defined in [types.d.ts:1915](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1915)*
 
 ___
 
@@ -543,7 +543,7 @@ ___
 
 • **lsetSoftX64**: *number*
 
-*Defined in [types.d.ts:1916](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1916)*
+*Defined in [types.d.ts:1916](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1916)*
 
 ___
 
@@ -551,4 +551,4 @@ ___
 
 • **lsetSoftXAll**: *number*
 
-*Defined in [types.d.ts:1917](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1917)*
+*Defined in [types.d.ts:1917](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1917)*

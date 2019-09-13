@@ -27,4 +27,4 @@
 
 • **bindings**: *[rrBinding](interfaces/rrbinding.md)* =  require('rrshared/nodeJs6_RR.node')
 
-*Defined in [src/index.ts:2](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/src/index.ts#L2)*
+*Defined in [src/index.ts:2](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/src/index.ts#L2)*

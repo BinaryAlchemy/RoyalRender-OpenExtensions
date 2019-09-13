@@ -24,7 +24,7 @@
 
 ▸ **at**(`userID`: number): *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
-*Defined in [types.d.ts:193](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L193)*
+*Defined in [types.d.ts:193](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L193)*
 
 **Parameters:**
 
@@ -42,7 +42,7 @@ ___
 
 ▸ **count**(): *number*
 
-*Defined in [types.d.ts:213](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L213)*
+*Defined in [types.d.ts:213](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L213)*
 
 **Returns:** *number*
 
@@ -54,7 +54,7 @@ ___
 
 ▸ **getAnonymous**(): *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
-*Defined in [types.d.ts:203](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L203)*
+*Defined in [types.d.ts:203](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L203)*
 
 **Returns:** *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
@@ -66,7 +66,7 @@ ___
 
 ▸ **getNewUserPreset**(): *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
-*Defined in [types.d.ts:198](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L198)*
+*Defined in [types.d.ts:198](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L198)*
 
 **Returns:** *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **getOurUser**(): *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
-*Defined in [types.d.ts:208](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L208)*
+*Defined in [types.d.ts:208](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L208)*
 
 **Returns:** *[rrUserSettings](libnoderr2.rrusersettings.md)*
 

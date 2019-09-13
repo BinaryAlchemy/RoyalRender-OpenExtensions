@@ -22,7 +22,7 @@
 
 • **infoClientSegment**: *[_rrInfoClientSegment](libnoderr2._rrinfoclientsegment.md)*
 
-*Defined in [types.d.ts:346](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L346)*
+*Defined in [types.d.ts:347](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L347)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **infoWOL**: *[_rrInfoWOL](libnoderr2._rrinfowol.md)*
 
-*Defined in [types.d.ts:347](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L347)*
+*Defined in [types.d.ts:348](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L348)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **time**: *string*
 
-*Defined in [types.d.ts:345](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L345)*
+*Defined in [types.d.ts:346](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L346)*

@@ -23,7 +23,7 @@
 
 • **jobCPU**: *number*
 
-*Defined in [types.d.ts:891](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L891)*
+*Defined in [types.d.ts:892](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L892)*
 
 **`returns`** CPU usage of the job.
 
@@ -33,7 +33,7 @@ ___
 
 • **jobMemoryMB**: *number*
 
-*Defined in [types.d.ts:886](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L886)*
+*Defined in [types.d.ts:887](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L887)*
 
 **`returns`** Memory usage of job.
 
@@ -43,7 +43,7 @@ ___
 
 • **nonJobCPU**: *number*
 
-*Defined in [types.d.ts:896](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L896)*
+*Defined in [types.d.ts:897](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L897)*
 
 **`returns`** Other CPU usage of the machine.
 
@@ -53,6 +53,6 @@ ___
 
 • **renderThreads**: *number*
 
-*Defined in [types.d.ts:901](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L901)*
+*Defined in [types.d.ts:902](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L902)*
 
 **`returns`** Number of job threads rendering on the client at this moment.

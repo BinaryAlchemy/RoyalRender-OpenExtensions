@@ -29,7 +29,7 @@
 
 • **ID**: *[rrUint64](utils.rruint64.md)*
 
-*Defined in [types.d.ts:1369](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1369)*
+*Defined in [types.d.ts:1370](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1370)*
 
 **`description`** The job ID
 
@@ -39,7 +39,7 @@ ___
 
 • **companyProjectName**: *string*
 
-*Defined in [types.d.ts:1379](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1379)*
+*Defined in [types.d.ts:1380](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1380)*
 
 **`description`** The company project of the job
 
@@ -49,7 +49,7 @@ ___
 
 • **filterMask**: *number*
 
-*Defined in [types.d.ts:1394](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1394)*
+*Defined in [types.d.ts:1395](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1395)*
 
 **`description`** A bit mask for different job states: 1 -> Not Rendering, 2 -> Rendering, 4 -> Disabled, 8 -> Wait for..., 16 -> Finished - See _filterIDs for equivalent data.
 
@@ -59,7 +59,7 @@ ___
 
 • **queueIDAtServer**: *number*
 
-*Defined in [types.d.ts:1389](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1389)*
+*Defined in [types.d.ts:1390](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1390)*
 
 **`description`** All jobs have a queue ID which starts at 0. Deleting/Moving jobs changes the queueID.
 
@@ -69,7 +69,7 @@ ___
 
 • **rendererName**: *string*
 
-*Defined in [types.d.ts:1384](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1384)*
+*Defined in [types.d.ts:1385](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1385)*
 
 **`description`** The name of the render application (Softimage, Nuke, ...)
 
@@ -79,7 +79,7 @@ ___
 
 • **userName**: *string*
 
-*Defined in [types.d.ts:1374](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1374)*
+*Defined in [types.d.ts:1375](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1375)*
 
 **`description`** The user who has send the job
 
@@ -89,7 +89,7 @@ ___
 
 ▸ **IDstr**(): *string*
 
-*Defined in [types.d.ts:1399](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1399)*
+*Defined in [types.d.ts:1400](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1400)*
 
 **Returns:** *string*
 

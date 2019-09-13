@@ -25,7 +25,7 @@
 
 • **isAll**: *number*
 
-*Defined in [types.d.ts:305](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L305)*
+*Defined in [types.d.ts:306](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L306)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **isDisabled**: *number*
 
-*Defined in [types.d.ts:302](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L302)*
+*Defined in [types.d.ts:303](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L303)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **isFinished**: *number*
 
-*Defined in [types.d.ts:304](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L304)*
+*Defined in [types.d.ts:305](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L305)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **isIdle**: *number*
 
-*Defined in [types.d.ts:300](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L300)*
+*Defined in [types.d.ts:301](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L301)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **isRendering**: *number*
 
-*Defined in [types.d.ts:301](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L301)*
+*Defined in [types.d.ts:302](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L302)*
 
 ___
 
@@ -65,4 +65,4 @@ ___
 
 • **isWaitFor**: *number*
 
-*Defined in [types.d.ts:303](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L303)*
+*Defined in [types.d.ts:304](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L304)*

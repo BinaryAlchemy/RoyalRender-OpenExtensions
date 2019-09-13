@@ -31,7 +31,7 @@
 
 • **emailAddress**: *string*
 
-*Defined in [types.d.ts:218](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L218)*
+*Defined in [types.d.ts:218](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L218)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **emailError**: *boolean*
 
-*Defined in [types.d.ts:221](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L221)*
+*Defined in [types.d.ts:221](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L221)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **emailStatus**: *boolean*
 
-*Defined in [types.d.ts:220](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L220)*
+*Defined in [types.d.ts:220](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L220)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **isAdmin**: *boolean*
 
-*Defined in [types.d.ts:222](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L222)*
+*Defined in [types.d.ts:222](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L222)*
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **lastUsed**: *Date*
 
-*Defined in [types.d.ts:228](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L228)*
+*Defined in [types.d.ts:228](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L228)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 • **loginUser**: *string*
 
-*Defined in [types.d.ts:224](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L224)*
+*Defined in [types.d.ts:224](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L224)*
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 • **mapLocal**: *string*
 
-*Defined in [types.d.ts:226](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L226)*
+*Defined in [types.d.ts:226](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L226)*
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 • **mapUNC**: *string*
 
-*Defined in [types.d.ts:225](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L225)*
+*Defined in [types.d.ts:225](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L225)*
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.d.ts:217](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L217)*
+*Defined in [types.d.ts:217](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L217)*
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 • **uniqueID**: *number*
 
-*Defined in [types.d.ts:223](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L223)*
+*Defined in [types.d.ts:223](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L223)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 • **userAdded**: *Date*
 
-*Defined in [types.d.ts:227](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L227)*
+*Defined in [types.d.ts:227](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L227)*
 
 ___
 
@@ -119,4 +119,4 @@ ___
 
 • **userGroup**: *string*
 
-*Defined in [types.d.ts:219](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L219)*
+*Defined in [types.d.ts:219](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L219)*

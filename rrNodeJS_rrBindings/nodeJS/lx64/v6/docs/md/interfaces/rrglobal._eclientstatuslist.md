@@ -49,7 +49,7 @@
 
 • **sAborted**: *number*
 
-*Defined in [types.d.ts:1194](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1194)*
+*Defined in [types.d.ts:1194](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1194)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **sAbortedAverage**: *number*
 
-*Defined in [types.d.ts:1210](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1210)*
+*Defined in [types.d.ts:1210](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1210)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **sAbortedDisable**: *number*
 
-*Defined in [types.d.ts:1201](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1201)*
+*Defined in [types.d.ts:1201](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1201)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **sAbortedFrameTime**: *number*
 
-*Defined in [types.d.ts:1205](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1205)*
+*Defined in [types.d.ts:1205](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1205)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **sAbortedFrozen**: *number*
 
-*Defined in [types.d.ts:1203](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1203)*
+*Defined in [types.d.ts:1203](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1203)*
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 • **sAbortedHighPriority**: *number*
 
-*Defined in [types.d.ts:1208](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1208)*
+*Defined in [types.d.ts:1208](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1208)*
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 • **sAbortedHighUserCPU**: *number*
 
-*Defined in [types.d.ts:1204](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1204)*
+*Defined in [types.d.ts:1204](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1204)*
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 • **sAbortedLicenseBlock**: *number*
 
-*Defined in [types.d.ts:1211](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1211)*
+*Defined in [types.d.ts:1211](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1211)*
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 • **sAbortedLocalMachine**: *number*
 
-*Defined in [types.d.ts:1212](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1212)*
+*Defined in [types.d.ts:1212](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1212)*
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 • **sAbortedLowMemory**: *number*
 
-*Defined in [types.d.ts:1202](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1202)*
+*Defined in [types.d.ts:1202](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1202)*
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 • **sAbortedProcessFound**: *number*
 
-*Defined in [types.d.ts:1213](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1213)*
+*Defined in [types.d.ts:1213](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1213)*
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 • **sAbortedReservedClient**: *number*
 
-*Defined in [types.d.ts:1207](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1207)*
+*Defined in [types.d.ts:1207](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1207)*
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 • **sAbortedWorkinghours**: *number*
 
-*Defined in [types.d.ts:1206](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1206)*
+*Defined in [types.d.ts:1206](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1206)*
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 • **sAbortedrrControl**: *number*
 
-*Defined in [types.d.ts:1209](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1209)*
+*Defined in [types.d.ts:1209](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1209)*
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 • **sClientFreeze**: *number*
 
-*Defined in [types.d.ts:1200](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1200)*
+*Defined in [types.d.ts:1200](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1200)*
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 • **sCrashed**: *number*
 
-*Defined in [types.d.ts:1195](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1195)*
+*Defined in [types.d.ts:1195](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1195)*
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 • **sCrashedKSOLogError**: *number*
 
-*Defined in [types.d.ts:1218](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1218)*
+*Defined in [types.d.ts:1218](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1218)*
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 • **sDisabled**: *number*
 
-*Defined in [types.d.ts:1191](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1191)*
+*Defined in [types.d.ts:1191](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1191)*
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 • **sDisabledAllowLittle**: *number*
 
-*Defined in [types.d.ts:1196](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1196)*
+*Defined in [types.d.ts:1196](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1196)*
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 • **sDisabledKeepDisabled**: *number*
 
-*Defined in [types.d.ts:1217](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1217)*
+*Defined in [types.d.ts:1217](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1217)*
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 • **sDisabledWorkinghours**: *number*
 
-*Defined in [types.d.ts:1215](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1215)*
+*Defined in [types.d.ts:1215](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1215)*
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 • **sDisabledWorkinghoursAllowLittle**: *number*
 
-*Defined in [types.d.ts:1216](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1216)*
+*Defined in [types.d.ts:1216](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1216)*
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 • **sFree**: *number*
 
-*Defined in [types.d.ts:1190](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1190)*
+*Defined in [types.d.ts:1190](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1190)*
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 • **sNoLicense**: *number*
 
-*Defined in [types.d.ts:1198](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1198)*
+*Defined in [types.d.ts:1198](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1198)*
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 • **sOff**: *number*
 
-*Defined in [types.d.ts:1189](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1189)*
+*Defined in [types.d.ts:1189](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1189)*
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 • **sPermanentCrashed**: *number*
 
-*Defined in [types.d.ts:1199](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1199)*
+*Defined in [types.d.ts:1199](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1199)*
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 • **sRendering**: *number*
 
-*Defined in [types.d.ts:1192](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1192)*
+*Defined in [types.d.ts:1192](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1192)*
 
 ___
 
@@ -265,7 +265,7 @@ ___
 
 • **sRenderingStarting**: *number*
 
-*Defined in [types.d.ts:1197](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1197)*
+*Defined in [types.d.ts:1197](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1197)*
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 • **sRenderingSuccessful**: *number*
 
-*Defined in [types.d.ts:1193](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1193)*
+*Defined in [types.d.ts:1193](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1193)*
 
 ___
 
@@ -281,4 +281,4 @@ ___
 
 • **sRenderingSuccessfulNoNewJob**: *number*
 
-*Defined in [types.d.ts:1214](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1214)*
+*Defined in [types.d.ts:1214](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1214)*

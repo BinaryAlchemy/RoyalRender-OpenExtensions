@@ -26,7 +26,7 @@
 
 • **lastUsed**: *Date*
 
-*Defined in [types.d.ts:1031](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1031)*
+*Defined in [types.d.ts:1031](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1031)*
 
 **`returns`** The last time a job was added to this list.
 
@@ -36,7 +36,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.d.ts:1036](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1036)*
+*Defined in [types.d.ts:1036](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1036)*
 
 **`returns`** Name of the project.
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **getLayer**(`idx`: number): *[_StatsRenderTime_layer](libnoderr2_datafiles._statsrendertime_layer.md)*
 
-*Defined in [types.d.ts:1041](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1041)*
+*Defined in [types.d.ts:1041](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1041)*
 
 **Parameters:**
 
@@ -62,7 +62,7 @@ ___
 
 ▸ **layerCount**(): *number*
 
-*Defined in [types.d.ts:1046](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1046)*
+*Defined in [types.d.ts:1046](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1046)*
 
 **Returns:** *number*
 

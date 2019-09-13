@@ -23,7 +23,7 @@
 
 • **jlBasic**: *number*
 
-*Defined in [types.d.ts:295](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L295)*
+*Defined in [types.d.ts:296](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L296)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **jlMinInfo**: *number*
 
-*Defined in [types.d.ts:294](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L294)*
+*Defined in [types.d.ts:295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L295)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **jlNone**: *number*
 
-*Defined in [types.d.ts:293](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L293)*
+*Defined in [types.d.ts:294](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L294)*
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **jlSend**: *number*
 
-*Defined in [types.d.ts:296](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L296)*
+*Defined in [types.d.ts:297](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L297)*

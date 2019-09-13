@@ -25,7 +25,7 @@
 
 • **lower**: *number*
 
-*Defined in [types.d.ts:2306](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L2306)*
+*Defined in [types.d.ts:2306](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2306)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **upper**: *number*
 
-*Defined in [types.d.ts:2307](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L2307)*
+*Defined in [types.d.ts:2307](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2307)*
 
 ## Methods
 
@@ -41,6 +41,6 @@ ___
 
 ▸ **toUint64Str**(): *string*
 
-*Defined in [types.d.ts:2308](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L2308)*
+*Defined in [types.d.ts:2308](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2308)*
 
 **Returns:** *string*

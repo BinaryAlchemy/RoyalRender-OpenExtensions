@@ -53,7 +53,7 @@
 
 • **cAbortAfterFrame**: *number*
 
-*Defined in [types.d.ts:1121](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1121)*
+*Defined in [types.d.ts:1122](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1122)*
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **cAbortAfterFrameDisable**: *number*
 
-*Defined in [types.d.ts:1122](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1122)*
+*Defined in [types.d.ts:1123](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1123)*
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **cAbortDisable**: *number*
 
-*Defined in [types.d.ts:1106](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1106)*
+*Defined in [types.d.ts:1107](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1107)*
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 • **cAbortUNKNOWN**: *number*
 
-*Defined in [types.d.ts:1093](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1093)*
+*Defined in [types.d.ts:1094](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1094)*
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 • **cAllowLittle**: *number*
 
-*Defined in [types.d.ts:1096](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1096)*
+*Defined in [types.d.ts:1097](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1097)*
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 • **cCommandLine**: *number*
 
-*Defined in [types.d.ts:1127](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1127)*
+*Defined in [types.d.ts:1128](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1128)*
 
 **`description`** Requires to set the param string of the clientSendCommand function. The client will create a batch file RR_LocalData/_command.bat. It executes the command and writes the output into RR_LocalData/_command.txt. If you want to keep your log output, you should redirect it into a file via your commandline. For example: myCommand 1>/fileserver/share/MyCommand_<LocalHost>.txt   2>/fileserver/share/MyCommand_<LocalHost>_error.txt myCommand 1>/fileserver/share/MyCommand_<LocalHost>.txt   2>&1 You can use all variables (like <LocalHost>) from  render configs, as long as they are not job specific. The command buffer can only take up to 500 letters.
 
@@ -103,7 +103,7 @@ ___
 
 • **cConfigSearchForApplications**: *number*
 
-*Defined in [types.d.ts:1116](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1116)*
+*Defined in [types.d.ts:1117](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1117)*
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 • **cConfigSearchForApplicationsDeleteOld**: *number*
 
-*Defined in [types.d.ts:1117](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1117)*
+*Defined in [types.d.ts:1118](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1118)*
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 • **cDevDebug**: *number*
 
-*Defined in [types.d.ts:1129](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1129)*
+*Defined in [types.d.ts:1130](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1130)*
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 • **cDisable**: *number*
 
-*Defined in [types.d.ts:1095](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1095)*
+*Defined in [types.d.ts:1096](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1096)*
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 • **cDoSpeedTest**: *number*
 
-*Defined in [types.d.ts:1123](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1123)*
+*Defined in [types.d.ts:1124](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1124)*
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 • **cEnable**: *number*
 
-*Defined in [types.d.ts:1094](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1094)*
+*Defined in [types.d.ts:1095](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1095)*
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 • **cForbitLittle**: *number*
 
-*Defined in [types.d.ts:1097](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1097)*
+*Defined in [types.d.ts:1098](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1098)*
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 • **cIgnoreCPU**: *number*
 
-*Defined in [types.d.ts:1107](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1107)*
+*Defined in [types.d.ts:1108](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1108)*
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 • **cIgnoreWorking**: *number*
 
-*Defined in [types.d.ts:1099](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1099)*
+*Defined in [types.d.ts:1100](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1100)*
 
 ___
 
@@ -175,7 +175,7 @@ ___
 
 • **cReloadAllConfig**: *number*
 
-*Defined in [types.d.ts:1114](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1114)*
+*Defined in [types.d.ts:1115](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1115)*
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 • **cReloadClientConfig**: *number*
 
-*Defined in [types.d.ts:1111](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1111)*
+*Defined in [types.d.ts:1112](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1112)*
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 • **cReloadGlobalConfig**: *number*
 
-*Defined in [types.d.ts:1113](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1113)*
+*Defined in [types.d.ts:1114](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1114)*
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 • **cReloadUserConfig**: *number*
 
-*Defined in [types.d.ts:1112](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1112)*
+*Defined in [types.d.ts:1113](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1113)*
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 • **cReserveCPUInteractive**: *number*
 
-*Defined in [types.d.ts:1108](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1108)*
+*Defined in [types.d.ts:1109](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1109)*
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 • **cResetIdleTime**: *number*
 
-*Defined in [types.d.ts:1128](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1128)*
+*Defined in [types.d.ts:1129](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1129)*
 
 ___
 
@@ -223,7 +223,7 @@ ___
 
 • **cRestartClientExe**: *number*
 
-*Defined in [types.d.ts:1100](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1100)*
+*Defined in [types.d.ts:1101](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1101)*
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 • **cRestartMachine**: *number*
 
-*Defined in [types.d.ts:1102](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1102)*
+*Defined in [types.d.ts:1103](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1103)*
 
 ___
 
@@ -239,7 +239,7 @@ ___
 
 • **cRestartMachineForce**: *number*
 
-*Defined in [types.d.ts:1103](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1103)*
+*Defined in [types.d.ts:1104](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1104)*
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 • **cShowProcessTree**: *number*
 
-*Defined in [types.d.ts:1120](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1120)*
+*Defined in [types.d.ts:1121](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1121)*
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 • **cShutdownClient**: *number*
 
-*Defined in [types.d.ts:1118](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1118)*
+*Defined in [types.d.ts:1119](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1119)*
 
 ___
 
@@ -263,7 +263,7 @@ ___
 
 • **cShutdownClientAndService**: *number*
 
-*Defined in [types.d.ts:1110](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1110)*
+*Defined in [types.d.ts:1111](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1111)*
 
 ___
 
@@ -271,7 +271,7 @@ ___
 
 • **cShutdownMachine**: *number*
 
-*Defined in [types.d.ts:1104](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1104)*
+*Defined in [types.d.ts:1105](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1105)*
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 • **cShutdownMachineForce**: *number*
 
-*Defined in [types.d.ts:1105](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1105)*
+*Defined in [types.d.ts:1106](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1106)*
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 • **cTimeSync**: *number*
 
-*Defined in [types.d.ts:1119](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1119)*
+*Defined in [types.d.ts:1120](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1120)*
 
 ___
 
@@ -295,7 +295,7 @@ ___
 
 • **cUpdateServiceCfg**: *number*
 
-*Defined in [types.d.ts:1115](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1115)*
+*Defined in [types.d.ts:1116](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1116)*
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 • **cUseCPUInteractive**: *number*
 
-*Defined in [types.d.ts:1109](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1109)*
+*Defined in [types.d.ts:1110](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1110)*
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 • **cUseWorking**: *number*
 
-*Defined in [types.d.ts:1098](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1098)*
+*Defined in [types.d.ts:1099](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1099)*
 
 ___
 
@@ -319,4 +319,4 @@ ___
 
 • **cWOL**: *number*
 
-*Defined in [types.d.ts:1101](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1101)*
+*Defined in [types.d.ts:1102](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1102)*

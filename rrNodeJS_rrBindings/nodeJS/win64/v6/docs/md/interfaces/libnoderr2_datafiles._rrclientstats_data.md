@@ -29,7 +29,7 @@
 
 • **structureID**: *number*
 
-*Defined in [types.d.ts:682](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L682)*
+*Defined in [types.d.ts:683](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L683)*
 
 **`description`** Should be the hex value A101.
 
@@ -39,7 +39,7 @@
 
 ▸ **days**(`idx`: number): *[_rrClientStats_day](libnoderr2_datafiles._rrclientstats_day.md)*
 
-*Defined in [types.d.ts:688](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L688)*
+*Defined in [types.d.ts:689](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L689)*
 
 **`description`** Get the data per day. Index (daysMax() - 1) is the last day written into the stats file. If the client is currently running, then this is today. Index (daysMax() - 2) is the day before. Check days(...).daySet and days(...).day to verify that you got some data and that it is the right day.
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **daysMax**(): *boolean*
 
-*Defined in [types.d.ts:693](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L693)*
+*Defined in [types.d.ts:694](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L694)*
 
 **Returns:** *boolean*
 
@@ -71,7 +71,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[getError](libnoderr2_datafiles._rrstatssharedfunctions.md#geterror)*
 
-*Defined in [types.d.ts:450](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L450)*
+*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
 
 **Returns:** *string*
 
@@ -85,7 +85,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[loadFromFile](libnoderr2_datafiles._rrstatssharedfunctions.md#loadfromfile)*
 
-*Defined in [types.d.ts:445](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L445)*
+*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
 
 **`description`** Loads the stats from file FileName.
 

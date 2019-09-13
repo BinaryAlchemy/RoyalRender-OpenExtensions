@@ -22,7 +22,7 @@
 
 ▸ **at**(`clientID`: number): *[_ClientStatus](client._clientstatus.md)*
 
-*Defined in [types.d.ts:332](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L332)*
+*Defined in [types.d.ts:333](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L333)*
 
 **`description`** Retrieves a client by its ID from the rrServer
 
@@ -40,7 +40,7 @@ ___
 
 ▸ **clientStatus**(`clientID`: number): *string*
 
-*Defined in [types.d.ts:341](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L341)*
+*Defined in [types.d.ts:342](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L342)*
 
 **`description`** Retrieves the current status of the specified client
 
@@ -58,7 +58,7 @@ ___
 
 ▸ **count**(): *number*
 
-*Defined in [types.d.ts:336](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L336)*
+*Defined in [types.d.ts:337](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L337)*
 
 **`description`** Fetches the amount of registered clients which were returned by the clientGetList() function
 

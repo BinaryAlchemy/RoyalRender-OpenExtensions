@@ -25,7 +25,7 @@
 
 • **ClientCommand**: *[_EClientCommand](rrglobal._eclientcommand.md)*
 
-*Defined in [types.d.ts:1080](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1080)*
+*Defined in [types.d.ts:1081](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1081)*
 
 **`description`** You can use a number instead of the enumeration. The IDs will not change with any RR update.
 
@@ -35,7 +35,7 @@ ___
 
 • **ClientStatusJob**: *[_EClientStatusJob](rrglobal._eclientstatusjob.md)*
 
-*Defined in [types.d.ts:1088](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1088)*
+*Defined in [types.d.ts:1089](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1089)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **ClientStatusList**: *[_EClientStatusList](rrglobal._eclientstatuslist.md)*
 
-*Defined in [types.d.ts:1087](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1087)*
+*Defined in [types.d.ts:1088](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1088)*
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **executeJobType**: *[_EExecuteJobType](rrglobal._eexecutejobtype.md)*
 
-*Defined in [types.d.ts:1081](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1081)*
+*Defined in [types.d.ts:1082](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1082)*
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **logLvL**: *[_ELogLvL](rrglobal._eloglvl.md)*
 
-*Defined in [types.d.ts:1086](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1086)*
+*Defined in [types.d.ts:1087](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1087)*
 
 **`description`** You can use a number instead of the enumeration. The IDs will not change with any RR update.
 
@@ -69,4 +69,4 @@ ___
 
 • **pluginReturn**: *[_EPluginReturn](rrglobal._epluginreturn.md)*
 
-*Defined in [types.d.ts:1089](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L1089)*
+*Defined in [types.d.ts:1090](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1090)*

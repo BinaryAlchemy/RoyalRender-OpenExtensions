@@ -22,7 +22,7 @@
 
 • **LastWOLExecute**: *string*
 
-*Defined in [types.d.ts:358](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L358)*
+*Defined in [types.d.ts:358](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L358)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **WOlAble**: *number*
 
-*Defined in [types.d.ts:356](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L356)*
+*Defined in [types.d.ts:356](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L356)*
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 • **totalClientNeed**: *number*
 
-*Defined in [types.d.ts:357](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L357)*
+*Defined in [types.d.ts:357](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L357)*

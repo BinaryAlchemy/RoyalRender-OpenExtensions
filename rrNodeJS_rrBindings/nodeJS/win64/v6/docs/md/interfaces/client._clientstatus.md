@@ -38,7 +38,7 @@
 
 • **CPU_Usage**: *number*
 
-*Defined in [types.d.ts:2222](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2222)*
+*Defined in [types.d.ts:2223](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2223)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **GPU_Usage**: *number*
 
-*Defined in [types.d.ts:2223](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2223)*
+*Defined in [types.d.ts:2224](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2224)*
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 • **StructureID**: *number*
 
-*Defined in [types.d.ts:2218](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2218)*
+*Defined in [types.d.ts:2219](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2219)*
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 • **VariablesID**: *number*
 
-*Defined in [types.d.ts:2219](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2219)*
+*Defined in [types.d.ts:2220](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2220)*
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 • **availMemoryMB**: *number*
 
-*Defined in [types.d.ts:2226](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2226)*
+*Defined in [types.d.ts:2227](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2227)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **gpuTemperature**: *number*
 
-*Defined in [types.d.ts:2224](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2224)*
+*Defined in [types.d.ts:2225](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2225)*
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 • **isRunningAsService**: *boolean*
 
-*Defined in [types.d.ts:2225](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2225)*
+*Defined in [types.d.ts:2226](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2226)*
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 • **localTextureSpaceUsed**: *number*
 
-*Defined in [types.d.ts:2220](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2220)*
+*Defined in [types.d.ts:2221](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2221)*
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 • **loggedUser**: *string*
 
-*Defined in [types.d.ts:2227](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2227)*
+*Defined in [types.d.ts:2228](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2228)*
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 • **maxCoresSetForJob**: *number*
 
-*Defined in [types.d.ts:2228](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2228)*
+*Defined in [types.d.ts:2229](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2229)*
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 • **maxJobThreads**: *number*
 
-*Defined in [types.d.ts:2221](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2221)*
+*Defined in [types.d.ts:2222](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2222)*
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.d.ts:2217](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2217)*
+*Defined in [types.d.ts:2218](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2218)*
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 • **noUserInteraction**: *number*
 
-*Defined in [types.d.ts:2233](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2233)*
+*Defined in [types.d.ts:2234](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2234)*
 
 **`description`** Minutes since last user interaction.
 
@@ -144,7 +144,7 @@ ___
 
 • **tempHDD**: *number*
 
-*Defined in [types.d.ts:2235](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2235)*
+*Defined in [types.d.ts:2236](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2236)*
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 • **version**: *string*
 
-*Defined in [types.d.ts:2234](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2234)*
+*Defined in [types.d.ts:2235](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2235)*
 
 ## Methods
 
@@ -160,7 +160,7 @@ ___
 
 ▸ **jobThread**(`threadID`: number): *[_ClientStatusThread](client._clientstatusthread.md)*
 
-*Defined in [types.d.ts:2241](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L2241)*
+*Defined in [types.d.ts:2242](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2242)*
 
 **`description`** The render thread by ID. The maximum threadID is maxJobThreads.
 

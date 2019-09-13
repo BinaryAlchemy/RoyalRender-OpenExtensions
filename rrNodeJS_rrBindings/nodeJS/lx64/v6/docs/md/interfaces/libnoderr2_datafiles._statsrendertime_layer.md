@@ -26,7 +26,7 @@
 
 • **jobsAdded**: *number*
 
-*Defined in [types.d.ts:1054](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1054)*
+*Defined in [types.d.ts:1054](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1054)*
 
 **`description`** Number of jobs that have been added. This is NOT the number of jobs in this list.
 
@@ -36,7 +36,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.d.ts:1059](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1059)*
+*Defined in [types.d.ts:1059](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1059)*
 
 **`description`** Name of the layer.
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **getFrameTime**(`idx`: number): *number*
 
-*Defined in [types.d.ts:1065](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1065)*
+*Defined in [types.d.ts:1065](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1065)*
 
 **Parameters:**
 
@@ -64,7 +64,7 @@ ___
 
 ▸ **timesCount**(): *number*
 
-*Defined in [types.d.ts:1070](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/lx64/v6/types.d.ts#L1070)*
+*Defined in [types.d.ts:1070](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1070)*
 
 **Returns:** *number*
 

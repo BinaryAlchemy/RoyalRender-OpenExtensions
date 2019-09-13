@@ -1,8 +1,9 @@
 /**
  * @fileOverview Types for the NodeJS C++ Addon for the powerfull Royal Render
- * @author <a href="mailto:robin.duerhager@gmail.com"></a>
+ * @author <a href="https://github.com/Novalis15">Robin Dürhager</a>
  * @version 1.0.0
  */
+
 export interface rrBinding {
     /**
      * @description creates a new TCP object for connecting the application with the rrServer

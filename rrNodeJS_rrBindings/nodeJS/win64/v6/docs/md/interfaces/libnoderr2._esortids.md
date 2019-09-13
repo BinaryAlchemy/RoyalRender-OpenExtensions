@@ -35,7 +35,7 @@
 
 • **sApproved**: *number*
 
-*Defined in [types.d.ts:316](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L316)*
+*Defined in [types.d.ts:317](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L317)*
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 • **sCamera**: *number*
 
-*Defined in [types.d.ts:323](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L323)*
+*Defined in [types.d.ts:324](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L324)*
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 • **sCustomName**: *number*
 
-*Defined in [types.d.ts:314](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L314)*
+*Defined in [types.d.ts:315](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L315)*
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 • **sDateSend**: *number*
 
-*Defined in [types.d.ts:311](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L311)*
+*Defined in [types.d.ts:312](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L312)*
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **sFrameTime**: *number*
 
-*Defined in [types.d.ts:324](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L324)*
+*Defined in [types.d.ts:325](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L325)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 • **sFramesDone**: *number*
 
-*Defined in [types.d.ts:318](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L318)*
+*Defined in [types.d.ts:319](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L319)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **sFramesLeft**: *number*
 
-*Defined in [types.d.ts:317](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L317)*
+*Defined in [types.d.ts:318](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L318)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 • **sLayer**: *number*
 
-*Defined in [types.d.ts:322](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L322)*
+*Defined in [types.d.ts:323](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L323)*
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 • **sPriority**: *number*
 
-*Defined in [types.d.ts:312](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L312)*
+*Defined in [types.d.ts:313](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L313)*
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 • **sProject**: *number*
 
-*Defined in [types.d.ts:313](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L313)*
+*Defined in [types.d.ts:314](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L314)*
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 • **sQueue**: *number*
 
-*Defined in [types.d.ts:309](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L309)*
+*Defined in [types.d.ts:310](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L310)*
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 • **sRenderApp**: *number*
 
-*Defined in [types.d.ts:315](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L315)*
+*Defined in [types.d.ts:316](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L316)*
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 • **sScene**: *number*
 
-*Defined in [types.d.ts:321](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L321)*
+*Defined in [types.d.ts:322](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L322)*
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 • **sStatus**: *number*
 
-*Defined in [types.d.ts:320](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L320)*
+*Defined in [types.d.ts:321](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L321)*
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 • **sTimeRemaining**: *number*
 
-*Defined in [types.d.ts:319](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L319)*
+*Defined in [types.d.ts:320](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L320)*
 
 ___
 
@@ -155,4 +155,4 @@ ___
 
 • **sUser**: *number*
 
-*Defined in [types.d.ts:310](https://github.com/Novalis15/rrBindings/blob/33d8d78/nodeJS/win64/v6/types.d.ts#L310)*
+*Defined in [types.d.ts:311](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L311)*
