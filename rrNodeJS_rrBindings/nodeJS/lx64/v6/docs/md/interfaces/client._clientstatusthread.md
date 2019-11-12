@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Client](../modules/client.md) › [_ClientStatusThread](client._clientstatusthread.md)
+[rrBindingsDocs](../README.md) › [Client](../modules/client.md) › [_ClientStatusThread](client._clientstatusthread.md)
 
 # Interface: _ClientStatusThread
 
@@ -38,7 +36,7 @@
 
 • **clientStatus**: *number*
 
-*Defined in [types.d.ts:2283](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2283)*
+*Defined in [types.d.ts:2283](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2283)*
 
 ___
 
@@ -46,7 +44,7 @@ ___
 
 • **jobCPU_Usage**: *number*
 
-*Defined in [types.d.ts:2284](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2284)*
+*Defined in [types.d.ts:2284](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2284)*
 
 ___
 
@@ -54,7 +52,7 @@ ___
 
 • **jobID**: *[rrUint64](utils.rruint64.md)*
 
-*Defined in [types.d.ts:2245](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2245)*
+*Defined in [types.d.ts:2245](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2245)*
 
 ___
 
@@ -62,7 +60,7 @@ ___
 
 • **jobIsPreview**: *boolean*
 
-*Defined in [types.d.ts:2281](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2281)*
+*Defined in [types.d.ts:2281](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2281)*
 
 ___
 
@@ -70,7 +68,7 @@ ___
 
 • **jobMemoryUsageMB**: *number*
 
-*Defined in [types.d.ts:2285](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2285)*
+*Defined in [types.d.ts:2285](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2285)*
 
 ___
 
@@ -78,7 +76,7 @@ ___
 
 • **jobMultiFrameID**: *number*
 
-*Defined in [types.d.ts:2280](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2280)*
+*Defined in [types.d.ts:2280](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2280)*
 
 **`description`** Tile id.
 
@@ -88,7 +86,7 @@ ___
 
 • **jobSeqEnd**: *number*
 
-*Defined in [types.d.ts:2260](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2260)*
+*Defined in [types.d.ts:2260](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2260)*
 
 **`description`** End frame of the current segment as frame number and internal job number.
 
@@ -98,7 +96,7 @@ ___
 
 • **jobSeqEndJobNr**: *number*
 
-*Defined in [types.d.ts:2265](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2265)*
+*Defined in [types.d.ts:2265](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2265)*
 
 **`description`** End frame of the current segment as frame number and internal job number.
 
@@ -108,7 +106,7 @@ ___
 
 • **jobSeqStart**: *number*
 
-*Defined in [types.d.ts:2250](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2250)*
+*Defined in [types.d.ts:2250](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2250)*
 
 **`description`** Start frame of the current segment as frame number and internal job number.
 
@@ -118,7 +116,7 @@ ___
 
 • **jobSeqStartJobNr**: *number*
 
-*Defined in [types.d.ts:2255](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2255)*
+*Defined in [types.d.ts:2255](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2255)*
 
 **`description`** Start frame of the current segment as frame number and internal job number.
 
@@ -128,7 +126,7 @@ ___
 
 • **jobSeqStep**: *number*
 
-*Defined in [types.d.ts:2270](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2270)*
+*Defined in [types.d.ts:2270](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2270)*
 
 **`description`** Frame step of the current segment as frame number and internal job number.
 
@@ -138,7 +136,7 @@ ___
 
 • **jobSeqStepJobNr**: *number*
 
-*Defined in [types.d.ts:2275](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2275)*
+*Defined in [types.d.ts:2275](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2275)*
 
 **`description`** Frame step of the current segment as frame number and internal job number.
 
@@ -148,7 +146,7 @@ ___
 
 • **jobStatus**: *number*
 
-*Defined in [types.d.ts:2282](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2282)*
+*Defined in [types.d.ts:2282](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2282)*
 
 ## Methods
 
@@ -156,7 +154,7 @@ ___
 
 ▸ **clientStatusAsStringSingle**(): *string*
 
-*Defined in [types.d.ts:2300](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2300)*
+*Defined in [types.d.ts:2300](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2300)*
 
 **Returns:** *string*
 
@@ -168,7 +166,7 @@ ___
 
 ▸ **hasKSOLoaded**(): *boolean*
 
-*Defined in [types.d.ts:2290](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2290)*
+*Defined in [types.d.ts:2290](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2290)*
 
 **Returns:** *boolean*
 
@@ -180,7 +178,7 @@ ___
 
 ▸ **isRendering**(): *boolean*
 
-*Defined in [types.d.ts:2295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2295)*
+*Defined in [types.d.ts:2295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2295)*
 
 **Returns:** *boolean*
 

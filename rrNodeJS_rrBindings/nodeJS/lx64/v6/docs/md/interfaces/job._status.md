@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](../modules/job.md) › [_Status](job._status.md)
+[rrBindingsDocs](../README.md) › [Job](../modules/job.md) › [_Status](job._status.md)
 
 # Interface: _Status
 
@@ -32,7 +30,7 @@
 
 • **sFinished**: *number*
 
-*Defined in [types.d.ts:2064](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2064)*
+*Defined in [types.d.ts:2064](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2064)*
 
 **`description`** Job is done.
 
@@ -42,7 +40,7 @@ ___
 
 • **sFirstCheck**: *number*
 
-*Defined in [types.d.ts:2009](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2009)*
+*Defined in [types.d.ts:2009](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2009)*
 
 **`description`** Job was received, next server task is "first check" to find output dir and existing files.
 
@@ -52,7 +50,7 @@ ___
 
 • **sMainRender**: *number*
 
-*Defined in [types.d.ts:2044](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2044)*
+*Defined in [types.d.ts:2044](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2044)*
 
 **`description`** Main render of all frames.
 
@@ -62,7 +60,7 @@ ___
 
 • **sNone**: *number*
 
-*Defined in [types.d.ts:2004](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2004)*
+*Defined in [types.d.ts:2004](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2004)*
 
 ___
 
@@ -70,7 +68,7 @@ ___
 
 • **sPreviewRender**: *number*
 
-*Defined in [types.d.ts:2024](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2024)*
+*Defined in [types.d.ts:2024](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2024)*
 
 **`description`** Job is rendering the preview frames.
 
@@ -80,7 +78,7 @@ ___
 
 • **sScriptAfterPreview**: *number*
 
-*Defined in [types.d.ts:2029](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2029)*
+*Defined in [types.d.ts:2029](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2029)*
 
 **`description`** About to execute after-preview scripts.
 
@@ -90,7 +88,7 @@ ___
 
 • **sScriptFinished**: *number*
 
-*Defined in [types.d.ts:2059](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2059)*
+*Defined in [types.d.ts:2059](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2059)*
 
 **`description`** About to execute finished scripts.
 
@@ -100,7 +98,7 @@ ___
 
 • **sScriptPostRender**: *number*
 
-*Defined in [types.d.ts:2049](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2049)*
+*Defined in [types.d.ts:2049](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2049)*
 
 **`description`** About to execute post-render scripts.
 
@@ -110,7 +108,7 @@ ___
 
 • **sScriptPreRender**: *number*
 
-*Defined in [types.d.ts:2019](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2019)*
+*Defined in [types.d.ts:2019](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2019)*
 
 **`description`** About to execute pre-render scripts.
 
@@ -120,7 +118,7 @@ ___
 
 • **sWaitForApprovalDone**: *number*
 
-*Defined in [types.d.ts:2054](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2054)*
+*Defined in [types.d.ts:2054](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2054)*
 
 **`description`** Waiting for user approval.
 
@@ -130,7 +128,7 @@ ___
 
 • **sWaitForApprovalMain**: *number*
 
-*Defined in [types.d.ts:2034](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2034)*
+*Defined in [types.d.ts:2034](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2034)*
 
 **`description`** Waiting for user approval.
 
@@ -140,7 +138,7 @@ ___
 
 • **sWaitForJobs**: *number*
 
-*Defined in [types.d.ts:2014](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2014)*
+*Defined in [types.d.ts:2014](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2014)*
 
 **`description`** Disabled while waiting for other jobs.
 
@@ -150,6 +148,6 @@ ___
 
 • **sWaitForJobsAfterPreview**: *number*
 
-*Defined in [types.d.ts:2039](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2039)*
+*Defined in [types.d.ts:2039](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L2039)*
 
 **`description`** Disabled while waiting for other jobs.

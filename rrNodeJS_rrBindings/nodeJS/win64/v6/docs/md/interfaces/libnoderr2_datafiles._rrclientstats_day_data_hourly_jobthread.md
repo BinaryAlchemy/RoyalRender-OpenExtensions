@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_hourly_jobthread](libnoderr2_datafiles._rrclientstats_day_data_hourly_jobthread.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_hourly_jobthread](libnoderr2_datafiles._rrclientstats_day_data_hourly_jobthread.md)
 
 # Interface: _rrClientStats_day_data_hourly_jobthread
 
@@ -23,7 +21,7 @@
 
 • **framesDone**: *number*
 
-*Defined in [types.d.ts:805](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L805)*
+*Defined in [types.d.ts:805](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L805)*
 
 **`description`** Frames done in this hour.
 
@@ -33,7 +31,7 @@ ___
 
 • **jobAborted**: *number*
 
-*Defined in [types.d.ts:815](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L815)*
+*Defined in [types.d.ts:815](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L815)*
 
 **`description`** Number of times a job was aborted.
 
@@ -43,7 +41,7 @@ ___
 
 • **jobCrashed**: *number*
 
-*Defined in [types.d.ts:810](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L810)*
+*Defined in [types.d.ts:810](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L810)*
 
 **`description`** Number of times a job crashes.
 
@@ -53,6 +51,6 @@ ___
 
 • **jobSuccessful**: *number*
 
-*Defined in [types.d.ts:820](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L820)*
+*Defined in [types.d.ts:820](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L820)*
 
 **`description`** Number of times a job rendered successfully.

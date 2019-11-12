@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_frameStatJob](libnoderr2_datafiles._framestatjob.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_frameStatJob](libnoderr2_datafiles._framestatjob.md)
 
 # Interface: _frameStatJob
 
@@ -8,7 +6,7 @@
 
 * [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md)
 
-  * **_frameStatJob**
+  ↳ **_frameStatJob**
 
 ## Index
 
@@ -25,7 +23,7 @@
 
 ▸ **frame**(`frame`: number): *[_frameStat](libnoderr2_datafiles._framestat.md)*
 
-*Defined in [types.d.ts:828](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L828)*
+*Defined in [types.d.ts:828](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L828)*
 
 **Parameters:**
 
@@ -43,7 +41,7 @@ ___
 
 ▸ **frameMax**(): *number*
 
-*Defined in [types.d.ts:833](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L833)*
+*Defined in [types.d.ts:833](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L833)*
 
 **Returns:** *number*
 
@@ -57,7 +55,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[getError](libnoderr2_datafiles._rrstatssharedfunctions.md#geterror)*
 
-*Defined in [types.d.ts:450](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L450)*
+*Defined in [types.d.ts:450](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L450)*
 
 **Returns:** *string*
 
@@ -71,7 +69,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[loadFromFile](libnoderr2_datafiles._rrstatssharedfunctions.md#loadfromfile)*
 
-*Defined in [types.d.ts:445](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L445)*
+*Defined in [types.d.ts:445](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L445)*
 
 **`description`** Loads the stats from file FileName.
 

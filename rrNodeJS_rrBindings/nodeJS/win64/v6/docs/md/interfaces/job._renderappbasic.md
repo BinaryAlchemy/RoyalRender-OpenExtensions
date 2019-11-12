@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](../modules/job.md) › [_RenderAppBasic](job._renderappbasic.md)
+[rrBindingsDocs](../README.md) › [Job](../modules/job.md) › [_RenderAppBasic](job._renderappbasic.md)
 
 # Interface: _RenderAppBasic
 
@@ -33,11 +31,11 @@
 
 • **executeType**: *number*
 
-*Defined in [types.d.ts:2190](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2190)*
+*Defined in [types.d.ts:2190](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2190)*
 
 **`description`** Sets if this is an execute job and if, which type of execute job
 
-**`see`** {@link http://www.royalrender.de/help8/index.html?modulerrGlobal.html}
+**`see`** [http://www.royalrender.de/help8/index.html?modulerrGlobal.html](http://www.royalrender.de/help8/index.html?modulerrGlobal.html)
 
 ___
 
@@ -45,7 +43,7 @@ ___
 
 • **name**: *string*
 
-*Defined in [types.d.ts:2159](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2159)*
+*Defined in [types.d.ts:2159](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2159)*
 
 **`description`** Name of the render application (Maya, Nuke)
 
@@ -55,7 +53,7 @@ ___
 
 • **rendererConfigListID**: *number*
 
-*Defined in [types.d.ts:2184](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2184)*
+*Defined in [types.d.ts:2184](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2184)*
 
 **`description`** ID of the render config file.
 
@@ -65,7 +63,7 @@ ___
 
 • **rendererName**: *string*
 
-*Defined in [types.d.ts:2164](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2164)*
+*Defined in [types.d.ts:2164](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2164)*
 
 **`description`** Name of the renderer (Vray, Arnold)
 
@@ -75,7 +73,7 @@ ___
 
 • **rendererVersion**: *string*
 
-*Defined in [types.d.ts:2174](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2174)*
+*Defined in [types.d.ts:2174](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2174)*
 
 **`description`** Version of the renderer
 
@@ -85,7 +83,7 @@ ___
 
 • **type**: *string*
 
-*Defined in [types.d.ts:2169](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2169)*
+*Defined in [types.d.ts:2169](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2169)*
 
 **`description`** Comp, 3D, Archive or Execute
 
@@ -95,7 +93,7 @@ ___
 
 • **version**: *number*
 
-*Defined in [types.d.ts:2179](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2179)*
+*Defined in [types.d.ts:2179](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2179)*
 
 **`description`** Version of the render application
 
@@ -105,7 +103,7 @@ ___
 
 ▸ **clearBasic**(): *void*
 
-*Defined in [types.d.ts:2212](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2212)*
+*Defined in [types.d.ts:2212](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2212)*
 
 **`description`** Clears all settings
 
@@ -117,7 +115,7 @@ ___
 
 ▸ **setVersionBoth**(`ver`: string): *void*
 
-*Defined in [types.d.ts:2201](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2201)*
+*Defined in [types.d.ts:2201](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2201)*
 
 **`description`** Set the minor and major version via a string. E.g. "2016.51"
 
@@ -135,7 +133,7 @@ ___
 
 ▸ **setVersionMinor**(`ver`: string): *void*
 
-*Defined in [types.d.ts:2207](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2207)*
+*Defined in [types.d.ts:2207](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2207)*
 
 **`description`** Set the minor version via a string. E.g. "031"
 
@@ -153,7 +151,7 @@ ___
 
 ▸ **versionMinorDisplay**(): *string*
 
-*Defined in [types.d.ts:2195](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2195)*
+*Defined in [types.d.ts:2195](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2195)*
 
 **Returns:** *string*
 

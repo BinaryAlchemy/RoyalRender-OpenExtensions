@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day](libnoderr2_datafiles._rrclientstats_day.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day](libnoderr2_datafiles._rrclientstats_day.md)
 
 # Interface: _rrClientStats_day
 
@@ -28,7 +26,7 @@
 
 • **day**: *number*
 
-*Defined in [types.d.ts:706](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L706)*
+*Defined in [types.d.ts:706](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L706)*
 
 **`description`** The current day in the default unix timestamp (days since Jan 1, 1970). Note: Most time functions return the time in seconds since 1970, so divide that value with /60/60/24.
 
@@ -38,7 +36,7 @@ ___
 
 • **daySet**: *boolean*
 
-*Defined in [types.d.ts:701](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L701)*
+*Defined in [types.d.ts:701](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L701)*
 
 **`description`** Contains this day any useful data? (e.g. if the client was not online that day, daySet is false).
 
@@ -48,7 +46,7 @@ ___
 
 ▸ **data**(`idx`: number): *[_rrClientStats_day_data](libnoderr2_datafiles._rrclientstats_day_data.md)*
 
-*Defined in [types.d.ts:711](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L711)*
+*Defined in [types.d.ts:711](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L711)*
 
 **`description`** This data is collected every 20 seconds. Index 0 are the first 20 seconds of the day, Index 1 the 20-40 seconds of the day, ...
 
@@ -66,7 +64,7 @@ ___
 
 ▸ **dataHourly**(`idx`: number): *[_rrClientStats_day_data_hourly](libnoderr2_datafiles._rrclientstats_day_data_hourly.md)*
 
-*Defined in [types.d.ts:721](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L721)*
+*Defined in [types.d.ts:721](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L721)*
 
 **Parameters:**
 
@@ -82,7 +80,7 @@ ___
 
 ▸ **dataHourlyMax**(): *number*
 
-*Defined in [types.d.ts:726](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L726)*
+*Defined in [types.d.ts:726](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L726)*
 
 **`description`** The maximum number of values in the hourly array (24).
 
@@ -94,7 +92,7 @@ ___
 
 ▸ **dataMax**(): *number*
 
-*Defined in [types.d.ts:716](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L716)*
+*Defined in [types.d.ts:716](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L716)*
 
 **Returns:** *number*
 

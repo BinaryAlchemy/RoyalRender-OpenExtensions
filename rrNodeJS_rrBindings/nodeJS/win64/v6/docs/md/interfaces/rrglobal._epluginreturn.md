@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_EPluginReturn](rrglobal._epluginreturn.md)
+[rrBindingsDocs](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_EPluginReturn](rrglobal._epluginreturn.md)
 
 # Interface: _EPluginReturn
 
@@ -47,7 +45,7 @@
 
 • **rAbsolutePathsRequired**: *number*
 
-*Defined in [types.d.ts:1321](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1321)*
+*Defined in [types.d.ts:1321](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1321)*
 
 **`description`** The scene parser was not able to create a job as some scene settings do not use an absolute path. And this plugin was not able to resolve the relative path OR it will not be possible to render the scene with relative paths.
 
@@ -57,7 +55,7 @@ ___
 
 • **rCError**: *number*
 
-*Defined in [types.d.ts:1273](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1273)*
+*Defined in [types.d.ts:1273](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1273)*
 
 ___
 
@@ -65,7 +63,7 @@ ___
 
 • **rDataError**: *number*
 
-*Defined in [types.d.ts:1293](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1293)*
+*Defined in [types.d.ts:1293](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1293)*
 
 **`description`** The data of the file seems to be broken.
 
@@ -75,7 +73,7 @@ ___
 
 • **rDebugCompile**: *number*
 
-*Defined in [types.d.ts:1303](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1303)*
+*Defined in [types.d.ts:1303](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1303)*
 
 ___
 
@@ -83,7 +81,7 @@ ___
 
 • **rFileBuffertoSmall**: *number*
 
-*Defined in [types.d.ts:1311](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1311)*
+*Defined in [types.d.ts:1311](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1311)*
 
 ___
 
@@ -91,7 +89,7 @@ ___
 
 • **rFileFailedToOpen**: *number*
 
-*Defined in [types.d.ts:1266](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1266)*
+*Defined in [types.d.ts:1266](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1266)*
 
 **`description`** Failed to open the file.
 
@@ -101,7 +99,7 @@ ___
 
 • **rFileFailedToSave**: *number*
 
-*Defined in [types.d.ts:1305](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1305)*
+*Defined in [types.d.ts:1305](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1305)*
 
 ___
 
@@ -109,7 +107,7 @@ ___
 
 • **rFileNotFound**: *number*
 
-*Defined in [types.d.ts:1261](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1261)*
+*Defined in [types.d.ts:1261](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1261)*
 
 **`description`** File to read was not found.
 
@@ -119,7 +117,7 @@ ___
 
 • **rFileSizeToSmall**: *number*
 
-*Defined in [types.d.ts:1302](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1302)*
+*Defined in [types.d.ts:1302](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1302)*
 
 **`description`** The file size is smaller than it should be. Indicates that the file was not completely written.
 
@@ -129,7 +127,7 @@ ___
 
 • **rImageDimensionsToLarge**: *number*
 
-*Defined in [types.d.ts:1294](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1294)*
+*Defined in [types.d.ts:1294](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1294)*
 
 ___
 
@@ -137,7 +135,7 @@ ___
 
 • **rIsPlaceHolderFile**: *number*
 
-*Defined in [types.d.ts:1304](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1304)*
+*Defined in [types.d.ts:1304](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1304)*
 
 ___
 
@@ -145,7 +143,7 @@ ___
 
 • **rLoadEndOfFileOnly**: *number*
 
-*Defined in [types.d.ts:1322](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1322)*
+*Defined in [types.d.ts:1322](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1322)*
 
 ___
 
@@ -153,7 +151,7 @@ ___
 
 • **rMemError**: *number*
 
-*Defined in [types.d.ts:1274](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1274)*
+*Defined in [types.d.ts:1274](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1274)*
 
 ___
 
@@ -161,7 +159,7 @@ ___
 
 • **rNoImageDimensions**: *number*
 
-*Defined in [types.d.ts:1288](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1288)*
+*Defined in [types.d.ts:1288](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1288)*
 
 ___
 
@@ -169,7 +167,7 @@ ___
 
 • **rNoImageOutput**: *number*
 
-*Defined in [types.d.ts:1316](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1316)*
+*Defined in [types.d.ts:1316](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1316)*
 
 **`description`** No image output set in scene file.
 
@@ -179,7 +177,7 @@ ___
 
 • **rNoPluginforFileType**: *number*
 
-*Defined in [types.d.ts:1296](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1296)*
+*Defined in [types.d.ts:1296](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1296)*
 
 ___
 
@@ -187,7 +185,7 @@ ___
 
 • **rOtherError**: *number*
 
-*Defined in [types.d.ts:1286](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1286)*
+*Defined in [types.d.ts:1286](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1286)*
 
 **`description`** Any other error.
 
@@ -197,7 +195,7 @@ ___
 
 • **rPluginFileMissing**: *number*
 
-*Defined in [types.d.ts:1275](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1275)*
+*Defined in [types.d.ts:1275](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1275)*
 
 ___
 
@@ -205,7 +203,7 @@ ___
 
 • **rPluginLoadError**: *number*
 
-*Defined in [types.d.ts:1276](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1276)*
+*Defined in [types.d.ts:1276](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1276)*
 
 ___
 
@@ -213,7 +211,7 @@ ___
 
 • **rPythonError**: *number*
 
-*Defined in [types.d.ts:1297](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1297)*
+*Defined in [types.d.ts:1297](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1297)*
 
 ___
 
@@ -221,7 +219,7 @@ ___
 
 • **rRRDataVersionConflict**: *number*
 
-*Defined in [types.d.ts:1272](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1272)*
+*Defined in [types.d.ts:1272](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1272)*
 
 ___
 
@@ -229,7 +227,7 @@ ___
 
 • **rRequireFullLoad**: *number*
 
-*Defined in [types.d.ts:1295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1295)*
+*Defined in [types.d.ts:1295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1295)*
 
 ___
 
@@ -237,7 +235,7 @@ ___
 
 • **rSuccessful**: *number*
 
-*Defined in [types.d.ts:1256](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1256)*
+*Defined in [types.d.ts:1256](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1256)*
 
 **`description`** Successful execution.
 
@@ -247,7 +245,7 @@ ___
 
 • **rSuccessfulIgnoreNoJobs**: *number*
 
-*Defined in [types.d.ts:1281](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1281)*
+*Defined in [types.d.ts:1281](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1281)*
 
 **`description`** The execution was successful, but the plugin has not created a job. And this should not be seen as an error.
 
@@ -257,7 +255,7 @@ ___
 
 • **rSuccessfulRetryLoad**: *number*
 
-*Defined in [types.d.ts:1310](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1310)*
+*Defined in [types.d.ts:1310](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1310)*
 
 **`description`** The execution was not an error. But the main app should execute this plugin again.
 
@@ -267,7 +265,7 @@ ___
 
 • **rUnknownError**: *number*
 
-*Defined in [types.d.ts:1251](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1251)*
+*Defined in [types.d.ts:1251](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1251)*
 
 **`description`** The default value if nothing was set.
 
@@ -277,7 +275,7 @@ ___
 
 • **rUnsupportedFormat**: *number*
 
-*Defined in [types.d.ts:1271](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1271)*
+*Defined in [types.d.ts:1271](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1271)*
 
 **`description`** This plugin does not support this file format. In such a case the next plugin that can open this file extension is executed.
 
@@ -287,4 +285,4 @@ ___
 
 • **rWrongFileSize**: *number*
 
-*Defined in [types.d.ts:1287](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1287)*
+*Defined in [types.d.ts:1287](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1287)*

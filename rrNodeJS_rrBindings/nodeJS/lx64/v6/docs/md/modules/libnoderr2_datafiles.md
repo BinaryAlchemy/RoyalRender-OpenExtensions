@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](libnoderr2_datafiles.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](libnoderr2_datafiles.md)
 
 # Module: libNodeRR2_datafiles
 

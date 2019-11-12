@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [rrGlobal](rrglobal.md)
+[rrBindingsDocs](../README.md) › [rrGlobal](rrglobal.md)
 
 # Module: rrGlobal
 

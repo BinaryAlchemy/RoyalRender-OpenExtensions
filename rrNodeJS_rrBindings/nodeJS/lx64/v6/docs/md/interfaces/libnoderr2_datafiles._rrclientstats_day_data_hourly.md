@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_hourly](libnoderr2_datafiles._rrclientstats_day_data_hourly.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_hourly](libnoderr2_datafiles._rrclientstats_day_data_hourly.md)
 
 # Interface: _rrClientStats_day_data_hourly
 
@@ -21,7 +19,7 @@
 
 ▸ **jobThread**(`idx`: number): *[_rrClientStats_day_data_hourly_jobthread](libnoderr2_datafiles._rrclientstats_day_data_hourly_jobthread.md)*
 
-*Defined in [types.d.ts:791](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L791)*
+*Defined in [types.d.ts:791](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L791)*
 
 **Parameters:**
 
@@ -39,7 +37,7 @@ ___
 
 ▸ **jobThreadMax**(): *number*
 
-*Defined in [types.d.ts:796](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L796)*
+*Defined in [types.d.ts:796](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L796)*
 
 **Returns:** *number*
 

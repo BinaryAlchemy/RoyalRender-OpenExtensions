@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_singleStatDay](libnoderr2_datafiles._singlestatday.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_singleStatDay](libnoderr2_datafiles._singlestatday.md)
 
 # Interface: _singleStatDay
 
@@ -26,7 +24,7 @@
 
 • **name**: *string*
 
-*Defined in [types.d.ts:473](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L473)*
+*Defined in [types.d.ts:473](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L473)*
 
 **`description`** Name of the user, project or render app.
 
@@ -36,7 +34,7 @@ ___
 
 • **type**: *number*
 
-*Defined in [types.d.ts:478](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L478)*
+*Defined in [types.d.ts:478](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L478)*
 
 **`description`** 0 -> User stats, 1 -> Project stats, 2 -> Render app stats
 
@@ -46,7 +44,7 @@ ___
 
 ▸ **stats**(`idx`: number): *[_singleStat](libnoderr2_datafiles._singlestat.md)*
 
-*Defined in [types.d.ts:484](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L484)*
+*Defined in [types.d.ts:484](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L484)*
 
 **`description`** Each array item contains the stats for 15 minutes of that day: 0: 00:00- 00:15 1: 00:15- 00:30 2: 00:30- 00:45 ...
 
@@ -64,7 +62,7 @@ ___
 
 ▸ **statsMax**(): *number*
 
-*Defined in [types.d.ts:489](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L489)*
+*Defined in [types.d.ts:489](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L489)*
 
 **Returns:** *number*
 

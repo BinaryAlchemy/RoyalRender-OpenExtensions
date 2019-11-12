@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrsStatsSaveData](libnoderr2_datafiles._rrsstatssavedata.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrsStatsSaveData](libnoderr2_datafiles._rrsstatssavedata.md)
 
 # Interface: _rrsStatsSaveData
 
@@ -8,7 +6,7 @@
 
 * **_rrsStatsSaveData**
 
-  * [_rrsStatsSaveDataLS](libnoderr2_datafiles._rrsstatssavedatals.md)
+  ↳ [_rrsStatsSaveDataLS](libnoderr2_datafiles._rrsstatssavedatals.md)
 
 ## Index
 
@@ -33,7 +31,7 @@
 
 • **lastSaveDay**: *number*
 
-*Defined in [types.d.ts:526](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L526)*
+*Defined in [types.d.ts:526](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L526)*
 
 **`description`** The time the last index of the day array was saved. This value is the system time in the current time zone divided by 90. Use currentLocalTime() to get the current local time.
 
@@ -43,7 +41,7 @@ ___
 
 • **lastSaveMonth**: *number*
 
-*Defined in [types.d.ts:531](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L531)*
+*Defined in [types.d.ts:531](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L531)*
 
 **`description`** The time the last index of the day array was saved. This value is the system time in the current time zone divided by 1800 (=30 minutes). Use currentLocalTime() to get the current local time.
 
@@ -53,7 +51,7 @@ ___
 
 • **lastSaveYear**: *number*
 
-*Defined in [types.d.ts:536](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L536)*
+*Defined in [types.d.ts:536](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L536)*
 
 **`description`** The time the last index of the day array was saved. This value is the system time in the current time zone divided by 21600 (=6 hours). Use currentLocalTime() to get the current local time.
 
@@ -63,7 +61,7 @@ ___
 
 ▸ **day**(`idx`: number): *[_rrsStats_type](libnoderr2_datafiles._rrsstats_type.md)*
 
-*Defined in [types.d.ts:541](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L541)*
+*Defined in [types.d.ts:541](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L541)*
 
 **`description`** Get the day stats at index idx. Index 0 returns the first 90s of the day, the time from 00:00.00 to 00:01.30. 12:15 in seconds of the day is 12*60*60 + 15*60 = 44100. Divided by 90s  is 44100 / 90 =490. The stats are constantly overwritten with the stats right now, therefore an index larger than the current time returns stats of yesterday. E.g. it is 18:00 right now. If you get the stats from 17:00, then you have the stats from 1 hour ago. If you get the stats from 19:00, then you get the stats from 23h ago. Note: This is only true as long as the rrServer is running and continues to save stats. Otherwise check lastSaveDay.
 
@@ -81,7 +79,7 @@ ___
 
 ▸ **dayMax**(): *number*
 
-*Defined in [types.d.ts:546](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L546)*
+*Defined in [types.d.ts:546](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L546)*
 
 **Returns:** *number*
 
@@ -93,7 +91,7 @@ ___
 
 ▸ **month**(): *[_rrsStats_type](libnoderr2_datafiles._rrsstats_type.md)*
 
-*Defined in [types.d.ts:551](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L551)*
+*Defined in [types.d.ts:551](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L551)*
 
 **`description`** The server adds the stats of the last 30 minutes to the last index (959) of the array and pushes all other stat values down in the array. Therefore an index of monthMax()-1=959 returns the stats of the last completed 30 minutes. E.g. if the current time is 18:15, then the last stats are from 17:30 - 18:00 Note: This is only true as long as the rrServer is running and continues to save stats. Otherwise check lastSaveMonth.
 
@@ -105,7 +103,7 @@ ___
 
 ▸ **monthMax**(): *number*
 
-*Defined in [types.d.ts:556](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L556)*
+*Defined in [types.d.ts:556](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L556)*
 
 **Returns:** *number*
 
@@ -117,7 +115,7 @@ ___
 
 ▸ **year**(): *[_rrsStats_type](libnoderr2_datafiles._rrsstats_type.md)*
 
-*Defined in [types.d.ts:561](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L561)*
+*Defined in [types.d.ts:561](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L561)*
 
 **`description`** The server adds the stats of the last 30 minutes to the last index (959) of the array and pushes all other stat values down in the array. Therefore an index of yearMax()-1=959 returns the stats of the last completed half day minutes. E.g. if the current time is 18:15, then the last stats are from 00:00 - 12:00 Note: This is only true as long as the rrServer is running and continues to save stats. Otherwise check lastSaveYear.
 
@@ -129,7 +127,7 @@ ___
 
 ▸ **yearMax**(): *number*
 
-*Defined in [types.d.ts:566](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L566)*
+*Defined in [types.d.ts:566](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L566)*
 
 **Returns:** *number*
 

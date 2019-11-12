@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_ELogLvL](rrglobal._eloglvl.md)
+[rrBindingsDocs](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_ELogLvL](rrglobal._eloglvl.md)
 
 # Interface: _ELogLvL
 
@@ -25,7 +23,7 @@
 
 • **critical**: *number*
 
-*Defined in [types.d.ts:1160](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1160)*
+*Defined in [types.d.ts:1160](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1160)*
 
 **`description`** Critical messages will force the RR application to restart or terminate themselves.
 
@@ -35,7 +33,7 @@ ___
 
 • **debug**: *number*
 
-*Defined in [types.d.ts:1185](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1185)*
+*Defined in [types.d.ts:1185](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1185)*
 
 **`description`** Debug messages are ignored by default. They are shown if you have called debugEnable() or the RR application is not running in debug mode.
 
@@ -45,7 +43,7 @@ ___
 
 • **error**: *number*
 
-*Defined in [types.d.ts:1165](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1165)*
+*Defined in [types.d.ts:1165](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1165)*
 
 **`description`** Error messages are important for the execution of RR and should never fail. All RR error messages are collected in a seperate error log RR/sub/log/_ERROR.txt for the rrAdmin and/or rrSupport to fix issues.
 
@@ -55,7 +53,7 @@ ___
 
 • **info**: *number*
 
-*Defined in [types.d.ts:1175](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1175)*
+*Defined in [types.d.ts:1175](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1175)*
 
 **`description`** default messages (At the moment there is no difference to "progress" besides for the message box).
 
@@ -65,7 +63,7 @@ ___
 
 • **progress**: *number*
 
-*Defined in [types.d.ts:1180](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1180)*
+*Defined in [types.d.ts:1180](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1180)*
 
 **`description`** default messages (At the moment there is no difference to "info" besides for the message box).
 
@@ -75,6 +73,6 @@ ___
 
 • **warning**: *number*
 
-*Defined in [types.d.ts:1170](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1170)*
+*Defined in [types.d.ts:1170](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1170)*
 
 **`description`** Warning messages will have a "WRN - " in front to identify them faster in logfiles.

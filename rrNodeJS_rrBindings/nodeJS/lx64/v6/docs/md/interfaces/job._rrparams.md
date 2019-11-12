@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](../modules/job.md) › [_RRParams](job._rrparams.md)
+[rrBindingsDocs](../README.md) › [Job](../modules/job.md) › [_RRParams](job._rrparams.md)
 
 # Interface: _RRParams
 
@@ -31,7 +29,7 @@
 
 • **rrApproveJob**: *number*
 
-*Defined in [types.d.ts:1994](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1994)*
+*Defined in [types.d.ts:1994](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1994)*
 
 **`description`** Possible values: 0: No Approval Wait, 1: Wait before main render (after preview), 2: Wait after frames done (before finished-scripts), 3: Both (1+2).
 
@@ -41,7 +39,7 @@ ___
 
 • **rrpColor**: *number*
 
-*Defined in [types.d.ts:1989](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1989)*
+*Defined in [types.d.ts:1989](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1989)*
 
 ___
 
@@ -49,7 +47,7 @@ ___
 
 • **rrpMaxClientsAtATime**: *number*
 
-*Defined in [types.d.ts:1981](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1981)*
+*Defined in [types.d.ts:1981](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1981)*
 
 ___
 
@@ -57,7 +55,7 @@ ___
 
 • **rrpMaxCrashes**: *number*
 
-*Defined in [types.d.ts:1985](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1985)*
+*Defined in [types.d.ts:1985](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1985)*
 
 ___
 
@@ -65,7 +63,7 @@ ___
 
 • **rrpMaxFrameTime**: *number*
 
-*Defined in [types.d.ts:1983](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1983)*
+*Defined in [types.d.ts:1983](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1983)*
 
 ___
 
@@ -73,7 +71,7 @@ ___
 
 • **rrpMaxLimitsReached**: *number*
 
-*Defined in [types.d.ts:1986](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1986)*
+*Defined in [types.d.ts:1986](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1986)*
 
 ___
 
@@ -81,7 +79,7 @@ ___
 
 • **rrpMinFileSizeKb**: *number*
 
-*Defined in [types.d.ts:1984](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1984)*
+*Defined in [types.d.ts:1984](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1984)*
 
 ___
 
@@ -89,7 +87,7 @@ ___
 
 • **rrpPreviewNumberOfFrames**: *number*
 
-*Defined in [types.d.ts:1980](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1980)*
+*Defined in [types.d.ts:1980](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1980)*
 
 ___
 
@@ -97,7 +95,7 @@ ___
 
 • **rrpRenderQuality**: *number*
 
-*Defined in [types.d.ts:1988](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1988)*
+*Defined in [types.d.ts:1988](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1988)*
 
 ___
 
@@ -105,7 +103,7 @@ ___
 
 • **rrpRequiredMemoryGB**: *number*
 
-*Defined in [types.d.ts:1982](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1982)*
+*Defined in [types.d.ts:1982](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1982)*
 
 ___
 
@@ -113,7 +111,7 @@ ___
 
 • **rrpTotalrrParameter**: *number*
 
-*Defined in [types.d.ts:1999](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1999)*
+*Defined in [types.d.ts:1999](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1999)*
 
 **`description`** No matter if there will be new options, this is always the total number of rrParams. Note for loop functions: This is not the ID of the last item!
 
@@ -123,4 +121,4 @@ ___
 
 • **rrpVerboseLevel**: *number*
 
-*Defined in [types.d.ts:1987](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1987)*
+*Defined in [types.d.ts:1987](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L1987)*

@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](../modules/job.md) › [_SettingsOnly](job._settingsonly.md)
+[rrBindingsDocs](../README.md) › [Job](../modules/job.md) › [_SettingsOnly](job._settingsonly.md)
 
 # Interface: _SettingsOnly
 
@@ -8,7 +6,7 @@
 
 * **_SettingsOnly**
 
-  * [_JobSend](job._jobsend.md)
+  ↳ [_JobSend](job._jobsend.md)
 
 ## Index
 
@@ -50,7 +48,7 @@
 
 • **additionalCommandlineParam**: *string*
 
-*Defined in [types.d.ts:2083](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2083)*
+*Defined in [types.d.ts:2083](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2083)*
 
 ___
 
@@ -58,7 +56,7 @@ ___
 
 • **companyProjectName**: *string*
 
-*Defined in [types.d.ts:2088](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2088)*
+*Defined in [types.d.ts:2088](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2088)*
 
 ___
 
@@ -66,7 +64,7 @@ ___
 
 • **customOptionsCount**: *number*
 
-*Defined in [types.d.ts:2122](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2122)*
+*Defined in [types.d.ts:2122](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2122)*
 
 **`description`** Number of custom options for the job  (custom options are set in the render config of the job).
 
@@ -76,7 +74,7 @@ ___
 
 • **customSeqName**: *string*
 
-*Defined in [types.d.ts:2085](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2085)*
+*Defined in [types.d.ts:2085](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2085)*
 
 ___
 
@@ -84,7 +82,7 @@ ___
 
 • **customShotName**: *string*
 
-*Defined in [types.d.ts:2086](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2086)*
+*Defined in [types.d.ts:2086](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2086)*
 
 ___
 
@@ -92,7 +90,7 @@ ___
 
 • **customVersionName**: *string*
 
-*Defined in [types.d.ts:2087](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2087)*
+*Defined in [types.d.ts:2087](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2087)*
 
 ___
 
@@ -100,7 +98,7 @@ ___
 
 • **notifyFinish**: *string*
 
-*Defined in [types.d.ts:2089](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2089)*
+*Defined in [types.d.ts:2089](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2089)*
 
 ___
 
@@ -108,7 +106,7 @@ ___
 
 • **notifyFinishClientName**: *string*
 
-*Defined in [types.d.ts:2090](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2090)*
+*Defined in [types.d.ts:2090](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2090)*
 
 ___
 
@@ -116,7 +114,7 @@ ___
 
 • **notifyFinishParam**: *number*
 
-*Defined in [types.d.ts:2091](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2091)*
+*Defined in [types.d.ts:2091](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2091)*
 
 ___
 
@@ -124,7 +122,7 @@ ___
 
 • **notifyFinishWhen**: *number*
 
-*Defined in [types.d.ts:2092](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2092)*
+*Defined in [types.d.ts:2092](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2092)*
 
 ___
 
@@ -132,7 +130,7 @@ ___
 
 • **prePostCommandCount**: *number*
 
-*Defined in [types.d.ts:2117](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2117)*
+*Defined in [types.d.ts:2117](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2117)*
 
 **`description`** Number of pre/preview/post/finished commands for the job.
 
@@ -142,7 +140,7 @@ ___
 
 • **priority**: *number*
 
-*Defined in [types.d.ts:2097](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2097)*
+*Defined in [types.d.ts:2097](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2097)*
 
 **`description`** The priority of the job.
 
@@ -152,7 +150,7 @@ ___
 
 • **seqDivMax**: *number*
 
-*Defined in [types.d.ts:2107](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2107)*
+*Defined in [types.d.ts:2107](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2107)*
 
 **`description`** Sequence Divide Max value.
 
@@ -162,7 +160,7 @@ ___
 
 • **seqDivMin**: *number*
 
-*Defined in [types.d.ts:2102](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2102)*
+*Defined in [types.d.ts:2102](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2102)*
 
 **`description`** Sequence Divide Min value.
 
@@ -172,7 +170,7 @@ ___
 
 • **seqEnd**: *number*
 
-*Defined in [types.d.ts:2070](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2070)*
+*Defined in [types.d.ts:2070](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2070)*
 
 ___
 
@@ -180,7 +178,7 @@ ___
 
 • **seqFileOffset**: *number*
 
-*Defined in [types.d.ts:2072](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2072)*
+*Defined in [types.d.ts:2072](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2072)*
 
 ___
 
@@ -188,7 +186,7 @@ ___
 
 • **seqFrameSet**: *string*
 
-*Defined in [types.d.ts:2077](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2077)*
+*Defined in [types.d.ts:2077](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2077)*
 
 **`description`** - not used -
 
@@ -198,7 +196,7 @@ ___
 
 • **seqIsFloatFrames**: *boolean*
 
-*Defined in [types.d.ts:2082](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2082)*
+*Defined in [types.d.ts:2082](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2082)*
 
 **`description`** - not used -
 
@@ -208,7 +206,7 @@ ___
 
 • **seqStart**: *number*
 
-*Defined in [types.d.ts:2069](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2069)*
+*Defined in [types.d.ts:2069](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2069)*
 
 ___
 
@@ -216,7 +214,7 @@ ___
 
 • **seqStep**: *number*
 
-*Defined in [types.d.ts:2071](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2071)*
+*Defined in [types.d.ts:2071](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2071)*
 
 ___
 
@@ -224,7 +222,7 @@ ___
 
 • **timeToEnable**: *Date*
 
-*Defined in [types.d.ts:2112](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2112)*
+*Defined in [types.d.ts:2112](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2112)*
 
 **`description`** The job is deactivated until this time.
 
@@ -234,7 +232,7 @@ ___
 
 • **userName**: *string*
 
-*Defined in [types.d.ts:2084](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2084)*
+*Defined in [types.d.ts:2084](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2084)*
 
 ## Methods
 
@@ -242,7 +240,7 @@ ___
 
 ▸ **rrOption**(`id`: number): *boolean*
 
-*Defined in [types.d.ts:2131](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2131)*
+*Defined in [types.d.ts:2131](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2131)*
 
 **`description`** Use the enumeration _rrOption for ids. Example: rrbinding.createRRjob().rrOption(rrbinding.createRRjob().rroAbortLowJobs).
 
@@ -262,7 +260,7 @@ ___
 
 ▸ **rrOption_Set**(`idx`: number, `newValue`: boolean): *void*
 
-*Defined in [types.d.ts:2138](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2138)*
+*Defined in [types.d.ts:2138](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2138)*
 
 **`description`** Sets the rrOption of a job.
 
@@ -281,7 +279,7 @@ ___
 
 ▸ **rrParam**(`id`: number): *number*
 
-*Defined in [types.d.ts:2145](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2145)*
+*Defined in [types.d.ts:2145](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2145)*
 
 **`description`** Use the enumeration _rrParam for ids. Example: rrbinding.createRRjob().rrParam(rrbinding.createRRjob().rrpRequiredMemoryGB).
 
@@ -301,7 +299,7 @@ ___
 
 ▸ **rrParam_Set**(`idx`: number, `newValue`: number): *void*
 
-*Defined in [types.d.ts:2152](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2152)*
+*Defined in [types.d.ts:2152](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L2152)*
 
 **`description`** Sets the rrParam of a job.
 

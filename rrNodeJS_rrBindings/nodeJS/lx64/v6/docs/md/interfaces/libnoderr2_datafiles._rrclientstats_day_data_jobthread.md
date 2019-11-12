@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_jobthread](libnoderr2_datafiles._rrclientstats_day_data_jobthread.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data_jobthread](libnoderr2_datafiles._rrclientstats_day_data_jobthread.md)
 
 # Interface: _rrClientStats_day_data_jobthread
 
@@ -27,7 +25,7 @@
 
 • **cpuRender**: *number*
 
-*Defined in [types.d.ts:767](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L767)*
+*Defined in [types.d.ts:767](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L767)*
 
 **`description`** CPU usage of this job. The value is exported as float (1.0 = 100%).
 
@@ -37,7 +35,7 @@ ___
 
 • **jobIDShort**: *number*
 
-*Defined in [types.d.ts:777](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L777)*
+*Defined in [types.d.ts:777](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L777)*
 
 **`description`** The ID of the job in a shortened representation (The internal job ID in RR is usually a 64bit number. In this case truncated to 32bit only).
 
@@ -47,7 +45,7 @@ ___
 
 • **memRender10MB**: *number*
 
-*Defined in [types.d.ts:772](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L772)*
+*Defined in [types.d.ts:772](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L772)*
 
 **`description`** Memory usage of the render job in MB, divided by 10.
 
@@ -57,7 +55,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [types.d.ts:762](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L762)*
+*Defined in [types.d.ts:762](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L762)*
 
 **`description`** Job status. See enumeration _Status.
 
@@ -67,7 +65,7 @@ ___
 
 ▸ **jobIDShortStr**(): *string*
 
-*Defined in [types.d.ts:782](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L782)*
+*Defined in [types.d.ts:782](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L782)*
 
 **Returns:** *string*
 
