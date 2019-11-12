@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data](libnoderr2_datafiles._rrclientstats_day_data.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrClientStats_day_data](libnoderr2_datafiles._rrclientstats_day_data.md)
 
 # Interface: _rrClientStats_day_data
 
@@ -27,7 +25,7 @@
 
 • **cpuTotal**: *number*
 
-*Defined in [types.d.ts:740](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L740)*
+*Defined in [types.d.ts:740](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L740)*
 
 **`description`** CPU usage as percentage of the system. The value is exported as float (1.0 = 100%).
 
@@ -37,7 +35,7 @@ ___
 
 • **memTotal10MB**: *number*
 
-*Defined in [types.d.ts:745](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L745)*
+*Defined in [types.d.ts:745](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L745)*
 
 **`description`** Total memory usage in MiB, divided by 10.
 
@@ -47,7 +45,7 @@ ___
 
 • **userLoggedIn**: *boolean*
 
-*Defined in [types.d.ts:735](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L735)*
+*Defined in [types.d.ts:735](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L735)*
 
 **`description`** Was a user logged in?
 
@@ -57,7 +55,7 @@ ___
 
 ▸ **jobThread**(): *[_rrClientStats_day_data_jobthread](libnoderr2_datafiles._rrclientstats_day_data_jobthread.md)*
 
-*Defined in [types.d.ts:750](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L750)*
+*Defined in [types.d.ts:750](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L750)*
 
 **Returns:** *[_rrClientStats_day_data_jobthread](libnoderr2_datafiles._rrclientstats_day_data_jobthread.md)*
 
@@ -69,7 +67,7 @@ ___
 
 ▸ **jobThreadMax**(): *number*
 
-*Defined in [types.d.ts:755](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L755)*
+*Defined in [types.d.ts:755](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L755)*
 
 **Returns:** *number*
 

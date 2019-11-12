@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrsStats_type](libnoderr2_datafiles._rrsstats_type.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrsStats_type](libnoderr2_datafiles._rrsstats_type.md)
 
 # Interface: _rrsStats_type
 
@@ -40,7 +38,7 @@
 
 • **av_frame_time**: *number*
 
-*Defined in [types.d.ts:669](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L669)*
+*Defined in [types.d.ts:669](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L669)*
 
 **`description`** Average frame time of all jobs.
 
@@ -50,7 +48,7 @@ ___
 
 • **avclientTemperature**: *number*
 
-*Defined in [types.d.ts:619](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L619)*
+*Defined in [types.d.ts:619](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L619)*
 
 **`description`** Average temperature of the first HDD of all rrClients.
 
@@ -60,7 +58,7 @@ ___
 
 • **client_rendering**: *number*
 
-*Defined in [types.d.ts:594](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L594)*
+*Defined in [types.d.ts:594](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L594)*
 
 **`description`** Number of clients rendering.
 
@@ -70,7 +68,7 @@ ___
 
 • **clients_disabled**: *number*
 
-*Defined in [types.d.ts:599](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L599)*
+*Defined in [types.d.ts:599](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L599)*
 
 **`description`** Number of disabled clients.
 
@@ -80,7 +78,7 @@ ___
 
 • **clients_free**: *number*
 
-*Defined in [types.d.ts:589](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L589)*
+*Defined in [types.d.ts:589](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L589)*
 
 **`description`** Number of free clients.
 
@@ -90,7 +88,7 @@ ___
 
 • **clients_needed**: *number*
 
-*Defined in [types.d.ts:579](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L579)*
+*Defined in [types.d.ts:579](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L579)*
 
 **`description`** A estimate how many clients would be needed to start all unassigned frame segments.
 
@@ -100,7 +98,7 @@ ___
 
 • **cpuMachine**: *number*
 
-*Defined in [types.d.ts:609](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L609)*
+*Defined in [types.d.ts:609](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L609)*
 
 **`description`** CPU usage of the machine (0-100%).
 
@@ -110,7 +108,7 @@ ___
 
 • **cpuProcess**: *number*
 
-*Defined in [types.d.ts:604](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L604)*
+*Defined in [types.d.ts:604](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L604)*
 
 **`description`** CPU usage of the rrServer app (0-100%).
 
@@ -120,7 +118,7 @@ ___
 
 • **framesPer90s**: *number*
 
-*Defined in [types.d.ts:584](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L584)*
+*Defined in [types.d.ts:584](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L584)*
 
 **`description`** Number of frames rendered during this time segment (90seconds, 30 minutes or 6hours depending on the stats type).
 
@@ -130,7 +128,7 @@ ___
 
 • **frames_to_do**: *number*
 
-*Defined in [types.d.ts:674](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L674)*
+*Defined in [types.d.ts:674](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L674)*
 
 **`description`** Summed frames to be rendered from all jobs.
 
@@ -140,7 +138,7 @@ ___
 
 • **jobBufferMemUsageJobs**: *number*
 
-*Defined in [types.d.ts:659](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L659)*
+*Defined in [types.d.ts:659](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L659)*
 
 **`description`** Memory usage for all job data.
 
@@ -150,7 +148,7 @@ ___
 
 • **jobs_rendering**: *number*
 
-*Defined in [types.d.ts:629](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L629)*
+*Defined in [types.d.ts:629](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L629)*
 
 **`description`** Number of jobs rendering.
 
@@ -160,7 +158,7 @@ ___
 
 • **jobs_total**: *number*
 
-*Defined in [types.d.ts:634](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L634)*
+*Defined in [types.d.ts:634](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L634)*
 
 **`description`** Total number of jobs.
 
@@ -170,7 +168,7 @@ ___
 
 • **jobs_unfinished**: *number*
 
-*Defined in [types.d.ts:624](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L624)*
+*Defined in [types.d.ts:624](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L624)*
 
 **`description`** Number of unfinished jobs.
 
@@ -180,7 +178,7 @@ ___
 
 • **memUsageMachine**: *number*
 
-*Defined in [types.d.ts:639](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L639)*
+*Defined in [types.d.ts:639](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L639)*
 
 **`description`** Memory usage of the rrServer machine.
 
@@ -190,7 +188,7 @@ ___
 
 • **memUsageProcess**: *number*
 
-*Defined in [types.d.ts:644](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L644)*
+*Defined in [types.d.ts:644](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L644)*
 
 **`description`** Memory usage of the rrServer application.
 
@@ -200,7 +198,7 @@ ___
 
 • **serverTemperature**: *number*
 
-*Defined in [types.d.ts:614](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L614)*
+*Defined in [types.d.ts:614](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L614)*
 
 **`description`** Temperature of the first HDD in the rrServer machine.
 
@@ -210,7 +208,7 @@ ___
 
 • **slot_used**: *boolean*
 
-*Defined in [types.d.ts:574](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L574)*
+*Defined in [types.d.ts:574](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L574)*
 
 **`description`** Is this data valid? If not, then this data is crap or from any other day/time.
 
@@ -220,7 +218,7 @@ ___
 
 • **tCPMemUsageData**: *number*
 
-*Defined in [types.d.ts:654](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L654)*
+*Defined in [types.d.ts:654](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L654)*
 
 **`description`** Memory usage of the 2nd rrServers TCP socket buffer.
 
@@ -230,7 +228,7 @@ ___
 
 • **tCPMemUsageDataCompressed**: *number*
 
-*Defined in [types.d.ts:664](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L664)*
+*Defined in [types.d.ts:664](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L664)*
 
 **`description`** Max memory for a TCP socket buffer after compression.
 
@@ -240,6 +238,6 @@ ___
 
 • **tCPMemUsageSocket**: *number*
 
-*Defined in [types.d.ts:649](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L649)*
+*Defined in [types.d.ts:649](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L649)*
 
 **`description`** Memory usage of the 1st rrServers TCP socket buffer.

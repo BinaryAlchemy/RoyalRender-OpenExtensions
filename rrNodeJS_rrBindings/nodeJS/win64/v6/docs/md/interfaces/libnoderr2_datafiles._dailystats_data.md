@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_DailyStats_Data](libnoderr2_datafiles._dailystats_data.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_DailyStats_Data](libnoderr2_datafiles._dailystats_data.md)
 
 # Interface: _DailyStats_Data
 
@@ -8,7 +6,7 @@
 
 * [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md)
 
-  * **_DailyStats_Data**
+  ↳ **_DailyStats_Data**
 
 ## Index
 
@@ -27,7 +25,7 @@
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[getError](libnoderr2_datafiles._rrstatssharedfunctions.md#geterror)*
 
-*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
+*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
 
 **Returns:** *string*
 
@@ -41,7 +39,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[loadFromFile](libnoderr2_datafiles._rrstatssharedfunctions.md#loadfromfile)*
 
-*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
+*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
 
 **`description`** Loads the stats from file FileName.
 
@@ -59,7 +57,7 @@ ___
 
 ▸ **singleStats**(`id`: number): *[_singleStatDay](libnoderr2_datafiles._singlestatday.md)[]*
 
-*Defined in [types.d.ts:460](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L460)*
+*Defined in [types.d.ts:460](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L460)*
 
 **Parameters:**
 
@@ -77,7 +75,7 @@ ___
 
 ▸ **singleStatsMax**(): *number*
 
-*Defined in [types.d.ts:465](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L465)*
+*Defined in [types.d.ts:465](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L465)*
 
 **Returns:** *number*
 

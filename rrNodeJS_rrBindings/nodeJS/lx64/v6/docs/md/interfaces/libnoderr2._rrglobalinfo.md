@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrGlobalInfo](libnoderr2._rrglobalinfo.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrGlobalInfo](libnoderr2._rrglobalinfo.md)
 
 # Interface: _rrGlobalInfo
 
@@ -22,7 +20,7 @@
 
 • **infoClientSegment**: *[_rrInfoClientSegment](libnoderr2._rrinfoclientsegment.md)*
 
-*Defined in [types.d.ts:346](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L346)*
+*Defined in [types.d.ts:346](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L346)*
 
 ___
 
@@ -30,7 +28,7 @@ ___
 
 • **infoWOL**: *[_rrInfoWOL](libnoderr2._rrinfowol.md)*
 
-*Defined in [types.d.ts:347](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L347)*
+*Defined in [types.d.ts:347](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L347)*
 
 ___
 
@@ -38,4 +36,4 @@ ___
 
 • **time**: *string*
 
-*Defined in [types.d.ts:345](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L345)*
+*Defined in [types.d.ts:345](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L345)*

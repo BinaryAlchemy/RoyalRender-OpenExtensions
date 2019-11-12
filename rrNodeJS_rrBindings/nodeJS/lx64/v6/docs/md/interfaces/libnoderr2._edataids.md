@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_EdataIDs](libnoderr2._edataids.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_EdataIDs](libnoderr2._edataids.md)
 
 # Interface: _EdataIDs
 
@@ -23,7 +21,7 @@
 
 • **jlBasic**: *number*
 
-*Defined in [types.d.ts:295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L295)*
+*Defined in [types.d.ts:295](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L295)*
 
 ___
 
@@ -31,7 +29,7 @@ ___
 
 • **jlMinInfo**: *number*
 
-*Defined in [types.d.ts:294](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L294)*
+*Defined in [types.d.ts:294](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L294)*
 
 ___
 
@@ -39,7 +37,7 @@ ___
 
 • **jlNone**: *number*
 
-*Defined in [types.d.ts:293](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L293)*
+*Defined in [types.d.ts:293](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L293)*
 
 ___
 
@@ -47,4 +45,4 @@ ___
 
 • **jlSend**: *number*
 
-*Defined in [types.d.ts:296](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L296)*
+*Defined in [types.d.ts:296](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L296)*

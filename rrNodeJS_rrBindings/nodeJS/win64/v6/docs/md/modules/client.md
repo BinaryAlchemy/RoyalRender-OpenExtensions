@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Client](client.md)
+[rrBindingsDocs](../README.md) › [Client](client.md)
 
 # Module: Client
 

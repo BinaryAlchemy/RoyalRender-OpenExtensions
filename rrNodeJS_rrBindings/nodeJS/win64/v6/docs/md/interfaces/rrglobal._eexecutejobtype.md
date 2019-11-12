@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_EExecuteJobType](rrglobal._eexecutejobtype.md)
+[rrBindingsDocs](../README.md) › [rrGlobal](../modules/rrglobal.md) › [_EExecuteJobType](rrglobal._eexecutejobtype.md)
 
 # Interface: _EExecuteJobType
 
@@ -23,7 +21,7 @@
 
 • **eachClient**: *number*
 
-*Defined in [types.d.ts:1148](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1148)*
+*Defined in [types.d.ts:1148](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1148)*
 
 **`description`** Execute this job on each client.
 
@@ -33,7 +31,7 @@ ___
 
 • **none**: *number*
 
-*Defined in [types.d.ts:1138](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1138)*
+*Defined in [types.d.ts:1138](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1138)*
 
 **`description`** default job.
 
@@ -43,7 +41,7 @@ ___
 
 • **once**: *number*
 
-*Defined in [types.d.ts:1143](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1143)*
+*Defined in [types.d.ts:1143](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1143)*
 
 **`description`** Execute this job once.
 
@@ -53,6 +51,6 @@ ___
 
 • **perFrame**: *number*
 
-*Defined in [types.d.ts:1153](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1153)*
+*Defined in [types.d.ts:1153](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1153)*
 
 **`description`** Execute this job once per frame.

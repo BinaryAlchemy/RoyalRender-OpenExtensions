@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_StatsRenderTime](libnoderr2_datafiles._statsrendertime.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_StatsRenderTime](libnoderr2_datafiles._statsrendertime.md)
 
 # Interface: _StatsRenderTime
 
@@ -28,7 +26,7 @@
 
 • **lastSaved**: *Date*
 
-*Defined in [types.d.ts:1000](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1000)*
+*Defined in [types.d.ts:1000](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1000)*
 
 **`description`** Date/Time of the group settings file saved.
 
@@ -38,7 +36,7 @@ ___
 
 • **prjCount**: *number*
 
-*Defined in [types.d.ts:995](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L995)*
+*Defined in [types.d.ts:995](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L995)*
 
 **`description`** Get the number of groups.
 
@@ -48,7 +46,7 @@ ___
 
 ▸ **getError**(): *string*
 
-*Defined in [types.d.ts:1024](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1024)*
+*Defined in [types.d.ts:1024](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1024)*
 
 **Returns:** *string*
 
@@ -60,7 +58,7 @@ ___
 
 ▸ **getProject**(`idx`: number): *[_StatsRenderTime_project](libnoderr2_datafiles._statsrendertime_project.md)*
 
-*Defined in [types.d.ts:1007](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1007)*
+*Defined in [types.d.ts:1007](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1007)*
 
 **Parameters:**
 
@@ -78,7 +76,7 @@ ___
 
 ▸ **loadFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:1013](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1013)*
+*Defined in [types.d.ts:1013](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1013)*
 
 **`description`** Loads the stats from file FileName.
 
@@ -96,7 +94,7 @@ ___
 
 ▸ **saveFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:1019](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1019)*
+*Defined in [types.d.ts:1019](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1019)*
 
 **`description`** Saves the stats into file FileName.
 

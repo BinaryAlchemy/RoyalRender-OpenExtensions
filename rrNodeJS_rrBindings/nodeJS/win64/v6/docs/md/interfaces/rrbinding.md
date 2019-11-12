@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [rrBinding](rrbinding.md)
+[rrBindingsDocs](../README.md) › [rrBinding](rrbinding.md)
 
 # Interface: rrBinding
 
@@ -24,11 +22,11 @@
 
 ### Methods
 
+* [_rrTCP](rrbinding.md#_rrtcp)
 * [createRRJob](rrbinding.md#createrrjob)
 * [createUserSettings](rrbinding.md#createusersettings)
 * [datafiles](rrbinding.md#datafiles)
 * [rrGlobal](rrbinding.md#rrglobal)
-* [rrTCP](rrbinding.md#rrtcp)
 * [rrUint64](rrbinding.md#rruint64)
 
 ## Properties
@@ -37,7 +35,7 @@
 
 • **_dataIDs**: *[_EdataIDs](libnoderr2._edataids.md)*
 
-*Defined in [types.d.ts:17](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L17)*
+*Defined in [types.d.ts:17](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L17)*
 
 ___
 
@@ -45,7 +43,7 @@ ___
 
 • **_filterIDs**: *[_EfilterIDs](libnoderr2._efilterids.md)*
 
-*Defined in [types.d.ts:18](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L18)*
+*Defined in [types.d.ts:18](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L18)*
 
 ___
 
@@ -53,15 +51,27 @@ ___
 
 • **_sortIDs**: *[_EsortIDs](libnoderr2._esortids.md)*
 
-*Defined in [types.d.ts:19](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L19)*
+*Defined in [types.d.ts:19](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L19)*
 
 ## Methods
+
+###  _rrTCP
+
+▸ **_rrTCP**(): *[rrTCP](libnoderr2.rrtcp.md)*
+
+*Defined in [types.d.ts:11](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L11)*
+
+**`description`** creates a new TCP object for connecting the application with the rrServer
+
+**Returns:** *[rrTCP](libnoderr2.rrtcp.md)*
+
+___
 
 ###  createRRJob
 
 ▸ **createRRJob**(): *[rrJob](job.rrjob.md)*
 
-*Defined in [types.d.ts:15](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L15)*
+*Defined in [types.d.ts:15](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L15)*
 
 **Returns:** *[rrJob](job.rrjob.md)*
 
@@ -71,7 +81,7 @@ ___
 
 ▸ **createUserSettings**(): *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
-*Defined in [types.d.ts:14](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L14)*
+*Defined in [types.d.ts:14](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L14)*
 
 **Returns:** *[rrUserSettings](libnoderr2.rrusersettings.md)*
 
@@ -81,7 +91,7 @@ ___
 
 ▸ **datafiles**(): *[DataFiles](libnoderr2_datafiles.datafiles.md)*
 
-*Defined in [types.d.ts:13](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L13)*
+*Defined in [types.d.ts:13](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L13)*
 
 **Returns:** *[DataFiles](libnoderr2_datafiles.datafiles.md)*
 
@@ -91,21 +101,9 @@ ___
 
 ▸ **rrGlobal**(): *[rrGlobal](rrglobal.rrglobal-1.md)*
 
-*Defined in [types.d.ts:12](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L12)*
+*Defined in [types.d.ts:12](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L12)*
 
 **Returns:** *[rrGlobal](rrglobal.rrglobal-1.md)*
-
-___
-
-###  rrTCP
-
-▸ **rrTCP**(): *[rrTCP](libnoderr2.rrtcp.md)*
-
-*Defined in [types.d.ts:11](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L11)*
-
-**`description`** creates a new TCP object for connecting the application with the rrServer
-
-**Returns:** *[rrTCP](libnoderr2.rrtcp.md)*
 
 ___
 
@@ -113,6 +111,6 @@ ___
 
 ▸ **rrUint64**(): *[rrUint64](utils.rruint64.md)*
 
-*Defined in [types.d.ts:16](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L16)*
+*Defined in [types.d.ts:16](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L16)*
 
 **Returns:** *[rrUint64](utils.rruint64.md)*

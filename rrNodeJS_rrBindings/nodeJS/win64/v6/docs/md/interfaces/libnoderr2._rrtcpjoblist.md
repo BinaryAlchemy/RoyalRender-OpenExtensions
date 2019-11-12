@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrTCPjobList](libnoderr2._rrtcpjoblist.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrTCPjobList](libnoderr2._rrtcpjoblist.md)
 
 # Interface: _rrTCPjobList
 
@@ -28,7 +26,7 @@
 
 ▸ **getJobBasic**(`jobID`: [rrUint64](utils.rruint64.md)): *[_JobBasics](job._jobbasics.md)*
 
-*Defined in [types.d.ts:252](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L252)*
+*Defined in [types.d.ts:252](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L252)*
 
 **`description`** If there is no _JobBasics for this job, then an empty job is returned. It has some fields like scene name set to ??..
 
@@ -48,7 +46,7 @@ ___
 
 ▸ **getJobDataType**(`jobID`: [rrUint64](utils.rruint64.md)): *[_EdataIDs](libnoderr2._edataids.md)*
 
-*Defined in [types.d.ts:238](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L238)*
+*Defined in [types.d.ts:238](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L238)*
 
 **`description`** Tells you which data class is currently available for that job.
 
@@ -68,7 +66,7 @@ ___
 
 ▸ **getJobMinInfo**(`jobID`: [rrUint64](utils.rruint64.md)): *[_JobMinInfo](job._jobmininfo.md)*
 
-*Defined in [types.d.ts:245](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L245)*
+*Defined in [types.d.ts:245](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L245)*
 
 **`description`** Fetches the MinInfo of a job from the rrServer.
 
@@ -88,7 +86,7 @@ ___
 
 ▸ **getJobMinInfo_filterQueue**(`ID`: number): *[_JobMinInfo](job._jobmininfo.md)*
 
-*Defined in [types.d.ts:290](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L290)*
+*Defined in [types.d.ts:290](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L290)*
 
 **`description`** for a loop with getMaxJobsFiltered().
 
@@ -108,7 +106,7 @@ ___
 
 ▸ **getJobMinInfo_queue**(`ID`: number): *[_JobMinInfo](job._jobmininfo.md)*
 
-*Defined in [types.d.ts:278](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L278)*
+*Defined in [types.d.ts:278](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L278)*
 
 **`description`** for a loop with getMaxJobs().
 
@@ -128,7 +126,7 @@ ___
 
 ▸ **getJobSend**(`jobID`: [rrUint64](utils.rruint64.md)): *[_JobSend](job._jobsend.md)*
 
-*Defined in [types.d.ts:259](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L259)*
+*Defined in [types.d.ts:259](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L259)*
 
 **`description`** If there is no _JobSend for this job, then it returns getJobBasic().
 
@@ -148,7 +146,7 @@ ___
 
 ▸ **getJobUpdatedTime**(`jobID`: [rrUint64](utils.rruint64.md)): *Date*
 
-*Defined in [types.d.ts:266](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L266)*
+*Defined in [types.d.ts:266](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L266)*
 
 **`description`** Returns the time this job object was updated by jobGetInfoBasic() or jobGetInfoSend(). The time is the rrServer time. Note: This is not the last time the job was changed. Use job.lastSettingsChanged or job.lastInfoChanged to get that information.
 
@@ -168,7 +166,7 @@ ___
 
 ▸ **getMaxJobs**(): *number*
 
-*Defined in [types.d.ts:271](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L271)*
+*Defined in [types.d.ts:271](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L271)*
 
 **Returns:** *number*
 
@@ -180,7 +178,7 @@ ___
 
 ▸ **getMaxJobsFiltered**(): *number*
 
-*Defined in [types.d.ts:283](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L283)*
+*Defined in [types.d.ts:283](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L283)*
 
 **Returns:** *number*
 

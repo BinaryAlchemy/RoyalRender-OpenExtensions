@@ -8,7 +8,7 @@ export interface rrBinding {
     /**
      * @description creates a new TCP object for connecting the application with the rrServer
      */
-    rrTCP(): libNodeRR2.rrTCP;
+    _rrTCP(): libNodeRR2.rrTCP;
     rrGlobal(): rrGlobal.rrGlobal;
     datafiles(): libNodeRR2_datafiles.DataFiles;
     createUserSettings(): libNodeRR2.rrUserSettings;

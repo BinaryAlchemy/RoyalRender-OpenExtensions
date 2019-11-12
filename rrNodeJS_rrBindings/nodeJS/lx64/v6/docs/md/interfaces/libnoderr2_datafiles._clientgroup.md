@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_ClientGroup](libnoderr2_datafiles._clientgroup.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_ClientGroup](libnoderr2_datafiles._clientgroup.md)
 
 # Interface: _ClientGroup
 
@@ -27,7 +25,7 @@
 
 ▸ **addClient**(`name`: string): *void*
 
-*Defined in [types.d.ts:969](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L969)*
+*Defined in [types.d.ts:969](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L969)*
 
 **`description`** Add a client with the specified name to the list.
 
@@ -45,7 +43,7 @@ ___
 
 ▸ **clear**(): *void*
 
-*Defined in [types.d.ts:946](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L946)*
+*Defined in [types.d.ts:946](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L946)*
 
 **`description`** Remove all clients from the group.
 
@@ -57,7 +55,7 @@ ___
 
 ▸ **count**(): *number*
 
-*Defined in [types.d.ts:986](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L986)*
+*Defined in [types.d.ts:986](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L986)*
 
 **Returns:** *number*
 
@@ -69,7 +67,7 @@ ___
 
 ▸ **getClientName**(`idx`: number): *string*
 
-*Defined in [types.d.ts:963](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L963)*
+*Defined in [types.d.ts:963](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L963)*
 
 **`description`** Get client name at the list index.
 
@@ -87,7 +85,7 @@ ___
 
 ▸ **getName**(): *string*
 
-*Defined in [types.d.ts:951](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L951)*
+*Defined in [types.d.ts:951](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L951)*
 
 **Returns:** *string*
 
@@ -99,7 +97,7 @@ ___
 
 ▸ **removeClient**(`name`: string): *void*
 
-*Defined in [types.d.ts:975](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L975)*
+*Defined in [types.d.ts:975](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L975)*
 
 **`description`** Remove client from the gorup with the specified name.
 
@@ -117,7 +115,7 @@ ___
 
 ▸ **removeClientbyID**(`idx`: number): *void*
 
-*Defined in [types.d.ts:981](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L981)*
+*Defined in [types.d.ts:981](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L981)*
 
 **`description`** Remove client at list index from the group.
 
@@ -135,7 +133,7 @@ ___
 
 ▸ **setName**(`newName`: string): *void*
 
-*Defined in [types.d.ts:957](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L957)*
+*Defined in [types.d.ts:957](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L957)*
 
 **`description`** Set the name of the group.
 

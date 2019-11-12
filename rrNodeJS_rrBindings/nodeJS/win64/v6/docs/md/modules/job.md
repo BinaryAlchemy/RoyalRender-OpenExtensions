@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](job.md)
+[rrBindingsDocs](../README.md) › [Job](job.md)
 
 # Module: Job
 

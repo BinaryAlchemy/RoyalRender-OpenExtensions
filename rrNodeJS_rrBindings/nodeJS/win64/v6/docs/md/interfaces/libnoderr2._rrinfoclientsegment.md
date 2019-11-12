@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrInfoClientSegment](libnoderr2._rrinfoclientsegment.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrInfoClientSegment](libnoderr2._rrinfoclientsegment.md)
 
 # Interface: _rrInfoClientSegment
 
@@ -21,7 +19,7 @@
 
 • **RenderSegmentsDone**: *number*
 
-*Defined in [types.d.ts:352](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L352)*
+*Defined in [types.d.ts:352](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L352)*
 
 ___
 
@@ -29,4 +27,4 @@ ___
 
 • **RenderSegmentsTime**: *number*
 
-*Defined in [types.d.ts:353](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L353)*
+*Defined in [types.d.ts:353](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L353)*

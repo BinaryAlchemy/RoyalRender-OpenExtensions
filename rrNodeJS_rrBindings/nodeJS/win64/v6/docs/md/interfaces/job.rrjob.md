@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [Job](../modules/job.md) › [rrJob](job.rrjob.md)
+[rrBindingsDocs](../README.md) › [Job](../modules/job.md) › [rrJob](job.rrjob.md)
 
 # Interface: rrJob
 
@@ -28,7 +26,7 @@
 
 • **_Status**: *[_Status](job._status.md)*
 
-*Defined in [types.d.ts:1350](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1350)*
+*Defined in [types.d.ts:1350](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1350)*
 
 ___
 
@@ -36,7 +34,7 @@ ___
 
 • **_logMessage**: *[_LogMessage](job._logmessage.md)*
 
-*Defined in [types.d.ts:1335](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1335)*
+*Defined in [types.d.ts:1335](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1335)*
 
 **`description`** _LogMessage is used for all job log messages and for commands send to a job.
 
@@ -50,7 +48,7 @@ ___
 
 • **_rrOptions**: *[_RROptions](job._rroptions.md)*
 
-*Defined in [types.d.ts:1342](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1342)*
+*Defined in [types.d.ts:1342](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1342)*
 
 **`example`** 
 var rrJob = rrbinding.createRRJob();
@@ -62,7 +60,7 @@ ___
 
 • **_rrParam**: *[_RRParams](job._rrparams.md)*
 
-*Defined in [types.d.ts:1349](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1349)*
+*Defined in [types.d.ts:1349](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1349)*
 
 **`example`** 
 var rrJob = rrbinding.createRRJob();
@@ -74,7 +72,7 @@ rrJob.rrParam(rrJob._rrParam.rrpRequiredMemoryGB);
 
 ▸ **getClass_JobBasics**(): *[_JobBasics](job._jobbasics.md)*
 
-*Defined in [types.d.ts:1357](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1357)*
+*Defined in [types.d.ts:1357](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1357)*
 
 **Returns:** *[_JobBasics](job._jobbasics.md)*
 
@@ -86,7 +84,7 @@ ___
 
 ▸ **getClass_SettingsOnly**(): *[_SettingsOnly](job._settingsonly.md)*
 
-*Defined in [types.d.ts:1363](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1363)*
+*Defined in [types.d.ts:1363](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L1363)*
 
 **`description`** If you want to change job settings, then you have to use this class and send the rrServer a command with the new values.
 

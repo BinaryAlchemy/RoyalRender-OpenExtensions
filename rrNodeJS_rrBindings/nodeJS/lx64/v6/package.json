@@ -9,7 +9,9 @@
     "start": "backpack",
     "build": "rm -rf ./lib/* && backpack build",
     "prepublishOnly": "npm run build",
-    "gen:docs": "rm -rf ./docs && typedoc --mode file --includeDeclarations --excludeExternals --out docs/html --name rrBindingsDocs --readme none && typedoc --theme markdown --mode file --includeDeclarations --excludeExternals --out docs/md --name rrBindingsDocs --readme none"
+    "gen:docs": "rm -rf ./docs && npm run gen:docs:html && npm run gen:docs:md",
+    "gen:docs:html": "typedoc --plugin none --mode file --includeDeclarations --excludeExternals --out docs/html --name rrBindingsDocs --readme none",
+    "gen:docs:md": "typedoc --plugin typedoc-plugin-markdown --theme markdown --mode file --includeDeclarations --excludeExternals --out docs/md --name rrBindingsDocs --readme none"
   },
   "files": [
     "lib/",

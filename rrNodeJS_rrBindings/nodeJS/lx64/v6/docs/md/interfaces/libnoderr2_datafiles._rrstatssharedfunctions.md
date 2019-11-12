@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md)
 
 # Interface: _rrStatsSharedFunctions
 
@@ -8,15 +6,15 @@
 
 * **_rrStatsSharedFunctions**
 
-  * [_DailyStats_Data](libnoderr2_datafiles._dailystats_data.md)
+  ↳ [_DailyStats_Data](libnoderr2_datafiles._dailystats_data.md)
 
-  * [_rrsStatsSaveDataLS](libnoderr2_datafiles._rrsstatssavedatals.md)
+  ↳ [_rrsStatsSaveDataLS](libnoderr2_datafiles._rrsstatssavedatals.md)
 
-  * [_rrClientStats_Data](libnoderr2_datafiles._rrclientstats_data.md)
+  ↳ [_rrClientStats_Data](libnoderr2_datafiles._rrclientstats_data.md)
 
-  * [_frameStatJob](libnoderr2_datafiles._framestatjob.md)
+  ↳ [_frameStatJob](libnoderr2_datafiles._framestatjob.md)
 
-  * [_ClientGroupList](libnoderr2_datafiles._clientgrouplist.md)
+  ↳ [_ClientGroupList](libnoderr2_datafiles._clientgrouplist.md)
 
 ## Index
 
@@ -31,7 +29,7 @@
 
 ▸ **getError**(): *string*
 
-*Defined in [types.d.ts:450](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L450)*
+*Defined in [types.d.ts:450](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L450)*
 
 **Returns:** *string*
 
@@ -43,7 +41,7 @@ ___
 
 ▸ **loadFromFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:445](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L445)*
+*Defined in [types.d.ts:445](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L445)*
 
 **`description`** Loads the stats from file FileName.
 

@@ -1,6 +1,6 @@
-**[rrBindingsDocs](README.md)**
+[rrBindingsDocs](README.md)
 
-[Globals](README.md)
+# rrBindingsDocs
 
 ## Index
 
@@ -27,4 +27,4 @@
 
 • **bindings**: *[rrBinding](interfaces/rrbinding.md)* =  require('rrshared/libNodeJs6_RR.node')
 
-*Defined in [src/index.ts:2](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/src/index.ts#L2)*
+*Defined in [src/index.ts:2](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/src/index.ts#L2)*

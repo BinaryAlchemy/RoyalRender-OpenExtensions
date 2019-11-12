@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrInfoWOL](libnoderr2._rrinfowol.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrInfoWOL](libnoderr2._rrinfowol.md)
 
 # Interface: _rrInfoWOL
 
@@ -22,7 +20,7 @@
 
 • **LastWOLExecute**: *string*
 
-*Defined in [types.d.ts:359](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L359)*
+*Defined in [types.d.ts:359](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L359)*
 
 ___
 
@@ -30,7 +28,7 @@ ___
 
 • **WOlAble**: *number*
 
-*Defined in [types.d.ts:357](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L357)*
+*Defined in [types.d.ts:357](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L357)*
 
 ___
 
@@ -38,4 +36,4 @@ ___
 
 • **totalClientNeed**: *number*
 
-*Defined in [types.d.ts:358](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L358)*
+*Defined in [types.d.ts:358](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L358)*

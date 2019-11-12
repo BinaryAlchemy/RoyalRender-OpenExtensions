@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_frameStat_part](libnoderr2_datafiles._framestat_part.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_frameStat_part](libnoderr2_datafiles._framestat_part.md)
 
 # Interface: _frameStat_part
 
@@ -23,7 +21,7 @@
 
 • **jobCPU**: *number*
 
-*Defined in [types.d.ts:891](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L891)*
+*Defined in [types.d.ts:891](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L891)*
 
 **`returns`** CPU usage of the job.
 
@@ -33,7 +31,7 @@ ___
 
 • **jobMemoryMB**: *number*
 
-*Defined in [types.d.ts:886](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L886)*
+*Defined in [types.d.ts:886](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L886)*
 
 **`returns`** Memory usage of job.
 
@@ -43,7 +41,7 @@ ___
 
 • **nonJobCPU**: *number*
 
-*Defined in [types.d.ts:896](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L896)*
+*Defined in [types.d.ts:896](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L896)*
 
 **`returns`** Other CPU usage of the machine.
 
@@ -53,6 +51,6 @@ ___
 
 • **renderThreads**: *number*
 
-*Defined in [types.d.ts:901](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L901)*
+*Defined in [types.d.ts:901](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/lx64/v6/types.d.ts#L901)*
 
 **`returns`** Number of job threads rendering on the client at this moment.

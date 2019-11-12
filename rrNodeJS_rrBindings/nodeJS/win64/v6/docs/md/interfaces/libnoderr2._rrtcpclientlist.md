@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrTCPclientList](libnoderr2._rrtcpclientlist.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2](../modules/libnoderr2.md) › [_rrTCPclientList](libnoderr2._rrtcpclientlist.md)
 
 # Interface: _rrTCPclientList
 
@@ -22,7 +20,7 @@
 
 ▸ **at**(`clientID`: number): *[_ClientStatus](client._clientstatus.md)*
 
-*Defined in [types.d.ts:333](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L333)*
+*Defined in [types.d.ts:333](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L333)*
 
 **`description`** Retrieves a client by its ID from the rrServer
 
@@ -40,7 +38,7 @@ ___
 
 ▸ **clientStatus**(`clientID`: number): *string*
 
-*Defined in [types.d.ts:342](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L342)*
+*Defined in [types.d.ts:342](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L342)*
 
 **`description`** Retrieves the current status of the specified client
 
@@ -58,7 +56,7 @@ ___
 
 ▸ **count**(): *number*
 
-*Defined in [types.d.ts:337](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L337)*
+*Defined in [types.d.ts:337](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L337)*
 
 **`description`** Fetches the amount of registered clients which were returned by the clientGetList() function
 

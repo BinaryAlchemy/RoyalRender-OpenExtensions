@@ -1,6 +1,4 @@
-**[rrBindingsDocs](../README.md)**
-
-[Globals](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_ClientGroupList](libnoderr2_datafiles._clientgrouplist.md)
+[rrBindingsDocs](../README.md) › [libNodeRR2_datafiles](../modules/libnoderr2_datafiles.md) › [_ClientGroupList](libnoderr2_datafiles._clientgrouplist.md)
 
 # Interface: _ClientGroupList
 
@@ -8,7 +6,7 @@
 
 * [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md)
 
-  * **_ClientGroupList**
+  ↳ **_ClientGroupList**
 
 ## Index
 
@@ -32,7 +30,7 @@
 
 • **count**: *number*
 
-*Defined in [types.d.ts:915](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L915)*
+*Defined in [types.d.ts:915](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L915)*
 
 **`description`** Get/set the number of groups.
 
@@ -42,7 +40,7 @@ ___
 
 • **settingsFileDate**: *Date*
 
-*Defined in [types.d.ts:910](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L910)*
+*Defined in [types.d.ts:910](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L910)*
 
 **`description`** Date/Time of the group settings file loaded/saved.
 
@@ -52,7 +50,7 @@ ___
 
 ▸ **clientGroup**(`idx`: number): *[_ClientGroup](libnoderr2_datafiles._clientgroup.md)*
 
-*Defined in [types.d.ts:921](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L921)*
+*Defined in [types.d.ts:921](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L921)*
 
 **Parameters:**
 
@@ -70,7 +68,7 @@ ___
 
 ▸ **clientGroupSet**(`idx`: number, `group`: [_ClientGroup](libnoderr2_datafiles._clientgroup.md)): *void*
 
-*Defined in [types.d.ts:928](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L928)*
+*Defined in [types.d.ts:928](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L928)*
 
 **Parameters:**
 
@@ -87,7 +85,7 @@ ___
 
 ▸ **clientGroupsMax**(): *number*
 
-*Defined in [types.d.ts:933](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L933)*
+*Defined in [types.d.ts:933](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L933)*
 
 **Returns:** *number*
 
@@ -101,7 +99,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[getError](libnoderr2_datafiles._rrstatssharedfunctions.md#geterror)*
 
-*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
+*Defined in [types.d.ts:451](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L451)*
 
 **Returns:** *string*
 
@@ -115,7 +113,7 @@ ___
 
 *Inherited from [_rrStatsSharedFunctions](libnoderr2_datafiles._rrstatssharedfunctions.md).[loadFromFile](libnoderr2_datafiles._rrstatssharedfunctions.md#loadfromfile)*
 
-*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
+*Defined in [types.d.ts:446](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L446)*
 
 **`description`** Loads the stats from file FileName.
 
@@ -133,7 +131,7 @@ ___
 
 ▸ **saveToFile**(`FileName`: string): *boolean*
 
-*Defined in [types.d.ts:939](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/5ba4523/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L939)*
+*Defined in [types.d.ts:939](https://github.com/Novalis15/RoyalRender-OpenExtensions/blob/f77b7d8/rrNodeJS_rrBindings/nodeJS/win64/v6/types.d.ts#L939)*
 
 **`description`** Saves the stats into file FileName.
 
