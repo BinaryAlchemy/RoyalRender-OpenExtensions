@@ -10,6 +10,7 @@
   "files": [
     "librrShared.so.1",
     "libQtCore.so.4",
+    "7z.so",
     "*.node"
   ],
   "author": "",
