@@ -16,3 +16,4 @@ qtc_packaging
 GeneratedFiles
 generatedfiles
 .vscode
+__pycache__

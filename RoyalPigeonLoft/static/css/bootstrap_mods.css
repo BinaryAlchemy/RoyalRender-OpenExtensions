@@ -1,0 +1,40 @@
+
+/* Modifies switches color in checked-state */
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #adb5bd;
+  background-color: #adb5bd;
+}
+
+.stat_center_element {
+  border-right: 1px solid rgba(0,0,0,.125);
+}
+
+.messageClass {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 1;
+}
+
+.table-card-body {
+  max-height: 600px;
+  overflow: auto;
+  padding: 0;
+}
+
+.btn-toolbar {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-dark {
+  /*border-color: white;*/
+  /*border-width: 3px;*/
+  box-shadow: 0 3px 8px gray;
+}
+
+.dropdown-menu {
+  box-shadow: 0 3px 8px gray;
+}

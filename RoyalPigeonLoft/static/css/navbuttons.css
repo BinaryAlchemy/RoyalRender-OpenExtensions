@@ -1,0 +1,23 @@
+.navbar-nav > li {
+  float: left;
+  position: relative;
+}
+
+.navbar-light .navbar-nav li.active::after{
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  content: " ";
+  /*color: #F4C127;*/
+  border-bottom: 3px solid #000;
+}
+
+#cog-link.dropdown-toggle::after {
+	display: none;
+}
+
+body {
+  padding-top: 4.5rem;
+}

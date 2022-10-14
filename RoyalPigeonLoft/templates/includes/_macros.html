@@ -1,0 +1,75 @@
+{% macro checkboxes(settings, name) -%}
+  {% set checks_per_block = ((settings|length) / 3) | round(0, 'ceil') %}
+  {%- for option in settings %}
+    {% if (loop.index % checks_per_block == 1) or checks_per_block == 1 %}
+      <div class="col-md-4">
+    {% endif %}
+      <div class="input-group border rounded mb-3 p-1">
+        <div class="custom-control custom-switch" style="color: black">
+            <input type="checkbox" class="custom-control-input"
+            {% if settings[option] %} checked {% endif %}
+            name={{name}} value="{{option}}" id="{{name}}_{{option}}">
+            <label class="custom-control-label" style="white-space: nowrap; color: black;" for="{{name}}_{{option}}">
+            {{option}}
+            </label>
+        </div>
+      </div>
+    {% if loop.index % checks_per_block == 0 or loop.index == (settings|length) %}
+      </div>
+    {% endif %}
+  {%- endfor %}
+{%- endmacro %}
+
+{% macro get_perc_bar_style(perc) -%}
+  {% if perc < 50 %}
+    {% set color = 'lightgreen' %}
+  {% elif perc < 80 %}
+    {% set color = 'orange' %}
+  {% else %}
+    {% set color = 'red' %}
+  {% endif %}
+  style="color: black; background-origin: border-box; background: linear-gradient(90deg, {{color}} {{perc}}%, #FFFFFF 1%);"
+{%- endmacro %}
+
+{% macro connection_stat_element(stat) -%}
+
+<div class="card mb-1">
+<div class="row py-1 mx-0">
+  <div class="col-auto stat_center_element px-2">
+    {% if not stat["Failed"] %}
+      <i class="fas fa-check-circle text-success"></i>
+    {% else %}
+      <i class="fas fa-times-circle text-danger"></i>
+    {% endif %}
+  </div>
+  <div class="col-auto stat_center_element px-2" style="font-weight: bold">
+    {{ stat["idx"] }}
+  </div>
+  <div class="col-auto stat_center_element">
+    <p class="m-0 p-0" style="font-size: xx-small">Function</p>
+    <p class="m-0 p-0">{{ stat["Function"] }}</p>
+  </div>
+  <div class="col-auto stat_center_element">
+    <p class="m-0 p-0" style="font-size: xx-small">TimeTaken</p>
+    <p class="m-0 p-0">{{ stat["TimeTaken"] }}</p>
+  </div>
+  <div class="col-auto stat_center_element">
+    <p class="m-0 p-0" style="font-size: xx-small">TX</p>
+    <p class="m-0 p-0">{{ stat["TrafficSend"] }}</p>
+  </div>
+  <div class="col-auto stat_center_element">
+    <p class="m-0 p-0" style="font-size: xx-small">RX</p>
+    <p class="m-0 p-0">{{ stat["TrafficReceived"] }}</p>
+  </div>
+  <div class="col-auto stat_center_element">
+    <p class="m-0 p-0" style="font-size: xx-small">MemoryAfter</p>
+    <p class="m-0 p-0">{{ stat["MemoryAfter"] }}</p>
+  </div>
+  <div class="col-auto">
+    <p class="m-0 p-0" style="font-size: xx-small">MemoryPeak</p>
+    <p class="m-0 p-0">{{ stat["MemoryPeak"] }}</p>
+  </div>
+</div>
+</div>
+
+{%- endmacro %}

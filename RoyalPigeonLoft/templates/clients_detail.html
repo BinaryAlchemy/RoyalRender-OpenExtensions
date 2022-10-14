@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+{% import 'includes/_client_macros.html' as macros %}
+
+{% for client in clients %}
+  {{ macros.client_card(client, loop.index) }}
+{% endfor %}
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}

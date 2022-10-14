@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+<!--WARNING USE ONLY TEXT (STR) OR CHKBOXES (BOOL) IN THE DASHBOARD. NO INT OR FLOAT-->
+{% block body %}
+
+{% import 'includes/_macros.html' as macros %}
+<form action="" method="POST">
+  <div class="row">
+    <div class="col-md-12">
+      <h4> Clients info</h4>
+      <div class="row">
+        {{ macros.checkboxes(settings['clients'], 'clients') }}
+      </div>
+      <h4> Jobs info</h4>
+      <div class="row">
+        {{ macros.checkboxes(settings['jobs'], 'jobs') }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button type="submit" class="btn btn-dark btn-large">Save Settings</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,174 @@
+{% import 'includes/_macros.html' as macros %}
+
+{% macro client_th(cli_sample, settings) -%}
+  <th><div></div></th>
+  <th><div>ID</div></th>
+  <th><div>Name</div></th>
+  {% if settings["Basic"] == true %}
+  <th><div>Status</div></th>
+  <th><div>User</div></th>
+  {% endif %}
+  {% if settings["CPU%"] == true %}
+  <th><div>CPU Usage</div></th>
+  {% endif %}
+  {% if settings["GPU%"] == true %}
+  <th><div>GPU Usage</div></th>
+  {% endif %}
+  {% if settings["Temperature"] == true %}
+  <th><div>tempHDD</div></th>
+  {% endif %}
+  {% if settings["Debug"] == true %}
+  <th><div>Version</div></th>
+  <th><div>StructureID</div></th>
+  <th><div>VariablesID</div></th>
+  <th><div>isRunningAsService</div></th>
+  <th><div>localTextureSpaceUsed</div></th>
+  <th><div>maxCoresSetForJob</div></th>
+  <th><div>maxJobThreads</div></th>
+  <th><div>noUserInteraction</div></th>
+  {% endif %}
+{%- endmacro %}
+
+{% macro client_tr(group, cli, index, settings) -%}
+  <tr id="{{group}}clirow{{index}}" data-client_id="{{cli['ID']}}" class="selectable-row {{cli['statusClass']}}">
+    <td>
+      <div class="px-1 py-0">
+        <a href="clients_detail?client_id={{cli['ID']}}">
+          <i class="m-0 fas fa-search-plus" style="color: black;"></i>
+        </a>
+      </div>
+    </td>
+    <td><div>{{cli['ID']}}</div></td>
+    <td><div>{{cli['name']}}</div></td>
+    {% if settings["Basic"] == true %}
+      <td><div>{{cli['status']}}</div></td>
+      <td><div>{{cli['loggedUser']}}</div></td>
+    {% endif %}
+    {% if settings["CPU%"] == true %}
+      {% if cli['statusClass'] == 'Off' %}
+      <td>
+        <div>--</div>
+      </td>
+      {% else %}
+      <td {{macros.get_perc_bar_style(cli['CPU_Usage'])}}>
+        <div>{{cli['CPU_Usage']}} %</div></td>
+      {% endif %}
+    {% endif %}
+    {% if settings["GPU%"] == true %}
+      {% if cli['statusClass'] == 'Off' %}
+      <td>
+        <div>--</div>
+      </td>
+      {% else %}
+      <td {{macros.get_perc_bar_style(cli['GPU_Usage'])}}>
+        <div>{{cli['GPU_Usage']}} %</div></td>
+      {% endif %}
+    {% endif %}
+    {% if settings["Temperature"] == true %}
+      {% if cli['statusClass'] == 'Off' or cli['tempHDD'] == 0 %}
+      <td>
+        <div>--</div>
+      </td>
+      {% else %}
+      {% set heat_perc = (cli['tempHDD']/90)*100 %}
+      <td {{macros.get_perc_bar_style(heat_perc)}}>
+        <div>{{cli['tempHDD']}} °C</div></td>
+      {% endif %}
+    {% endif %}
+    {% if settings["Debug"] == true %}
+      <td><div>{{cli['version']}}</div></td>
+      <td><div>{{cli['StructureID']}}</div></td>
+      <td><div>{{cli['VariablesID']}}</div></td>
+      <td><div>{{cli['isRunningAsService']}}</div></td>
+      <td><div>{{cli['localTextureSpaceUsed']}}</div></td>
+      <td><div>{{cli['maxCoresSetForJob']}}</div></td>
+      <td><div>{{cli['maxJobThreads']}}</div></td>
+      <td><div>{{cli['noUserInteraction']}}</div></td>
+    {% endif %}
+  </tr>
+{%- endmacro %}
+
+{% macro client_card(cli, index) -%}
+  <div class="card mb-1">
+    <div class="card-header">
+      <h3>Client {{cli["name"]}}</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          <div class="row justify-content-end m-0">
+            Client name
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row">
+            {{cli["name"] or "-" }}
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+        </div>
+      </div>
+      <div class="row" style="background: black; color: white">
+        <h5 class="p-1">Other info</h5>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="row justify-content-end m-0">
+            Status
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+          <div class="row justify-content-end m-0">
+            --
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endmacro %}

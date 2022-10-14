@@ -1,0 +1,393 @@
+{% import 'includes/_macros.html' as macros %}
+
+{% macro job_th(job_sample, settings) -%}
+  <th><div style="color: transparent">_</div></th>
+  <th><div>ID</div></th>
+  {% if settings["Basic"] == true %}
+  <th><div>User</div></th>
+  <th><div>Seq-Shot-Ver</div></th>
+  <th><div>Error</div></th>
+  <th><div>Approved</div></th>
+  {% endif %}
+  {% if settings["Scene"] %}
+  <th><div>SceneDisplayName</div></th>
+  <th><div>Layer</div></th>
+  {% endif %}
+  {% if settings["Progress"] %}
+  <th><div>Frames</div></th>
+  <th><div>Done-Started-Left</div></th>
+  {% endif %}
+  {% if settings["Time"] %}
+  <th><div>Until now</div></th>
+  <th><div>Remaining</div></th>
+  <th><div>Fr. Time</div></th>
+  <th><div>PS*s</div></th>
+  <th><div>Cost</div></th>
+  {% endif %}
+  {% if settings["Status"] %}
+  <th><div>Priority</div></th>
+  <th><div>Status</div></th>
+  <th><div>Clients Rendering</div></th>
+  <th><div>Max Memory Usage (GiB)</div></th>
+  <th><div>Date Sent</div></th>
+  <th><div>GHz*h</div></th>
+  {% endif %}
+  {% if settings["Debug"] %}
+  {% for k in job_sample %}
+  <th><div>{{k}}</div></th>
+  {% endfor %}
+  {% endif %}
+{%- endmacro %}
+
+{% macro job_tr(group, job, index, settings) -%}
+  <tr id="{{group}}jobrow{{index}}" data-job_id="{{job['ID']}}" class="selectable-row {{job['statusClass']}} {{job['withClientsClass']}}">
+    <td><div class="px-1 py-0">
+      <a href="jobs_detail?job_id={{job['ID']}}">
+        <i class="m-0 fas fa-search-plus" style="color: black;"></i>
+      </a>
+    </div></td>
+    <td class="{{job['statusClass']}}">
+        <div class="row mx-0 px-1 justify-content-between" style="min-width: 5rem;">
+            <div class="col-8 px-0">
+                {{job["IDstr"]}}
+            </div>
+          <div class="col-4 px-0">
+                <img class="px-1" src="/static/images/{{job['appIcon']}}">
+            </div>
+        </div>
+    </td>
+    {% if settings["Basic"] %}
+    <td><div>{{job["userName"]}}</div></td>
+    <td><div>{{[job["customSeqName"], job["customShotName"], job["customVersionName"] ] | join("-")}}</div></td>
+    <td><div><img src="/static/images/{{job['errorIcon']}}"></div></td>
+    <td><div><input type="checkbox" aria-label="Checkbox" {% if job['userApproved'] %} checked="checked" {% endif %} disabled></div></td>
+    {% endif %}
+    {% if settings["Scene"] %}
+    <td><div>{{job["sceneDisplayName"]}}</div></td>
+    <td><div>{{job["layer"]}}</div></td>
+    {% endif %}
+    {% if settings["Progress"] %}
+    <td>
+        <div>
+            {{[job["seqStart"] | int, job["seqEnd"] | int] | join(" - ")}}
+            {%- if job["seqStep"] > 1 -%}
+            , {{ job["seqStep"]}}
+            {%- endif -%}
+        </div>
+    </td>
+    <td {{get_job_progbar_style(job)}}>
+        <div class="row">
+            <div class="col-4">{{job["framesDone"]}}</div>
+            <div class="col-4" style="color: darkgreen">{{framesStarted}}</div>
+            <div class="col-4">{{job["framesLeft"]}}</div>
+        </div>
+    </td>
+    {% endif %}
+    {% if settings["Time"] %}
+    <td><div>{{job["Until now"]}}</div></td>
+    <td><div>{{job["Remaining"]}}</div></td>
+      {% if job["framesDone"] > 0 %}
+        {% set frameTime = job["frameTimeString"]%}
+      {% else %}
+        {% set frameTime = '-' %}
+      {% endif %}
+    <td><div>{{frameTime}}</div></td>
+    <td><div>{{job["renderTimeSum_PS"]}}</div></td>
+    <td><div>{{job["infoRenderTime_Cost"]}}</div></td>
+    {% endif %}
+    {% if settings["Status"] %}
+    <td><div>{{job["priority"]}}</div></td>
+    <td><div>{{job["statusAsString"]}}</div></td>
+    <td><div>{{job["clientsRenderingCount"]}}</div></td>
+    <td><div>{{job["maxMemoryUsageGiB"]}}</div></td>
+    <td><div>{{job["dateSend"]}}</div></td>
+    <td><div>{{job["renderTimeSum_Ghz_h"]|int}}</div></td>
+    {% endif %}
+    {% if settings["Debug"] %}
+    {%- for field in job %}
+      <td><div>{{job[field]}}</div></td>
+    {%- endfor %}
+    {% endif %}
+
+  </tr>
+{%- endmacro %}
+
+{% macro job_tr_w_tags(group, job, index, settings) -%}
+  <tr id="{{group}}jobrow{{index}}" data-job_id="{{job['ID']}}" class="selectable-row {{job['statusClass']}} {{job['withClientsClass']}}">
+    <td><div class="px-1 py-0">
+      <a href="jobs_detail?job_id={{job['ID']}}">
+        <i class="m-0 fas fa-search-plus" style="color: black;"></i>
+      </a>
+    </div></td>
+    <td class="{{job['statusClass']}}">
+      <div class="row mx-0 px-1 justify-content-between" style="min-width: 5rem;">
+        <div class="col-8 px-0">
+          <div class="m-0 p-0" style="font-size: xx-small">ID</div>
+          <div class="m-0 p-0">{{job["IDstr"]}}</div>
+        </div>
+        <div class="col-4 px-0">
+          <img class="px-1" src="/static/images/{{job['appIcon']}}">
+        </div>
+      </div>
+    </td>
+    {% if settings["Basic"] %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">User</div>
+        <div class="m-0 p-0">{{job["userName"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Seq-Shot-Ver</div>
+        <div class="m-0 p-0">{{[job["customSeqName"], job["customShotName"], job["customVersionName"] ] | join("-")}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Error</div>
+        <div class="m-0 p-0" >
+          <img src="/static/images/{{job['errorIcon']}}">
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Approved</div>
+        <div class="m-0 p-0" >
+          <input type="checkbox" aria-label="Checkbox" {% if job['userApproved'] %} checked="checked" {% endif %} disabled>
+        </div>
+      </div>
+    </td>
+    {% endif %}
+    {% if settings["Scene"] %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">SceneDisplayName</div>
+        <div class="m-0 p-0">
+          {{job["sceneDisplayName"]}}
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Layer</div>
+        <div class="m-0 p-0">
+          {{job["layer"]}}
+        </div>
+      </div>
+    </td>
+    {% endif %}
+    {% if settings["Progress"] %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Frames</div>
+        <div>
+          {{[job["seqStart"] | int, job["seqEnd"] | int] | join(" - ")}}
+          {%- if job["seqStep"] > 1 -%}
+          , {{ job["seqStep"]}}
+          {%- endif -%}
+        </div>
+      </div>
+    </td>
+    <td {{get_job_progbar_style(job)}}>
+      <div class="mx-0 px-1"><div class="m-0 p-0" style="font-size: xx-small; color: black">Done - Started - Left</div>
+        <div class="row">
+          <div class="col-4">{{job["framesDone"]}}</div>
+          <div class="col-4" style="color: darkgreen">{{framesStarted}}</div>
+          <div class="col-4">{{job["framesLeft"]}}</div>
+        </div>
+      </div>
+    </td>
+    {% endif %}
+    {% if settings["Time"] %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Until now</div>
+        <div class="m-0 p-0">
+          {{job["Until now"]}}
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Remaining</div>
+        <div class="m-0 p-0">{{job["Remaining"]}}</div>
+      </div>
+    </td>
+      {% if job["framesDone"] > 0 %}
+        {% set frameTime = job["frameTimeString"]%}
+      {% else %}
+        {% set frameTime = '-' %}
+      {% endif %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Fr. Time</div>
+        <div class="m-0 p-0">{{frameTime}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">PS*s</div>
+        <div class="m-0 p-0">{{job["renderTimeSum_PS"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Cost</div>
+        <div class="m-0 p-0">{{job["infoRenderTime_Cost"]}}</div>
+      </div>
+    </td>
+    {% endif %}
+    {% if settings["Status"] %}
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Priority</div>
+        <div class="m-0 p-0">{{job["priority"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Status</div>
+        <div class="m-0 p-0">{{job["statusAsString"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Clients Rendering</div>
+        <div class="m-0 p-0">{{job["clientsRenderingCount"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Max Memory Usage (GiB)</div>
+        <div class="m-0 p-0">{{job["maxMemoryUsageGiB"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">Date Sent</div>
+        <div class="m-0 p-0">{{job["dateSend"]}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="mx-0 px-1">
+        <div class="m-0 p-0" style="font-size: xx-small; color: black">GHz*h</div>
+        <div class="m-0 p-0">{{job["renderTimeSum_Ghz_h"]|int}}</div>
+      </div>
+    </td>
+    {% endif %}
+    {% if settings["Debug"] %}
+    {%- for field in job %}
+      <td>
+        <div class="mx-0 px-1">
+          <div class="m-0 p-0" style="font-size: xx-small; color: black">{{field}}</div>
+          <div class="m-0 p-0">{{job[field]}}</div>
+        </div>
+      </td>
+    {%- endfor %}
+    {% endif %}
+
+  </tr>
+{%- endmacro %}
+
+{% macro job_card(job, index) -%}
+  <div class="card mb-1">
+    <div class="card-header">
+      <h3>Job {{job["IDstr"]}} - {{job["companyProjectName"]}}</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          <div class="row justify-content-end m-0">
+            Job name
+          </div>
+          <div class="row justify-content-end m-0">
+            Scene
+          </div>
+          <div class="row justify-content-end m-0">
+            Camera | Layer
+          </div>
+          <div class="row justify-content-end m-0">
+            Render App
+          </div>
+          <div class="row justify-content-end m-0">
+            Output File
+          </div>
+          <div class="row justify-content-end m-0">
+            Custom
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row">
+            {{job["IDstr"] or "-" }}
+          </div>
+          <div class="row">
+            {{job["sceneDisplayName"] or "-"}}
+          </div>
+          <div class="row">
+            {{job["camera"] or "-" }} | {{job["layer"] or "-"}}
+          </div>
+          <div class="row">
+            {{job["appName"] or "-"}}
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+          <div class="row">
+            placeholder
+          </div>
+        </div>
+      </div>
+      <div class="row" style="background: black; color: white">
+        <h5 class="p-1">Render</h5>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="row justify-content-end m-0">
+            Status
+          </div>
+          <div class="row justify-content-end m-0">
+            Frame Range
+          </div>
+          <div class="row justify-content-end m-0">
+            Avg. Number of Clients
+          </div>
+          <div class="row justify-content-end m-0">
+            Avg. Time per Frame
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="row">
+            {{job["statusAsString"] or "-"}}
+          </div>
+          <div class="row">
+            {{[job["seqStart"] | int, job["seqEnd"] | int] | join(" - ")}}
+          </div>
+          <div class="row">
+            {{job["clientsRenderingCount"]}}
+          </div>
+          <div class="row">
+          {% if job["framesDone"] > 0 %}
+            {% set frameTime = job["renderTimeSum_seconds"] / job["framesDone"] %}
+          {% else %}
+            {% set frameTime = '-' %}
+          {% endif %}
+          {{frameTime}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endmacro %}
+
+{% macro get_job_progbar_style(job) -%}
+  {% set perc = (job["framesDone"]/job["framesTotal"])*100 %}
+  {% if job["clientsRenderingCount"] > 0 %}
+    {% set framesStarted = job["framesLeft"] - job["framesUnAssignedFoundNr"] %}
+    {% set start_perc = ([((job["framesDone"] + framesStarted)/job["framesTotal"])*100, perc + 1] | max) %}
+  {% else %}
+    {% set start_perc = 0 %}
+  {% endif %}
+  style="background-origin: border-box; background: linear-gradient(90deg, #AAAAAA {{perc}}%, lightgrey 0%, lightgrey {{start_perc}}%, #FFFFFF 1%);"
+{%- endmacro %}

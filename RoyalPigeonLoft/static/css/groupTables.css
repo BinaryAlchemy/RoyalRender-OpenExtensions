@@ -1,0 +1,93 @@
+
+body.hasHover .selectable-row:hover {
+    background-color: grey;
+}
+
+.selected-row {
+    background-color: lightgray;
+}
+
+td {
+    padding: .1rem !important;
+    max-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td.Render {
+	color: black;
+    background-color: lightgreen;
+}
+
+td.Disabled {
+	color: black;
+    background-color: orange;
+}
+
+td.Finished {
+	color: black;
+    background-color: lightgray;
+}
+
+tr.withClients {
+    color: limegreen;
+}
+
+tr.Disabled {
+    color: orange;
+}
+
+tr.Finished {
+	color: blue;
+}
+
+tr.Off {
+    color: darkgray;
+}
+
+tr.Idle {
+    color: black;
+}
+
+tr.Rendering {
+    color: lawngreen;
+}
+
+tr.Waiting {
+    color: darkorange;
+}
+
+tr.Error {
+    color: red;
+}
+
+td div {
+    position: static !important;
+}
+
+th {
+    background: #eee;
+    /*background-clip: padding-box;*/
+    padding: 0 !important;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+}
+
+th div {
+    background: #d1d1d1;
+}
+
+.sticky_header {
+    /*background: #eee;*/
+    padding: 2px 6px;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
+}

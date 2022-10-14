@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="col-md-12">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 700px">
+            <form action="" method="POST">
+			<img src="/static/images/taubenschlag.jpg"  />
+			<div style="position: absolute; left: 230px; top: 240px;"> 
+                <div class="form-group">
+                  <label>rrLogin</label>
+                  <input type="text" name="username" class="form-control" value={{request.form.username}}>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" name="password" class="form-control" value={{request.form.password}}>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Pigeon</button>
+				</div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

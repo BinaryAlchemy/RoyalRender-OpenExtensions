@@ -1,0 +1,5 @@
+{% import 'includes/_job_macros.html' as macros %}
+
+{% for job in jobs %}
+  {{ macros.job_tr(id, job, loop.index, settings) }}
+{% endfor %}

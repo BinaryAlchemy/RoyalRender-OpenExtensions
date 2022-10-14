@@ -1,0 +1,24 @@
+<div class="row m-0 justify-content-between">
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
+    <button type="button" onclick="showClientDetails()" class="btn btn-dark ml-0 mb-1">
+      <i class="fas fa-search-plus"></i><span class="pl-1">Details</span>
+    </button>
+    <div class="dropdown">
+    <a class="btn btn-dark ml-1 mb-1 dropdown-toggle" href="#" role="button" id="dropdownMenuCommands" data-toggle="dropdown">
+      Commands
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#" onclick="execute_command_on_selected_clients('abort')">Abort</a>
+      <a class="dropdown-item" href="#" onclick="execute_command_on_selected_clients('enable')">Enable</a>
+      <a class="dropdown-item" href="#" onclick="execute_command_on_selected_clients('disable')">Disable</a>
+      <a class="dropdown-item" href="#" onclick="execute_command_on_selected_clients('restart')">Restart</a>
+      <a class="dropdown-item" href="#" onclick="execute_command_on_selected_clients('close')">Close</a>
+    </div>
+    </div>
+  </div>
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar">
+    <button type="button" onclick="updateOpenGroups()" class="btn btn-dark ml-1 mb-1">
+      <i class="fas fa-sync-alt"></i><span class="pl-1">Update</span>
+    </button>
+  </div>
+</div>

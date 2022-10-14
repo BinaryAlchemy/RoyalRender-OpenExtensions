@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+    <script  src="/static/js/colResizable-1.6.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/groupTables.css" />
+{% endblock %}
+
+{% block toolbar %}
+  <div class="container fixed-top" style="margin-top: 4rem; z-index: 1000;">
+    {% include 'includes/_jobs_btnstoolbar.html' %}
+  </div>
+{% endblock %}
+
+{% block body %}
+
+<div style="margin-top: 2.5rem;">
+  {% include 'includes/_jobs_filter.html' %}
+</div>
+
+{% import 'includes/_job_macros.html' as macros %}
+
+  {% for g in snapshot.job_groups_filtered %}
+    {% set g_ = "job_group" + loop.index|string %}
+    <div class="card mb-1">
+      <div class="card-header p-0" id="card{{g_}}">
+        <div class="row m-0 justify-content-between">
+          <div class="col p-1 mr-n1">
+          <h5 class="mb-0">
+            <button id="{{g_}}plusBtn" class="btn btn-lg btn-light no-shadow" style="width: 100%; text-align: left; white-space: nowrap" type="button" data-toggle="collapse" data-target="#collapse{{g_}}" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fas fa-plus-square {{g_}}Class"></i>
+              {{g}}
+            </button>
+          </h5>
+          </div>
+          <div class="col col-md-auto p-1 ml-md-n1">
+            <div class="btn-group">
+              <button id="{{g_}}refreshBtn" class="btn btn-lg btn-light no-shadow refreshable" type="submit">
+                <i class="fas fa-sync-alt"></i>
+              </button>
+              <button id="{{g_}}selectBtn" class="btn btn-lg btn-light no-shadow">
+                <i class="far fa-check-circle"></i>
+              </button>
+              <a href="jobs_detail?project_id={{ g }}" class="btn btn-lg btn-light no-shadow">
+                <i class="m-1 fas fa-search-plus" style="color: black;"></i>
+              </a>
+              <p id="{{g_}}lastUpdate" class="py-2 pr-3 m-0">{{ time_now }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="collapse{{g_}}" class="collapsing" aria-labelledby="headingOne">
+        <div class="card-body table-card-body">
+          <table id="groupTable{{g_}}" class= "table table-bordered table-sm" width="100%" style="margin:0;" data-active_row="" border="0" cellpadding="0" cellspacing="0" >
+            <thead class="sticky_header" id="groupTable{{g_}}head">
+            </thead>
+            <tbody id="groupTable{{g_}}body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+{% endblock %}
+
+{% block js %}
+  {% for g in snapshot.job_groups_filtered %}
+    {% set g_ = "job_group" + loop.index|string %}
+    <script type="text/javascript">
+
+      $('#collapse'.concat('{{g_}}')).on('shown.bs.collapse', function() {
+        $(".{{g_}}".concat("Class")).addClass('fa-minus-square').removeClass('fa-plus-square');
+        ajax_jobs_table("{{g}}", "{{g_}}", "groupTable{{g_}}");
+      });
+
+      $('#collapse'.concat('{{g_}}')).on('hidden.bs.collapse', function() {
+        $(".{{g_}}".concat("Class")).addClass('fa-plus-square').removeClass('fa-minus-square');
+        $('#groupTable{{g_}}body').innerHtml = '';
+      });
+
+      $('#{{g_}}refreshBtn').on("click", function() {
+        $('#groupTable{{g_}}body').innerHtml = '';
+        ajax_jobs_table("{{g}}", "{{g_}}", "groupTable{{g_}}");
+      });
+
+      $('#{{g_}}selectBtn').on("click", function() {
+        selectAll("#groupTable{{g_}}");
+      });
+
+    </script>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <head>
+    <meta charset="utf-8">
+    <title>RyPgLf</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/colResizable.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/buttons_extra.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap_mods.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body class="hasHover">
+    <!-- Modal Loading spinner-->
+    <div class="modal" id="loadingSpinner" tabindex="-1" role="dialog" aria-labelledby="loadingSpinnerLabel" aria-hidden="true">
+      <div class="modal-dialog-centered justify-content-center">
+<!--        <div class="spinner-border" style="color:black; width:3rem; height:3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>-->
+        <img src="/static/images/pigeon_200px.gif"/>
+      </div>
+    </div>
+    {% if navbar %}
+      {% include 'includes/_navbar.html' %}
+      {% block toolbar %}
+      {% endblock %}
+    {% endif %}
+    <div class="container">
+      {% block body %}{% endblock %}
+      {% include 'includes/_messages.html' %}
+    </div>
+    <script type="text/javascript" src="static/js/functions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script id="selectableRows" type="text/javascript" src="static/js/selectRows.js"></script>
+    {% block js %}{% endblock %}
+  </body>
+</html>

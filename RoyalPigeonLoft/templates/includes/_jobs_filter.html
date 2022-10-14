@@ -1,0 +1,160 @@
+<div class="card mb-2">
+<div class="container">
+  <div class="row">
+    <button id="filterToggleBtn" class="btn btn-sm btn-light no-shadow" style="width: 100%; text-align: left; white-space: nowrap; background: #fff; border: none;" type="button" data-toggle="collapse" data-target="#filterForm">
+      <i id="filterToggleCue" class="far fa-plus-square"></i>
+      Filter
+    </button>
+  </div>
+  <div id="filterForm" class="collapse row mb-2">
+    <form action="" method="POST">
+      <div class="input-group" id="jobsFilter">
+
+        <div class="col-md-6 mb-1">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row mb-2">
+                <div class="col-md-4">
+                  Project:
+                </div>
+                <div class="col-md-8">
+                  <select style="width: 100%" id="projectSelect" name="projectSelect">
+                    <option>{{filter_settings.ALL_STRING}}</option>
+                    {% for g in snapshot.job_groups %}
+                    <option {% if filter_settings["project"]==g %} selected {% endif %} >{{g}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-4">
+                  User:
+                </div>
+                <div class="col-md-8">
+                  <select style="width: 100%" id="userSelect" name="userSelect">
+                    <option>{{filter_settings.ALL_STRING}}</option>
+                    {% for u in snapshot.users %}
+                    <option {% if filter_settings["username"]==u %} selected {% endif %} >{{u}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row mb-2">
+                <div class="col-md-4">
+                  App:
+                </div>
+                <div class="col-md-8">
+                  <select style="width: 100%" id="appSelect" name="appSelect">
+                    <option>{{filter_settings.ALL_STRING}}</option>
+                    {% for a in snapshot.apps %}
+                    <option {% if filter_settings["render_app"]==a %} selected {% endif %}>{{a}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-md-4">
+                  Age:
+                </div>
+                <div class="col-md-8">
+                  <select style="width: 100%" id="ageSelect" name="ageSelect">
+                    <option>{{filter_settings.ALL_STRING}}</option>
+                    {% for d in filter_settings.age_options %}
+                    <option {% if filter_settings["ageString"]==d %} selected {% endif %}>{{d}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-1 border-left border-right">
+          <div class="row">
+            <div class="col-auto">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="filterChkBox" id="notRenderingChk"
+                         {% if filter_settings["Not Rendering"] %} checked {% endif %} value="Not Rendering">
+                <label class="form-check-label" style="white-space: nowrap; color: black;" for="notRenderingChk">
+                  Not Rendering
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="filterChkBox" id="RenderingChk"
+                         {% if filter_settings["Rendering"] %} checked {% endif %} value="Rendering">
+                <label class="form-check-label" style="white-space: nowrap; color: green;" for="RenderingChk">
+                  Rendering
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="filterChkBox" id="DisabledChk"
+                         {% if filter_settings["Disabled"] %} checked {% endif %} value="Disabled">
+                <label class="form-check-label" style="white-space: nowrap; color: orange;" for="DisabledChk">
+                  Disabled
+                </label>
+              </div>
+            </div>
+            <div class="col-auto">
+                        <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="filterChkBox" id="WaitingChk"
+                         {% if filter_settings["Waiting"] %} checked {% endif %} value="Waiting">
+                <label class="form-check-label" style="white-space: nowrap; color: blue;" for="WaitingChk">
+                  Wait for...
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="filterChkBox" id="FinishedChk"
+                         {% if filter_settings["Finished"] %} checked {% endif %} value="Finished">
+                <label class="form-check-label" style="white-space: nowrap; color: grey;" for="FinishedChk">
+                  Finished
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-1">
+            <div class="row">
+              <div class="col-12">
+                Includes:
+              </div>
+              <div class="col-12">
+                  <input type="text" style="width: 100%" id="includeText" name="includeText"
+                  {%- if "includes" in filter_settings %}
+                    value = "{{filter_settings["includes"]}}"
+                  {% endif -%}
+                  >
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="filterChkBox" id="invertChk"
+                    {% if "invert" in filter_settings and filter_settings["invert"] %} checked {% endif %} value="invert">
+                    <label class="form-check-label" style="white-space: nowrap; color: black;" for="invertChk">
+                      invert
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <div class="row justify-content-end pr-3">
+              <label class="pt-2 pr-1 mb-0" style="color:black;">Filter:</label>
+              <div class="btn-group mb-0">
+                <button type="submit" name="save_filter" class="btn btn-sm btn-dark ml-1 mb-1">Save</button>
+                <button type="submit" name="filter_jobs" class="btn btn-sm btn-dark ml-1 mb-1">Apply</button>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </form>
+    <script type="text/javascript">
+      var fform = $("#filterForm");
+      fform.on('shown.bs.collapse', function() {
+        $("#filterToggleCue").addClass('fa-minus-square').removeClass('fa-plus-square');
+      });
+      fform.on('hidden.bs.collapse', function() {
+        $("#filterToggleCue").addClass('fa-plus-square').removeClass('fa-minus-square');
+      });
+    </script>
+  </div>
+</div>
+</div>

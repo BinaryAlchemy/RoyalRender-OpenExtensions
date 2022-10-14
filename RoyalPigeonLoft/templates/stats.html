@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% import 'includes/_macros.html' as macros %}
+
+  <div class="col col-auto">
+    <div class="card p-2 mb-1">
+      <h4 class="card-title"><i class="fas fa-memory"></i> Memory Usage </h4>
+      <p class="card-text">{{stats["memUsage"]}} (MiB)</p>
+    </div>
+    <div class="card p-2 mb-1">
+      <h4 class="card-title"><i class="fas fa-memory"></i> RR webapp Mem Usage </h4>
+      <h6 class="card-title">last {{stats["appMemory"]["window_mins"]}} (minutes)</h6>
+      {% set values = stats["appMemory"]["total"] %}
+      {% if values %}
+        <p class="card-text">TOTAL: {{ (values | sum / values | count) | int}} (bytes)</p>
+        <div class="card-text">By Worker</div>
+        <ul>
+          {% for worker in stats["appMemory"]["workers"] %}
+          {% set w_values = stats["appMemory"]["workers"][worker] %}
+            <li class="card-text">Worker ({{worker[0:6]}}...): {{ (w_values | sum / w_values | count) | int}} (bytes)</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="card-text">No information available</p>
+      {% endif %}
+    </div>
+    <div class="card p-2 mb-1">
+      <div class="row m-0 justify-content-between">
+        <h4 class="card-title m-0">
+          <i class="fas fa-info-circle"></i>
+          Global info
+        </h4>
+        <button id="infoChevron" class="btn collapsed m-0 p-0" type="button" data-toggle="collapse" data-target="#collapseInfo">
+          <i class="fas fa-chevron-circle-down" style="font-size: x-large;"></i>
+        </button>
+      </div>
+      <div class="card-body" style="overflow-x: auto; padding: 0">
+        <div id="collapseInfo" class="col collapse" style="margin-bottom: -30px">
+          {% for table in stats["infoGlobal"] %}
+          <table style="margin-bottom: 30px">
+            {% for row in table %}
+            <tr>
+              {% for element in row %}
+                <td style="width: 200px;">
+                  {{element}}
+                </td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <script>
+      $("#infoChevron").click(function(event) {
+        $(this).find('i').toggleClass('fa-chevron-circle-down').toggleClass('fa-chevron-circle-up');
+      });
+    </script>
+    <div class="row m-0 mt-3 p-2">
+      <h4>
+        Connection Stats
+      </h4>
+    </div>
+      {% for conn in stats["connectionStatsJSON"]["LastConnections"] %}
+        {{ macros.connection_stat_element(conn) }}
+      {% endfor %}
+  </div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

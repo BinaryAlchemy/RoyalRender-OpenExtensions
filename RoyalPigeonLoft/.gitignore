@@ -1,0 +1,12 @@
+.idea
+.vs
+instance/
+venv*/
+db/*.sql
+db/*.db
+/Flask.egg-info
+/Flask-2.1.2
+/build
+/dist
+__pycache__
+

@@ -1,0 +1,30 @@
+{
+"afroman": {
+"jobs": {
+"Basic": true,
+"Scene": true,
+"Progress": true,
+"Time": true,
+"Status": true,
+"Debug": false
+},
+"clients": {
+"Basic": true,
+"CPU%": true,
+"GPU%": true,
+"Temperature": true,
+"Debug": false
+},
+"filter": {
+"Project": "-- all --",
+"User": "-- all --",
+"App": "-- all --",
+"Not Rendering": true,
+"Rendering": true,
+"Disabled": true,
+"Waiting": true,
+"Finished": false,
+"Age": "-- all --"
+}
+}
+}

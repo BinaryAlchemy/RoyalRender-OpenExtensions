@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<form action="" method="POST">
+<div class="col col-md-8">
+  <div class="row">
+    <label style="color: black;">Log file</label>
+  </div>
+  <div class="row justify-content-between mb-1">
+    <select class="custom-select mb-1" id="logs_select" name="logs_select" style="width: 50%">
+      <option selected disabled>Select log...</option>
+      <optgroup label="-- App Logs --">
+        {% for f in log_files %}
+        <option {% if selected==f %} selected {% endif %} >{{f}}</option>
+        {% endfor %}
+      </optgroup>
+      <optgroup label="-- System Logs --">
+        {% for f in syslog_files %}
+          <option {% if selected==f %} selected {% endif %} >{{f}}</option>
+        {% endfor %}
+      </optgroup>
+    </select>
+    <div class="btn-group mb-0">
+      {% if selected %}
+      {% set link = "logs/" + selected %}
+      {% else %}
+      {% set link = "" %}
+      {% endif %}
+      <a href="{{link}}" id="download_btn" name="download" class="btn btn-dark mb-1">Download</a>
+      <button type="submit" name="show" class="btn btn-dark ml-1 mb-1">Show content</button>
+    </div>
+  </div>
+  <div class="row">
+    <label style="color: black;">Content:</label>
+  </div>
+  <div class="row">
+    <textarea rows="15" style="width: 100%;">{{content}}</textarea>
+  </div>
+</div>
+</form>
+
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript">
+    $("#logs_select").on('change', function() {
+      $("#download_btn").attr("href", "logs/" + this.value);
+    });
+  </script>
+{% endblock %}

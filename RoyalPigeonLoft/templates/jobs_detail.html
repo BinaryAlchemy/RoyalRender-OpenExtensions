@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+{% import 'includes/_job_macros.html' as macros %}
+
+{% for job in jobs %}
+  {{ macros.job_card(job, loop.index) }}
+{% endfor %}
+
+{% endblock %}
+
+{% block js %}
+{% endblock %}
