@@ -396,14 +396,7 @@ def get_stats():
     return render_template("stats.html", navbar=True, stats=stats)
 
 
-# TODO remove demo page
-@app.route("/demo", methods=["GET"])
-@is_logged_in
-def demo():
-    return render_template("demo.html", navbar=True)
-
-
-@app.route("/dyndns", methods=["POST"])
+@app.route("/dyndns", methods=["GET", "POST"])
 def dyndns():
     if request.method == 'POST':
         try:
@@ -413,10 +406,33 @@ def dyndns():
                 if temp_ip != app.config.get('TMP_RR_IP'):
                     app.config.update(TMP_RR_IP=temp_ip)
                     logging.info("DynDNS service IP changed: " + temp_ip)
-            return ""
+                    return "updated"
+                else:
+                    return "same"
+            else:
+                logging.error("Wrong access to DynDNS route from: " + request.remote_addr+"\ndata="+str(auth_key))
+                return "Wrong access to DynDNS route from: " + request.remote_addr
         except Exception as e:
-            logging.error("Wrong access to DynDNS route from: " + request.remote_addr)
-            logging.error(str(e))
+            logging.error("Wrong access to DynDNS route from: " + request.remote_addr+"\n "+str(e))
+            return "Wrong access to DynDNS route from: " + request.remote_addr+"<br>"+str(e)
+    else if (request.method == 'GET') && app.config.get('DEBUG')==True:
+        try:
+            auth_key = request.args['data']
+            if auth_key == app.config.get('DDNS_KEY'):
+                temp_ip = request.remote_addr
+                if temp_ip != app.config.get('TMP_RR_IP'):
+                    app.config.update(TMP_RR_IP=temp_ip)
+                    logging.info("DynDNS service IP changed: " + temp_ip)
+                    return "updated"
+                else:
+                    return "same"
+            else:
+                logging.error("Wrong access to DynDNS route from: " + request.remote_addr+"\ndata="+str(auth_key))
+                return "Wrong access to DynDNS route from: " + request.remote_addr
+        except Exception as e:
+            logging.error("Wrong access to DynDNS route from: " + request.remote_addr+"\n "+str(e))
+            return "Wrong access to DynDNS route from: " + request.remote_addr+"<br>"+str(e)
+    return "Not Supported"
 
 
 @app.teardown_request
