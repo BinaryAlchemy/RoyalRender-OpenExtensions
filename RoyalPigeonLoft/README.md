@@ -28,19 +28,23 @@ First install:
     make altinstall
 	
   LINUX: To get and compile 3.9.7 use:
-    sudo apt update
-	sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
-	cd /usr/src
-	wget https://www.python.org/ftp/python/3.9.7/Python-3.9.7.tgz
-	tar -xf Python-3.9.7.tgz
-    cd Python-3.9.7
-    ./configure --enable-optimizations
-	make -j 8
-    make altinstall	
-	python3.9 --version
+    Ubuntu:
+		sudo apt update
+		sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+		sudo mkdir /usr/src/compile
+		sudo chmod 777 /usr/src/compile
+		wget https://www.python.org/ftp/python/3.9.7/Python-3.9.7.tgz
+		tar -xf Python-3.9.7.tgz
+		cd Python-3.9.7
+		./configure --enable-optimizations
+		make -j 8
+		sudo make altinstall	
+		python3.9 --version
 
-	Note: On Centos, you need to install these packages before compiling:
-	sudo yum install gcc openssl-devel bzip2-devel	
+	Centos:
+	    You need to install these packages before compiling:
+		sudo yum install gcc openssl-devel bzip2-devel	
+
 	
     
 - PIP

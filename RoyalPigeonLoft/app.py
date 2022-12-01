@@ -415,7 +415,7 @@ def dyndns():
         except Exception as e:
             logging.error("Wrong access to DynDNS route from: " + request.remote_addr+"\n "+str(e))
             return "Wrong access to DynDNS route from: " + request.remote_addr+"<br>"+str(e)
-    elif (request.method == 'GET') && app.config.get('DEBUG')==True:
+    elif (request.method == 'GET') and app.config.get('DEBUG')==True:
         try:
             auth_key = request.args['data']
             if auth_key == app.config.get('DDNS_KEY'):
