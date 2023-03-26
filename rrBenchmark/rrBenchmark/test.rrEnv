@@ -1,0 +1,241 @@
+
+# If your company uses multiple fileservers that are synced, then it is not possible that all machines write the same file at the same time.
+# The fileserver sync function would not know how to join the different versions from all fileservers into one.
+# Therefore we write one result file per fileserver IP.
+#
+# rrParseOutput can do that, but in case the fileserver IPs are assigned round-robin/random per request, 
+# we want that one machine always writes to the same file (IP) for all tests.
+# Therfore we get the IP once and save it to these env vars.
+#
+# Note that accessing a fileserver path via IP is possible on Windows only.
+
+BenchmarkVersion=01
+
+
+Base_Dir = [rrEnvDir]
+IP_Server= [rrEnvServer]
+HostName = [host]
+
+[If] <PrependHostName>  [!=] 
+	[If] <PrependHostName>  [!=] -
+		HostName = <PrependHostName>_<HostName>
+	[EndIf]
+[EndIf]
+
+[If] <AppendHostName>  [!=] 
+	HostName = <HostName>_<AppendHostName>
+[EndIf]
+
+
+resultLog= <Base_Dir>log/<HostName>__<rrExeOS>.txt
+resultCSV= <Base_Dir>CPU-Results___<IP_Server>.csv
+
+
+[If] <rrExeOS>  [==] win
+    LocalTemp = %TEMP%/rrBenchmark
+[Else]
+    LocalTemp = /tmp/rrBenchmark
+[EndIf]
+tempOut= <LocalTemp>out
+
+dataDirSource= <Base_Dir>data
+dataDir= <LocalTemp>data
+
+Arnold_AppSource= <binDir>/arnold
+Arnold_App= <LocalTemp>/arnold
+
+[CreateFolder] <tempOut>
+[CreateFolder] <Base_Dir>log
+[CreateFolder] <LocalTemp>
+[CreateFolder] <dataDir>
+
+RR_BIN_FOLDER= <binDir>/rrBin
+
+[If] <rrExeOS>  [==] mac
+    RR_BIN=<RR_BIN_FOLDER>/all.app/Contents/MacOS/
+    rrBin=<RR_BIN_FOLDER>/
+    BLENDER_APP=/Contents/MacOS/Blender
+    BLENDER_FOLDER=<binDir>/blender/Blender.app
+[Else]
+    RR_BIN=<RR_BIN_FOLDER>/
+	rrBin=<RR_BIN_FOLDER>/
+    BLENDER_APP=/blender
+    BLENDER_FOLDER=<binDir>/blender
+[EndIf]
+
+[copy] SyncCreateDir <dataDirSource>   =>   <dataDir>
+
+[copy] SyncCreateDir <Arnold_AppSource>   =>   <Arnold_App>
+
+
+#we must copy Blender locally to be able to use the Intel Performance Cores on Windows 10 for rendering
+[copy] SyncCreateDir <BLENDER_FOLDER>   =>   <LocalTemp>/Blender.app
+[If] <rrExeOS>  [==] win
+    [Exec] powercfg /powerthrottling disable /path <LocalTemp>/Blender.app<BLENDER_APP> >> <resultLog> 2>&1
+[EndIf]
+
+[copy] SyncCreateDir <BLENDER_FOLDER>   =>   <LocalTemp>/Blender.app
+
+
+
+
+ARNOLD_PLUGIN_PATH=    <Arnold_App>/shaders;<Arnold_App>/arnold/plugins   
+ARNOLD_PROCEDURAL_PATH=<Arnold_App>/procedurals;<Arnold_App>/arnold/procedurals   
+PATH=                  <Arnold_App>/procedurals;<Arnold_App>/arnold/procedurals;<PATH>    
+LD_LIBRARY_PATH=       <Arnold_App>/procedurals;<Arnold_App>/arnold/procedurals    
+DYLD_LIBRARY_PATH=     <Arnold_App>/procedurals;<Arnold_App>/arnold/procedurals    
+ARNOLD_ADP_OPTIN=      0   
+
+
+
+echo ------------------------- START--------------------------------   
+[Exec] echo ------------------------- START--------------------------------   > <resultLog> 2>&1
+echo Writing results to <resultCSV>
+echo Writing logfile to <resultLog>
+[Exec] echo rrBenchmarkVersion: <BenchmarkVersion>   >> <resultLog> 2>&1
+
+
+#not required, but in case something fails, then the result file matches all .csv files generated
+[copy] KeepExisting <dataDir>/empty.csv   =>   <resultCSV>
+
+
+#linux does not support an exit core bigger than 255. So we have to split the time value.
+
+[Exec] "<RR_BIN>rrTest_TerminalTimer" -b1 >> <resultLog> 2>&1
+startTime1= [ExitCode]
+[Exec] "<RR_BIN>rrTest_TerminalTimer" -b2 >> <resultLog> 2>&1
+startTime2= [ExitCode]
+[Exec] "<RR_BIN>rrTest_TerminalTimer" -b3 >> <resultLog> 2>&1
+startTime3= [ExitCode]
+[Exec] "<RR_BIN>rrTest_TerminalTimer" -b4 >> <resultLog> 2>&1
+startTime4= [ExitCode]
+
+
+testCount = 10
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 1/<testCount> rrTestMachine... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN>rrTestMachine -no_save"  table "<resultCSV>" -showCmdOutput "Workstation,Unique=<HostName>" "OS=OS type:  ';;' " "OSver=OS_Info:  ';;' " "VM=VM host:;;" "VM_hardware=VM hardware:;;"  "Ver=<BenchmarkVersion>"  "StartDate=[dateMonth]" "StartTime=[time]" -csv_EN >> <resultLog> 2>&1
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 2/<testCount> rrClientCoresUsed... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+rrClientCoresUsed=<rrClientCoresUsed>
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN_FOLDER>/echo_cores.allos"  table "<resultCSV>" -showCmdOutput "Workstation,Unique=<HostName>" "CoresRRClient=rrClient cores;;"  -csv_EN >> <resultLog> 2>&1
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 3/<testCount> baCPUInfo... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN>baCPUInfo"  table "<resultCSV>" -showCmdOutput "Workstation,Unique=<HostName>" "Cores=CPU Core Count:;;" "CoresHW=CPU Core Count (HW):;;"  "CPU=CPU:;;" "RAM=RAM  GB:;;"  "RAM Mhz=RAM  Mhz:;;"   -csv_EN >> <resultLog> 2>&1
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 4/<testCount> rrTest_CpuBenchmark ... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN>rrTest_CpuBenchmark ClientMultiNoPrint exitCodeThreshold 200" table "<resultCSV>" -showCmdOutput -showTerminal -forwardExitCode "Workstation,Unique=<HostName>" "rrPS,NumberP=PS_Result:;;"  "rrPS core,NumberP=Average per core:;;PS" "CPUps=[MaxCPU]" "avCPUps=[AvrgCPU]"  "rrTime,Number=Time_Exec:;;sec"  "GhzCur,Number=CPU MHz summed (measured current, HT adjusted):;;"  "GhzCal,Number=CPU MHz summed (calculated per Core, HT adjusted):;;" -csv_EN >> <resultLog> 2>&1
+speedIdx= [ExitCode]
+
+
+[If] speedIdx [>] 0
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 5/<testCount> Blender... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] "<RR_BIN>rrParseOutput" "<LocalTemp>/Blender.app<BLENDER_APP> -b <dataDir>/main.blend -x 1 -o <tempOut>/blendTest -f 1 -t 0" table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "Blender=[ExecutionTimeSec_Invert]" "BlenderTime,NumberTime=Time: ;;(" "CPUb=[MaxCPU]" "avCPUb=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 6/<testCount> Arnold Village... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+
+	[Exec] "<RR_BIN>rrParseOutput" "<Arnold_App>/bin/kick -i <dataDir>/village.ass.gz  -o <tempOut>/village.exr     -l <Arnold_App>/bin -dw -dp -as 10 -nstdin -v 2"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "ArnoldV=[ExecutionTimeSec_Invert]" "ArnoldVTime,NumberTime=render done in;;"  "CPUav=[MaxCPU]"  "avCPUav=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 7/<testCount> Arnold Fish... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] "<RR_BIN>rrParseOutput" "<Arnold_App>/bin/kick -i <dataDir>/fish.ass.gz     -o <tempOut>/Angler-fish.exr -l <Arnold_App>/bin -dw -dp -as 14 -nstdin -v 2"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "ArnoldF=[ExecutionTimeSec_Invert]" "ArnoldFTime,NumberTime=render done in;;" "CPUaf=[MaxCPU]"  "avCPUaf=[AvrgCPU]"  -csv_EN >> <resultLog> 2>&1
+[Else]
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 5/<testCount> Blender... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] "<RR_BIN>rrParseOutput" "<LocalTemp>/Blender.app<BLENDER_APP> -b <dataDir>/main.blend -x 1 -o <tempOut>/blendTest -f 1 -t 0" table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "Blender=[ExecutionTimeSec_Invert]" "BlenderTime,NumberTime=Time: ;;(" "CPUb=[MaxCPU]" "avCPUb=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 6/<testCount> Arnold Village... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+
+	[Exec] "<RR_BIN>rrParseOutput" "<Arnold_App>/bin/kick -i <dataDir>/village.ass.gz  -o <tempOut>/village.exr     -l <Arnold_App>/bin -dw -dp -as 5 -nstdin -v 2"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "ArnoldV=[ExecutionTimeSec_Invert]" "ArnoldVTime,NumberTime=render done in;;"  "CPUav=[MaxCPU]"  "avCPUav=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] echo 7/<testCount> Arnold Fish... >> <resultLog> 2>&1
+	[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+	[Exec] "<RR_BIN>rrParseOutput" "<Arnold_App>/bin/kick -i <dataDir>/fish.ass.gz     -o <tempOut>/Angler-fish.exr -l <Arnold_App>/bin -dw -dp -as 7 -nstdin -v 2"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "ArnoldF=[ExecutionTimeSec_Invert]" "ArnoldFTime,NumberTime=render done in;;" "CPUaf=[MaxCPU]"  "avCPUaf=[AvrgCPU]"  -csv_EN >> <resultLog> 2>&1
+[EndIf]
+
+#apps and data is  not required any more
+[DelFolder]  <LocalTemp>/Blender.app
+[DelFolder]  <Arnold_App>
+[DelFolder]  <dataDir>
+
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 8/<testCount> VRay... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+
+#we have to do this to be able to use the Intel Performance Cores on Windows 10 for rendering
+[If] <rrExeOS>  [==] win
+[CreateFolder] %TEMP%\V-Ray Benchmark\resources\app\bin
+echo  dummyFile > "%TEMP%\V-Ray Benchmark\resources\app\bin\V-Ray Benchmark (CLI).exe"
+[Exec] powercfg /powerthrottling disable /path "%TEMP%\V-Ray Benchmark\resources\app\bin\V-Ray Benchmark (CLI).exe" >> <resultLog> 2>&1
+[Exec] powercfg /powerthrottling list >> <resultLog> 2>&1
+[EndIf]
+
+
+
+
+[Exec] "<RR_BIN>rrParseOutput" "<binDir>/vray/vray_test.allos"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "VRay,Number=score:;;vsamples" "CPUv=[MaxCPU]" "avCPUv=[AvrgCPU]"  -csv_EN >> <resultLog> 2>&1
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 9/<testCount> C4D/CineBench... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[If] <rrExeOS>  [==] win
+    [If] <rrClientRunMode>  [==] service
+        echo Can not run C4D/CineBench UI within background service 
+    [Else]
+        [Exec] "<RR_BIN>rrParseOutput" "<binDir>/CinebenchR23/Cinebench.exe g_CinebenchCpuXTest=true g_CinebenchMinimumTestDuration=250"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "C4D,NumberP=CB;;("  "CPUc=[MaxCPU]"  "avCPUc=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+    [EndIf]
+[EndIf]
+[If] <rrExeOS>  [==] mac
+    [Exec] "<RR_BIN>rrParseOutput" "<binDir>/CinebenchR23/Cinebench.app/Contents/MacOS/Cinebench g_CinebenchCpuXTest=true g_CinebenchMinimumTestDuration=250"   table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "C4D,NumberP=CB;;("  "CPUc=[MaxCPU]"  "avCPUc=[AvrgCPU]" -csv_EN >> <resultLog> 2>&1
+[EndIf]
+
+[If] <rrExeOS>  [==] lx
+    #just execute anything and add 0 values to the table
+    [Exec] "<RR_BIN>rrParseOutput" "<RR_BIN_FOLDER>/echo_cores.allos"  table "<resultCSV>" "Workstation,Unique=<HostName>" "C4D=0"  "CPUc=0"  "avCPUc=0"   -csv_EN >> <resultLog> 2>&1
+[EndIf]
+
+
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] echo 10/<testCount> rrTest_CpuBenchmark... >> <resultLog> 2>&1
+[Exec] echo --------------------------------------------------------------------------- >> <resultLog> 2>&1
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN>rrTest_CpuBenchmark ClientMultiNoPrint" table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "rrPS2,NumberP=PS_Result:;;" "GhzCur2,Number=CPU MHz summed (measured current, HT adjusted):;;"  -csv_EN >> <resultLog> 2>&1
+
+
+
+[Exec] "<RR_BIN>rrParseOutput" "<RR_BIN>rrTest_TerminalTimer <startTime1> <startTime2> <startTime3> <startTime4>" table "<resultCSV>" -showCmdOutput -showTerminal "Workstation,Unique=<HostName>" "RunTime=Difference:;;" "RunTimeSec,Number=Difference seconds:;;"  -csv_EN >> <resultLog> 2>&1
+
+
+
+
+
+
+echo cleaning up...
+[DelFolder]  <tempOut>
+[DelFolder]  <LocalTemp>
+
+[Exec] echo ------------------------- DONE --------------------------------   >> <resultLog> 2>&1
+[Exec] echo ------------------------- DONE --------------------------------   >> <resultLog> 2>&1
+

@@ -1,0 +1,32 @@
+
+----------------------------------------------------
+OK
+----------------------------------------------------
+VRay:
+ You may not redistribute or give THE PRODUCT away in any way (exchange, share or other) to any third parties in return for payment or other kind of material benefit.
+ 
+
+ 
+Blender: free distribution (even to sell it!)
+
+ 
+----------------------------------------------------
+MAYBE
+----------------------------------------------------
+ 
+CineBench:
+You shall not make available, rent, transfer or sublicense CINEBENCH to any third party. 
+
+...BUT I never accepted the license...
+
+
+
+----------------------------------------------------
+NOT
+----------------------------------------------------
+ 
+Arnold
+https://www.autodesk.com/company/terms-of-use/en/general-terms
+
+You will not:
+Sublicense, distribute, transmit, sell, lease, rent, loan or otherwise make available all or any portion of any Offering (including any functionality of any Offering) to a third party or provide any functionality of any Offering to a third party (whether on a service bureau basis or otherwise); and
