@@ -1,5 +1,5 @@
 #  Render script for Blender
-#  Last Change: %rrVersion%
+#  Last Change: 9.0.04
 #  Copyright (c)  Holger Schoenberger - Binary Alchemy
 #  Author: Paolo Acampora, Binary Alchemy
 
@@ -147,7 +147,7 @@ class RRArgParser(object):
 
         self.enable_gpu = False
         self.load_redshift = False
-        
+        self.render_format=""
 
         self.error = ""
         self.parse(args)
@@ -266,8 +266,6 @@ class RRArgParser(object):
 
             if arg == "-rRenderer":
                 self.renderer = value
-                global CURRENT_RENDERER
-                CURRENT_RENDERER = value
                 continue
 
             if arg == "-rCam":
@@ -366,8 +364,9 @@ def render_frame_range(start, end, step, movie=False):
                 # They would overwrite RR placeholders before the render starts.
 
                 #kso_tcp.writeRenderPlaceholder_nr(RENDER_PATH, fr, RENDER_PADDING, scene.render.file_extension)
-
+                pass
             log_msg(f"Rendering Frame #{fr} ...")
+            flush_log()
 
             scene.frame_start = fr
             scene.frame_end = fr
@@ -375,6 +374,7 @@ def render_frame_range(start, end, step, movie=False):
     else:
         log_msg(f"Rendering Frames (no frame loop): {start} - {end}")
         set_frame_range(start, end, step)
+        flush_log()
         bpy.ops.render.render(animation=True, write_still=True, use_viewport=False, scene=RENDER_SCENE, layer=RENDER_LAYER)
 
 
@@ -571,7 +571,7 @@ if __name__ == "__main__":
 
     args = RRArgParser(*sys.argv)
     
-    
+      
     log_msg(" About to open blend file ".center(100, "_"))
     log_msg(f"Open scene file: {args.blend_file}")
 
@@ -579,6 +579,19 @@ if __name__ == "__main__":
     log_msg(" blend file opened ".center(100, "_"))
 
     ensure_scene_and_layer()
+
+    context = bpy.context.scene
+    if RENDER_SCENE != "":
+        if RENDER_SCENE in bpy.data.scenes:
+            context = bpy.data.scenes[ RENDER_SCENE ]    
+    renderer_pretty_name = context.render.engine.title()
+    renderer_prefix = "Blender_"
+    if renderer_pretty_name.startswith(renderer_prefix):
+        renderer_pretty_name = renderer_pretty_name[len(renderer_prefix):]
+    log_msg("Scene renderer is: "+str(renderer_pretty_name))
+    if (args.renderer ==  ""):
+        args.renderer= renderer_pretty_name
+    CURRENT_RENDERER = args.renderer
 
     if args.enable_gpu:
         enable_gpu_devices()
@@ -593,7 +606,7 @@ if __name__ == "__main__":
         enable_addon("redshift")
 
     adjust_resolution(args.res_x, args.res_y)
-    multiply_antialias_settings(args.renderer, args.anti_alias_mult)
+    multiply_render_samples(args.renderer, args.anti_alias_mult)
     
     set_frame_range(args.seq_start, args.seq_end, args.seq_step)
     set_output_path()
@@ -607,7 +620,8 @@ if __name__ == "__main__":
 
     # ensure output dir
     Path(os.path.dirname(RENDER_PATH)).mkdir(parents=True, exist_ok=True)
-
+    flush_log()
+    
     try:
         render_frame_range(args.seq_start, args.seq_end, args.seq_step)
     except Exception as e:

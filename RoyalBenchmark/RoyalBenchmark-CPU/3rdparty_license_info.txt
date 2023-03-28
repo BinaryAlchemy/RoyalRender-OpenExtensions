@@ -7,7 +7,8 @@ VRay:
  
 
  
-Blender: free distribution (even to sell it!)
+Blender: 
+Free distribution (Even allowed to sell it)
 
  
 ----------------------------------------------------
@@ -15,17 +16,17 @@ MAYBE
 ----------------------------------------------------
  
 CineBench:
-You shall not make available, rent, transfer or sublicense CINEBENCH to any third party. 
+Download and batch execution are not restricted.
 
-...BUT I never accepted the license...
-
+The UI version is:
+"You shall not make available, rent, transfer or sublicense CINEBENCH to any third party."
 
 
 ----------------------------------------------------
 NOT
 ----------------------------------------------------
  
-Arnold
+Arnold on download
 https://www.autodesk.com/company/terms-of-use/en/general-terms
 
 You will not:
