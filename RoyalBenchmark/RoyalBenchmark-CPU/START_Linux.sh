@@ -9,7 +9,7 @@ export PrependHostName="$2"
 export AppendHostName="$3"
 
 
-chmod +x "${baseDir}/lnx/rrBin/*"
+chmod +x -R "${baseDir}/lnx/rrBin"
 
 
 rm -f /tmp/rrBench-CPU.sh

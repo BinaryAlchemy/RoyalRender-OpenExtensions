@@ -13,3 +13,4 @@ echo %time%
 del %TEMP%\rrBench-CPU.bat
 
 rem shutdown /s
+rem pause

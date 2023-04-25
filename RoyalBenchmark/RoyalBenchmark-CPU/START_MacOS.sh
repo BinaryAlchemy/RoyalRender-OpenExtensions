@@ -8,8 +8,8 @@ export AppendRandomName="$1"
 export PrependHostName="$2"
 export AppendHostName="$3"
 
-chmod +x "${baseDir}/mac/rrBin/all.app/Contents/MacOS/*"
-chmod +x "${baseDir}/mac/rrBin/rrCopy.app/Contents/MacOS/rrCopy"
+chmod -R +x "${baseDir}/mac/rrBin/all.app/Contents/MacOS/*"
+chmod -R +x "${baseDir}/mac/rrBin/rrCopy.app/Contents/MacOS/rrCopy"
 
 
 rm -f "${TMPDIR}rrBench-CPU.sh"
