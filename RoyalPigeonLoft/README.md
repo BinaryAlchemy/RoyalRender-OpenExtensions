@@ -4,6 +4,12 @@
 
 First install:
 
+- Main RR config
+  Open rrConfig, Menu Server, tab rrLogin.
+  In "Authorization Options", add the IP range(s) of your companies network.
+  Although this website automatically enables the remote access option, some other script might not.
+
+
 - COPY FILES
 	Copy the contents of RoyalPigeonLoft into some local folder.
 	e.g. /home/$USER/RoyalPigeonLoft
