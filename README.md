@@ -1,19 +1,9 @@
-# RoyalRender-OpenExtensions
-Extensions for Royal Render by Customers
-
-
-
-===========
-
-# What is this?
-===========
-
-This git repo contains open-source extensions for Royal Render.
+# RR-OpenExtensions
+This github provides free tools and extensions for Royal Render
 Either written by RR devs or customers.
 
 
 ===========
-
 # Usage
 ===========
 
@@ -47,6 +37,7 @@ A config file for RR like a submitter preset file or a website template
 Your Extension covers files from multiple areas. 
 Or it can even be a pull of your whole RR folder
 In this case you should use .gitignore files in each folder to ignore the official RR release files.
+
 
 
 
