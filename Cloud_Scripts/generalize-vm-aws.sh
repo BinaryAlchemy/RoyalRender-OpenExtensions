@@ -62,8 +62,12 @@ echo "[*] Removing OpenVPN configurations..."
 rm -fR ~/Server 2>/dev/null || true
 rm -fR /etc/openvpn/server/* 2>/dev/null  || true
 
-# 10. Remove this script folder
-echo "[*] Removing scripts folder..."
+# 10. Remove temp stuff home folder
+echo "[*] Removing temp stuff home folder..."
 rm -fR ~/scripts 2>/dev/null || true
+rm -fR ~/.local 2>/dev/null || true
+rm -fR ~/.cache 2>/dev/null || true
+rm -f ~/.wget-hsts 2>/dev/null || true
+rm -f ~/.sudo_as_admin_successful 2>/dev/null || true
 
 echo "=== Generalization complete. Shut down this instance and create the AMI ==="
