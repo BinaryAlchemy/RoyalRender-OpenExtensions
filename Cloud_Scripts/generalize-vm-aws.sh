@@ -15,14 +15,15 @@ systemctl stop rsyslog 2>/dev/null || true
 
 # 3. Remove SSH host keys so each clone gets fresh keys
 echo "[*] Removing SSH host keys..."
-rm -f /etc/ssh/ssh_host_*
+rm -f /etc/ssh/ssh_host_* 2>/dev/null || true
 
-# 4. Clear user bash history for all local users
-echo "[*] Clearing bash history..."
+# 4. Clear user bash history and authorized_keys for all local users
+echo "[*] Clearing bash history and authorized keys..."
 history -c 2>/dev/null || true
 for home in /root /home/*; do
   if [[ -d "$home" ]]; then
     rm -f "$home"/.bash_history 2>/dev/null || true
+    cat /dev/null > ~/.ssh/authorized_keys || true
   fi
 done
 
@@ -55,5 +56,14 @@ echo "[*] Resetting machine-id..."
 truncate -s 0 /etc/machine-id 2>/dev/null || true
 rm -f /var/lib/dbus/machine-id 2>/dev/null || true
 ln -sf /etc/machine-id /var/lib/dbus/machine-id 2>/dev/null || true
+
+# 9. Remove open-vpn configurations
+echo "[*] Removing OpenVPN configurations..."
+rm -fR ~/Server 2>/dev/null || true
+rm -fR /etc/openvpn/server/* 2>/dev/null  || true
+
+# 10. Remove this script folder
+echo "[*] Removing scripts folder..."
+rm -fR ~/scripts 2>/dev/null || true
 
 echo "=== Generalization complete. Shut down this instance and create the AMI ==="
