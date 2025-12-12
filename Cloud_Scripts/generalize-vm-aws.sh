@@ -66,6 +66,6 @@ rm -R /home/$SUDO_USER/.local
 rm -R /home/$SUDO_USER/.cache
 rm  /home/$SUDO_USER/.wget-hsts
 rm  /home/$SUDO_USER/.sudo_as_admin_successful
-#rm -R ~/scripts
+rm -R /home/$SUDO_USER/scripts
 
 echo "=== Generalization complete. Shut down this instance and create the AMI ==="
