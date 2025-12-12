@@ -30,7 +30,7 @@ RR_SERVICE_FILES=(
 )
 
 
-
+dnf install unzip wget cifs-utils
 wget "https://www.royalrender.de/download/$RR_INSTALLER_ARCHIVE"
 unzip $RR_INSTALLER_ARCHIVE
 
