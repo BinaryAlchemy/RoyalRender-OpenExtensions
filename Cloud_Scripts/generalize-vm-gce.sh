@@ -28,11 +28,21 @@ echo "Cleaning APT and temp files..."
 apt-get clean
 rm -rf /tmp/* /var/tmp/* /var/cache/apt/archives/*
 
-# 5. Remove machine-specific data (history, caches)
-echo "Removing machine-specific data..."
-rm -f ~/.ssh/known_hosts
-rm -f ~/.ssh/known_hosts
+# 5. Remove open-vpn configurations
+echo "[*] Removing OpenVPN configurations..."
+rm -fR /etc/openvpn/server/*
+
+# 6. Remove machine-specific data (history, caches)
 rm -rf /root/.cache /home/*/.cache
+
+# 7. Remove all users
+echo "Removing custom users..."
+for user in $(getent passwd | awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}'); do
+    userdel --remove --force "$user"
+done
+rm -rf /home/* /root/.ssh
+
+# 8. Clear history
 history -c
 
 echo "Cleanup complete."
